@@ -1,26 +1,285 @@
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-1xl: 1360px;
+  --breakpoint-2xl: 1536px;
+  --breakpoint-3xl: 1920px;
 }
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  @font-face {
+    font-family: "ITC Avant Garde Gothic Std";
+    src: url("/fonts/ITCAvantGardeStd-Demi.woff2") format("woff2"),
+      url("/fonts/ITCAvantGardeStd-Demi.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "ITC Avant Garde Gothic Std";
+    src: url("/fonts/ITCAvantGardeStd-Md.woff2") format("woff2"),
+      url("/fonts/ITCAvantGardeStd-Md.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "ITC Avant Garde Gothic Std";
+    src: url("/fonts/ITCAvantGardeStd-Bk.woff2") format("woff2"),
+      url("/fonts/ITCAvantGardeStd-Bk.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "ITC Avant Garde Gothic Std";
+    src: url("/fonts/ITCAvantGardeStd-XLt.woff2") format("woff2"),
+      url("/fonts/ITCAvantGardeStd-XLt.woff") format("woff");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
   }
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f5f5;
+  overflow-x: hidden;
+  font-family: "ITC Avant Garde Gothic Std";
+  font-size: 1.4rem;
+  color: #000;
+  font-weight: 300;
+}
+.inter {
+  font-family: "Inter", sans-serif;
+}
+.urbanist {
+  font-family: "Urbanist", sans-serif;
+}
+.container {
+  padding: 0 1.5rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+}
+.slick-track {
+  display: flex !important;
+}
+.slick-slide {
+  height: inherit !important;
+}
+.slick-slide > div {
+  height: 100%;
+}
+.marquee-item {
+  display: flex !important;
+}
+h2 strong,
+h2 b {
+  font-weight: 500;
+}
+
+.collection-gallery-slider .slick-dots {
+  width: 100%;
+  bottom: 2rem;
+}
+.collection-gallery-slider .slick-dots .slick-active {
+  width: 3.3rem;
+}
+.collection-gallery-slider .slick-dots li {
+  width: 5px;
+  height: 5px;
+}
+.collection-gallery-slider .slick-dots .slick-active button,
+.collection-gallery-slider .slick-dots li.slick-active button:before {
+  width: 100%;
+}
+.collection-gallery-slider .slick-dots li button:before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #ddd;
+}
+.collection-gallery-slider .slick-dots li.slick-active button:before {
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+.collection-gallery-slider .slick-slide {
+  height: inherit;
+}
+.collection-gallery-slider .slick-slide div {
+  height: 100%;
+}
+.hp-testimonial-slider .slick-slide {
+  margin: 0 1rem;
+}
+.hp-testimonial-slider .slick-arrow {
+  display: none;
+}
+.hp-testimonial-slider .content {
+  background: linear-gradient(
+    180deg,
+    rgba(27, 27, 27, 0) 57.53%,
+    rgba(27, 27, 27, 0.794629) 74.89%,
+    #1b1b1b 100%
+  );
+}
+.video-playing .play-icon {
+  opacity: 0;
+  visibility: hidden;
+}
+.absolute-center {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+.red-tick-list li {
+  position: relative;
+  padding-left: 2rem;
+}
+.red-tick-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2.5rem;
+  width: 1.3rem;
+  height: 1.3rem;
+  background: url("../public/images/tick-mark-red.webp") no-repeat center;
+  background-size: contain;
+}
+.hp-sell-car-quotes .slick-dots {
+  position: relative;
+  display: flex !important;
+  justify-content: center;
+  margin-top: 2rem;
+  top: 0;
+}
+.hp-sell-car-quotes .slick-dots li {
+  width: 10px;
+  height: 10px;
+  background-color: #cfcfcf;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.hp-sell-car-quotes .slick-dots li.slick-active {
+  background-color: #fe0000;
+}
+.hp-sell-car-quotes .slick-dots button {
+  opacity: 0;
+}
+.slick-dots li button:before {
+  display: none;
+}
+footer .active-menu img {
+  transform: rotate(180deg);
+}
+@media only screen and (max-width: 639px) {
+  html {
+    font-size: 2.5vw;
+  }
+}
+@media only screen and (max-width: 767px) {
+}
+@media only screen and (max-width: 1023px) {
+}
+@media only screen and (max-width: 1199px) {
+}
+
+@media only screen and (min-width: 768px) {
+  .hp-sell-car-quotes .slick-dots {
+    justify-content: flex-start;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .container {
+    padding: 0 30px;
+  }
+  .hp-sellcar-usps li:nth-last-child(2) {
+    border-bottom: 1px solid #d4d4d4;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  html {
+    font-size: 0.64vw;
+  }
+  .container {
+    width: 90%;
+    padding: 0 30px;
+  }
+  .hp-whyus-usp-item {
+    box-shadow: -37px 4px 34px 0px #0000004f;
+  }
+  .hp-whyus-usp-item:nth-of-type(1),
+  .hp-whyus-usp-item:nth-of-type(4) {
+    transform: rotate(8deg);
+  }
+  .hp-whyus-usp-item:nth-of-type(2),
+  .hp-whyus-usp-item:nth-of-type(5) {
+    transform: rotate(-8deg);
+  }
+  .hp-testimonial-slider .slick-slide {
+    margin: 0 2rem;
+  }
+  .hp-testimonial-slider .slick-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7.5rem;
+    height: 7.5rem;
+    background-color: #303030;
+    z-index: 10;
+    transition: all 0.5s ease;
+  }
+  .hp-testimonial-slider .slick-arrow:hover {
+    background-color: #fe0000;
+  }
+  .hp-testimonial-slider .slick-arrow.slick-disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  .slick-arrow:before {
+    display: none;
+  }
+  .red-tick-list li {
+    padding-left: 4rem;
+  }
+  .red-tick-list li::before {
+    top: 4rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .hp-sell-car-quotes .slick-dots {
+    margin-top: 4rem;
+  }
+}
+@media only screen and (min-width: 1360px) {
+  html {
+    font-size: 0.57vw;
+  }
+}
+@media only screen and (min-width: 1536px) {
+  html {
+    font-size: 0.55vw;
+  }
+  .container {
+    width: 88%;
+    max-width: 1525px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  html {
+    font-size: 10px;
+  }
 }
