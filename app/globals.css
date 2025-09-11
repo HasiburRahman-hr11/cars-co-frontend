@@ -220,6 +220,7 @@ footer .active-menu img {
   }
   .hp-whyus-usp-item {
     box-shadow: -37px 4px 34px 0px #0000004f;
+    transition: all 0.5s ease;
   }
   .hp-whyus-usp-item:nth-of-type(1),
   .hp-whyus-usp-item:nth-of-type(4) {
@@ -228,6 +229,15 @@ footer .active-menu img {
   .hp-whyus-usp-item:nth-of-type(2),
   .hp-whyus-usp-item:nth-of-type(5) {
     transform: rotate(-8deg);
+  }
+  .hp-whyus-usp-item:nth-of-type(1):hover,
+  .hp-whyus-usp-item:nth-of-type(4):hover,
+  .hp-whyus-usp-item:nth-of-type(2):hover,
+  .hp-whyus-usp-item:nth-of-type(5):hover {
+    transform: rotate(0);
+  }
+  .hp-whyus-usp-item:nth-of-type(3):hover {
+    transform: rotate(8deg);
   }
   .hp-testimonial-slider .slick-slide {
     margin: 0 2rem;
