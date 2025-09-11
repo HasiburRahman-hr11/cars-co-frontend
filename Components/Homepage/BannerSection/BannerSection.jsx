@@ -14,6 +14,16 @@ const logos = [
   "/images/homepage/hp-banner-logo-8.webp",
   "/images/homepage/hp-banner-logo-9.webp",
   "/images/homepage/hp-banner-logo-2.webp",
+  "/images/homepage/hp-banner-logo-1.webp",
+  "/images/homepage/hp-banner-logo-2.webp",
+  "/images/homepage/hp-banner-logo-3.webp",
+  "/images/homepage/hp-banner-logo-4.webp",
+  "/images/homepage/hp-banner-logo-5.webp",
+  "/images/homepage/hp-banner-logo-6.webp",
+  "/images/homepage/hp-banner-logo-7.webp",
+  "/images/homepage/hp-banner-logo-8.webp",
+  "/images/homepage/hp-banner-logo-9.webp",
+  "/images/homepage/hp-banner-logo-2.webp",
 ];
 
 const BannerSection = () => {
