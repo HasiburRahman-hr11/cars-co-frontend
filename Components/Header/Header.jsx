@@ -14,7 +14,7 @@ const phoneNumbers = [
 const Header = () => {
   return (
     <header className="header absolute left-[0] top-[0] z-[20] w-full">
-      <div className="header-wrapper px-[20px] py-[15px] flex justify-between items-center lg:px-[30px] xl:py-[20px]">
+      <div className="header-wrapper mx-auto px-[20px] py-[15px] flex justify-between items-center lg:px-[30px] xl:py-[20px] xl:w-[97%] xl:max-w-[1790px] xl:px-[30px]">
         <Link
           href="/"
           className="inline-block w-[10rem] lg:w-[15rem] xl:w-[17.4rem]"

@@ -26,7 +26,7 @@ const BannerSection = () => {
           alt="Banner Image"
           width="1920"
           height="1100"
-          className="hidden md:block object-cover"
+          className="hidden md:block object-cover w-full h-auto"
         />
         <img
           src="/images/homepage/hp-banner-mobile.webp"
