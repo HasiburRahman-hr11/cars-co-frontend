@@ -17,16 +17,15 @@ const logos = [
 ];
 
 const BannerSection = () => {
-
   return (
-    <section className="bg-[#000000] relative overflow-hidden ">
+    <section className="bg-[#141313] relative overflow-hidden ">
       <div className="h-full w-full">
         <img
           src="/images/homepage/hp-banner-desktop.webp"
           alt="Banner Image"
           width="1920"
           height="1100"
-          className="hidden md:block object-cover w-full h-auto"
+          className="hidden md:block object-cover w-full"
         />
         <img
           src="/images/homepage/hp-banner-mobile.webp"
@@ -36,7 +35,7 @@ const BannerSection = () => {
           className="block w-full md:hidden object-cover h-[80vh] min-h-[67rem] max-h-[95vh]"
         />
       </div>
-      <div className="absolute top-[0] left-[0] text-center w-full h-full flex flex-col justify-between pt-[9rem] xl:pt-[15rem]">
+      <div className="absolute top-[0] left-[0] text-center w-full h-full flex flex-col justify-between pt-[9rem] xl:pt-[15rem] 3xl:pt-[20rem]">
         <div className="container w-full">
           <h1 className="text-[#ffffff] text-center text-[3rem] font-[500] leading-[1.3] xl:text-[6rem] lx:leading-[1.1]">
             Where elegance meets performance
