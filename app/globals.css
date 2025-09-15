@@ -95,26 +95,21 @@ h2 b {
 }
 .collection-gallery-slider .slick-dots .slick-active {
   width: 3.3rem;
+  border-radius: 1rem;
+  background-color: #ffffff;
 }
 .collection-gallery-slider .slick-dots li {
-  width: 5px;
-  height: 5px;
+  width: 0.6rem;
+  height: 0.6rem;
+  background-color: #dddddd;
+  border-radius: 50%;
+  margin: 0 2px;
 }
 .collection-gallery-slider .slick-dots .slick-active button,
 .collection-gallery-slider .slick-dots li.slick-active button:before {
-  width: 100%;
+  opacity: 0;
 }
-.collection-gallery-slider .slick-dots li button:before {
-  content: "";
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background-color: #ddd;
-}
-.collection-gallery-slider .slick-dots li.slick-active button:before {
-  border-radius: 5px;
-  background-color: #ffffff;
-}
+
 .collection-gallery-slider .slick-slide {
   height: inherit;
 }
@@ -272,6 +267,10 @@ footer .active-menu img {
   }
   .hp-sell-car-quotes .slick-dots {
     margin-top: 4rem;
+  }
+  .collection-gallery-slider .slick-dots li {
+    width: 0.8rem;
+    height: 0.8rem;
   }
 }
 @media only screen and (min-width: 1360px) {
