@@ -29,6 +29,18 @@ const testimonials = [
     name: "John Abraham",
     designation: "Actor",
   },
+  {
+    video: "/videos/rolls-video.mp4",
+    thumbnail: "/images/homepage/hp-testimonial-img-2.webp",
+    name: "Aman Gupta",
+    designation: "CEO of Boat",
+  },
+  {
+    video: "/videos/rolls-video.mp4",
+    thumbnail: "/images/homepage/hp-testimonial-img-3.webp",
+    name: "Deepinder Goyal",
+    designation: "CEO of Zomato",
+  },
 ];
 
 function NextArrow(props) {

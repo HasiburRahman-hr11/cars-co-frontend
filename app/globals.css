@@ -253,6 +253,7 @@ footer .active-menu img {
   .hp-testimonial-slider .slick-arrow.slick-disabled {
     cursor: not-allowed;
     pointer-events: none;
+    opacity: 0.5;
   }
   .slick-arrow:before {
     display: none;

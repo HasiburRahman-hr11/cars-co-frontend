@@ -14,7 +14,7 @@ const carsCoWorldMenu = [
   { title: "Why Us", link: "#" },
   { title: "Compare Cars", link: "#" },
   { title: "Blog", link: "#" },
-  { title: "About Us", link: "#" },
+  { title: "About Us", link: "/about-us" },
   { title: "Testimonials", link: "#" },
 ];
 const stylesMenu = [

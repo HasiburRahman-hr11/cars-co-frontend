@@ -1,0 +1,83 @@
+import Link from "next/link";
+import React from "react";
+
+const bannerUsps = [
+  {
+    icon: "/images/about-us/banner-usp-1.webp",
+    title: "Transparency",
+    subtitle: "Clear deals, no hidden terms.",
+  },
+  {
+    icon: "/images/about-us/banner-usp-2.webp",
+    title: "Reliability",
+    subtitle: "Verified cars you can trust.",
+  },
+  {
+    icon: "/images/about-us/banner-usp-3.webp",
+    title: "Affordability",
+    subtitle: "Luxury within your reach.",
+  },
+  {
+    icon: "/images/about-us/banner-usp-4.webp",
+    title: "Excellence",
+    subtitle: "Premium service at every step.",
+  },
+];
+
+const BannerSection = () => {
+  return (
+    <section className="bg-[#1B1A1D] text-white relative overflow-hidden">
+      <div className="relative">
+        <img
+          src="/images/about-us/banner-image-desktop.webp"
+          width="1920"
+          height="1000"
+          alt="Banner Image"
+          className="hidden w-full h-auto object-cover sm:block"
+        />
+        <img
+          src="/images/about-us/banner-image-desktop.webp"
+          width="640"
+          height="1280"
+          alt="Banner Image"
+          className="w-full object-cover block sm:hidden h-[90vh] min-h-[500px]"
+        />
+      </div>
+      <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-between pt-[9rem] xl:pt-[15rem] 3xl:pt-[20rem]">
+        <div className="container text-center">
+          <h6 className="w-max mx-auto bg-white px-[3rem] py-[1.4rem] text-black text-[1.3rem] uppercase rounded-[4rem] leading-1 mb-[2rem] xl:text-[2rem] xl:leading-[1] xl:mb-[3rem] font-[600]">
+            About Us
+          </h6>
+          <h1 className="text-[#ffffff] text-center text-[3rem] font-[500] leading-[1.3] xl:text-[6rem] lx:leading-[1.1]">
+            Driving Luxury, Redefining Affordability
+          </h1>
+          <p className="mt-[1rem] text-white xl:text-[2.2rem] xl:mt-[2rem]">
+            At Cars.co.in, we believe luxury should be real—always within your
+            reach.
+          </p>
+        </div>
+        <div className="container">
+          <ul className="flex flex-wrap justify-between pb-[4rem] gap-y-[2.5rem]">
+            {bannerUsps.map((usp, index) => (
+              <li key={index} className="flex w-[48%]">
+                <span className="icon w-[2.8rem] inline-block mt-[0.6rem]">
+                  <img src={usp?.icon} alt="Icon" className="object-contain max-w-full" />
+                </span>
+                <div className="flex-1 pl-[1rem]">
+                  <h6 className="text-white text-[1.6rem] xl:text-[2.8rem] font-[600]">
+                    {usp.title}
+                  </h6>
+                  <p className="text-[#BDBEBE] text-[1.1rem] xl:text-[2rem]">
+                    {usp.subtitle}
+                  </p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default BannerSection;
