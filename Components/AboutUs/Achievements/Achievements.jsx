@@ -59,8 +59,8 @@ const Achievements = () => {
             selling simple and secure.
           </p>
         </div>
-        <div className="max-w-[600px] mx-auto">
-            <div>
+        <div className="max-w-[540px] mx-auto md:max-w-none md:flex md:justify-between">
+            <div className="md:w-[48%]">
                 {leftCol.map((item ,index) => (
                     <div key={index} className="mt-[4rem]">
                         <h4 className="text-[2rem] text-[#4B4B4B] font-[500] [&>b]:font-[600] [&>b]:text-black xl:text-[4.5rem]" dangerouslySetInnerHTML={{__html : item.title}}></h4>
@@ -69,7 +69,7 @@ const Achievements = () => {
                     </div>
                 ))}
             </div>
-            <div>
+            <div className="md:w-[48%]">
                 {rightCol.map((item ,index) => (
                     <div key={index} className="mt-[4rem]">
                         <h4 className="text-[2rem] text-[#4B4B4B] font-[500] [&>b]:font-[600] [&>b]:text-black xl:text-[4.5rem]" dangerouslySetInnerHTML={{__html : item.title}}></h4>

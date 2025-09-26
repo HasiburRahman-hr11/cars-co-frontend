@@ -180,6 +180,9 @@ h2 b {
 footer .active-menu img {
   transform: rotate(180deg);
 }
+.dark-slider-arrow.slick-arrow {
+  display: none;
+}
 @media only screen and (max-width: 639px) {
   html {
     font-size: 2.5vw;
@@ -237,7 +240,8 @@ footer .active-menu img {
   .hp-testimonial-slider .slick-slide {
     margin: 0 2rem;
   }
-  .hp-testimonial-slider .slick-arrow {
+  .hp-testimonial-slider .slick-arrow,
+  .dark-slider-arrow.slick-arrow {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -247,15 +251,18 @@ footer .active-menu img {
     z-index: 10;
     transition: all 0.5s ease;
   }
-  .hp-testimonial-slider .slick-arrow:hover {
+  .hp-testimonial-slider .slick-arrow:hover,
+  .dark-slider-arrow.slick-arrow:hover {
     background-color: #fe0000;
   }
-  .hp-testimonial-slider .slick-arrow.slick-disabled {
+  .hp-testimonial-slider .slick-arrow.slick-disabled,
+  .dark-slider-arrow.slick-arrow.slick-disabled {
     cursor: not-allowed;
     pointer-events: none;
     opacity: 0.5;
   }
-  .slick-arrow:before {
+  .slick-arrow:before,
+  .dark-slider-arrow.slick-arrow::before {
     display: none;
   }
   .red-tick-list li {
@@ -272,6 +279,12 @@ footer .active-menu img {
   .collection-gallery-slider .slick-dots li {
     width: 0.8rem;
     height: 0.8rem;
+  }
+  .full-width-gallery-slider .slick-prev {
+    left: 10%;
+  }
+  .full-width-gallery-slider .slick-next {
+    right: 10%;
   }
 }
 @media only screen and (min-width: 1360px) {

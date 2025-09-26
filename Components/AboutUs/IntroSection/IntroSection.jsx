@@ -37,8 +37,8 @@ const IntroSection = () => {
           </h2>
         </div>
 
-        <div className="mt-[5rem]">
-          <div className="max-w-[600px] mx-auto">
+        <div className="mt-[5rem] max-w-[540px] mx-auto">
+          <div className="">
             <img
               src="/images/about-us/intro-thumb.webp"
               alt="THumbnail"

@@ -33,7 +33,7 @@ const BannerSection = () => {
           width="1920"
           height="1000"
           alt="Banner Image"
-          className="hidden w-full h-auto object-cover sm:block"
+          className="hidden w-full h-auto object-cover sm:block min-h-[500px]"
         />
         <img
           src="/images/about-us/banner-image-desktop.webp"
@@ -57,9 +57,9 @@ const BannerSection = () => {
           </p>
         </div>
         <div className="container">
-          <ul className="flex flex-wrap justify-between pb-[4rem] gap-y-[2.5rem]">
+          <ul className="flex flex-wrap justify-between pb-[4rem] gap-y-[2.5rem] max-w-[500px] mx-auto md:max-w-none md:justify-between">
             {bannerUsps.map((usp, index) => (
-              <li key={index} className="flex w-[48%]">
+              <li key={index} className="flex w-[48%] md:w-[23%]">
                 <span className="icon w-[2.8rem] inline-block mt-[0.6rem]">
                   <img src={usp?.icon} alt="Icon" className="object-contain max-w-full" />
                 </span>
