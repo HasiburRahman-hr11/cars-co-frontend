@@ -21,10 +21,10 @@ const introUsps = [
 
 const IntroSection = () => {
   return (
-    <section className="bg-black py-[6rem]">
+    <section className="bg-black py-[6rem] xl:py-[13rem]">
       <div className="container">
-        <div className="text-center section-header">
-          <h6 className="w-max mx-auto bg-[#202020] px-[3rem] py-[1.4rem] text-[#AEAEAE] text-[1.3rem] uppercase rounded-[4rem] leading-1 mb-[2rem] xl:text-[2rem] xl:leading-[1] xl:mb-[3rem]">
+        <div className="text-center section-header lg:w-[75%] lg:text-left xl:w-[85%]">
+          <h6 className="w-max mx-auto bg-[#202020] px-[3rem] py-[1.4rem] text-[#AEAEAE] text-[1.3rem] uppercase rounded-[4rem] leading-1 mb-[2rem] xl:text-[2rem] xl:leading-[1] xl:mb-[3rem] lg:ml-0">
             Who we are
           </h6>
           <h2 className="text-white leading-[1.3] text-[2.6rem] [&>br]:hidden md:[&>br]:block xl:text-[4.5rem] xl:leading-[1.2]">
@@ -37,8 +37,8 @@ const IntroSection = () => {
           </h2>
         </div>
 
-        <div className="mt-[5rem] max-w-[540px] mx-auto">
-          <div className="">
+        <div className="mt-[5rem] max-w-[540px] mx-auto lg:max-w-none lg:flex lg:flex-wrap lg:justify-between xl:mt-[7rem]">
+          <div className="lg:w-[46%]">
             <img
               src="/images/about-us/intro-thumb.webp"
               alt="THumbnail"
@@ -47,8 +47,8 @@ const IntroSection = () => {
               className="w-full block"
             />
           </div>
-          <div className="mt-[5rem]">
-            <p className="mt-[1rem] text-[#A7A7A7] xl:text-[2.2rem] xl:mt-[2rem]">
+          <div className="mt-[5rem] lg:w-[47%] lg:mt-0">
+            <p className="mt-[1rem] text-[#A7A7A7] xl:text-[2.2rem] lg:mt-0">
               Cars.co.in goes beyond buying and selling—it’s about experiences
               blending luxury, trust, and accessibility. As India’s trusted
               destination, we bring premium cars closer with expert guidance,
@@ -60,8 +60,8 @@ const IntroSection = () => {
             <ul className="mt-[4rem] flex flex-wrap justify-between gap-y-[3rem]">
                 {introUsps.map((usp , index) => (
                     <li key={index} className="w-[48%]">
-                        <img src={usp.icon} alt="Icon" className="object-contain w-[2.5rem] h-[3rem]" />
-                        <h6 className="text-white font-[500] mt-[1.5rem] text-[1.6rem] xl:text-[2.6rem]">{usp.title}</h6>
+                        <img src={usp.icon} alt="Icon" className="object-contain w-[2.5rem] h-[3rem] xl:w-[3rem] 1xl:w-[4rem] 1xl:h-[4rem]" />
+                        <h6 className="text-white font-[500] mt-[1.5rem] text-[1.6rem] xl:text-[2.2rem] 1xl:text-[2.6rem]">{usp.title}</h6>
                     </li>
                 ))}
             </ul>
