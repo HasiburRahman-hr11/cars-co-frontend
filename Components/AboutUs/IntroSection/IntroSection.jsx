@@ -57,7 +57,7 @@ const IntroSection = () => {
               truly luxurious.
             </p>
 
-            <ul className="mt-[4rem] flex flex-wrap justify-between gap-y-[3rem]">
+            <ul className="mt-[4rem] flex flex-wrap justify-between gap-y-[3rem] lg:gap-y-[5rem]">
                 {introUsps.map((usp , index) => (
                     <li key={index} className="w-[48%]">
                         <img src={usp.icon} alt="Icon" className="object-contain w-[2.5rem] h-[3rem] xl:w-[3rem] 1xl:w-[4rem] 1xl:h-[4rem]" />

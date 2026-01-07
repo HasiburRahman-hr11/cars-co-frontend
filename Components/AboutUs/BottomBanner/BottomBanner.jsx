@@ -46,7 +46,7 @@ const BottomBanner = () => {
                 href="#"
                 className="inline-block bg-[transparent border border-black text-black text-[1.5rem] px-[3rem] py-[1.3rem]  rounded-[5rem] xl:text-[2.2rem] xl:py-[1.8rem] xl:px-[6rem] hover:bg-black hover:text-white transition-all duration-500"
               >
-                Sell Cars
+                List Cars
               </Link>
             </div>
           </div>
