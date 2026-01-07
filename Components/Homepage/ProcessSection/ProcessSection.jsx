@@ -3,10 +3,10 @@ import Link from "next/link";
 import { useRef, useState } from "react";
 
 const usps = [
-  { title: "Instant Car Valuation" },
-  { title: "Free Hassle-Free Inspection" },
-  { title: "Fair Offer Instantly" },
-  { title: "Quick Payment, Easy Transfer" },
+  { title: "Outright Sale to End User" },
+  { title: "Best Offer in 24 Minutes" },
+  { title: "10k+ Satisfied Customers" },
+  { title: "Hassle Free Processing" },
 ];
 
 const ProcessSection = () => {
@@ -34,8 +34,8 @@ const ProcessSection = () => {
             <h6 className="w-max mx-auto bg-[#202020] px-[3rem] py-[1.4rem] text-[#AEAEAE] text-[1.3rem] uppercase rounded-[4rem] leading-1 mb-[2rem] xl:text-[2rem] xl:leading-[1]">
               The Process
             </h6>
-            <h2 className="text-white leading-[1.3] text-[2.6rem] [&>br]:hidden md:[&>br]:block xl:text-[4.5rem] xl:leading-[1.2]">
-              Sell your luxury car <b>in 4 simple steps</b>
+            <h2 className="text-white leading-[1.3] text-[2.6rem] md:[&>br]:block xl:text-[4.5rem] xl:leading-[1.2]">
+              Selling your luxury car for the best price? Let's get you better. <br /> <b>List your car @ Cars.co.in</b>
             </h2>
             <p className="mt-[1rem] text-[#818181] xl:text-[2.2rem] xl:mt-[2rem]">
               Sell your luxury car quickly and hassle-free in just four easy
@@ -86,10 +86,7 @@ const ProcessSection = () => {
                   The Process
                 </h6>
                 <h2 className="text-white leading-[1.3] text-[2.6rem] [&>br]:hidden md:[&>br]:block xl:text-[4.5rem] xl:leading-[1.2]">
-                  Sell your luxury car{" "}
-                  <b>
-                    in <br /> 4 simple steps
-                  </b>
+                  Selling your luxury car for the best price? Let's get you better. <br /> <b>List your car @ Cars.co.in</b>
                 </h2>
                 <p className="mt-[1rem] text-[#818181] xl:text-[2.2rem] xl:mt-[2rem]">
                   Sell your luxury car quickly and hassle-free in just four easy

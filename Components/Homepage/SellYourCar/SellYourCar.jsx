@@ -73,7 +73,7 @@ const SellYourCar = () => {
             Enjoy Free Doorstep Car Pickup and Inspection
           </li>
           <li className=" text-[#333333] font-medium py-[2rem] xl:text-[2.5rem] xl:py-[3.5rem]">
-            Get Instant Payment Directly Into Your Bank
+            Fast and Secure Payment Directly to Your Bank
           </li>
           <li className=" text-[#333333] font-medium py-[2rem] xl:text-[2.5rem] xl:py-[3.5rem]">
             Receive the Best Market Price for Cars
@@ -127,74 +127,61 @@ const SellYourCar = () => {
         </div>
 
         <div className="mt-[4rem] bg-[#F0F0F0] rounded-[1.5rem] py-[4rem] px-[1.5rem] lg:px-[2.5rem] xl:px-[4rem]">
-          <h3 className="text-[2.2rem] font-medium xl:text-[4rem]">List your car</h3>
+          <h3 className="text-[2.2rem] font-medium xl:text-[4rem]">
+            List your car
+          </h3>
           <form action="" className="block mt-[3rem]">
             <div className="flex flex-wrap justify-around">
-              <div className="w-full mb-[2.5rem] xl:mb-[3.5rem] md:w-[31%]">
+              <div className="w-full mb-[2.5rem] xl:mb-[4rem] md:w-[31%]">
                 <input
                   type="text"
                   placeholder="Full Name"
                   className={`${inputStyles}`}
                 />
               </div>
-              <div className="w-full mb-[2.5rem] xl:mb-[3.5rem] md:w-[31%]">
+              <div className="w-full mb-[2.5rem] xl:mb-[4rem] md:w-[31%]">
                 <input
                   type="tel"
                   placeholder="Mobile"
                   className={`${inputStyles}`}
                 />
               </div>
-              <div className="w-full mb-[2.5rem] xl:mb-[3.5rem] md:w-[31%]">
+              <div className="w-full mb-[2.5rem] xl:mb-[4rem] md:w-[31%]">
                 <input
                   type="email"
                   placeholder="Email"
                   className={`${inputStyles}`}
                 />
               </div>
-              <div className="w-full relative mb-[2.5rem] xl:mb-[3.5rem] md:w-[48%] lg:w-[23%]">
-                <select
-                  name=""
-                  id=""
-                  className={`${inputStyles} appearance-none`}
-                >
-                  <option value="">Car Brand</option>
-                  <option value="bmw">BMW</option>
-                  <option value="audi">Audi</option>
-                  <option value="toyota">Toyota</option>
-                  <option value="honda">Honda</option>
-                </select>
-                <img
-                  src="/images/dropdown-arrow-grey.webp"
-                  alt="Arrow"
-                  className="pointer-events-none absolute right-0 top-[1rem] w-[1.5rem] object-contain"
-                />
-              </div>
-              <div className="w-full mb-[2.5rem] xl:mb-[3.5rem] md:w-[48%] lg:w-[23%]">
+              <div className="w-full relative mb-[2.5rem] xl:mb-[4rem] md:w-[48%] lg:w-[23%]">
                 <input
                   type="text"
-                  placeholder="Car Model"
+                  placeholder="Brand Model"
                   className={`${inputStyles}`}
                 />
               </div>
-              <div className="w-full relative mb-[2.5rem] xl:mb-[3.5rem] md:w-[48%] lg:w-[23%]">
-                <select
-                  name=""
-                  id=""
-                  className={`${inputStyles} appearance-none`}
-                >
-                  <option value="">KMS</option>
-                  <option value="0-1000">0-1000</option>
-                  <option value="1000-5000">1000-5000</option>
-                  <option value="5000-10000">5000-10000</option>
-                  <option value="10000-15000">10000-15000</option>
-                </select>
-                <img
-                  src="/images/dropdown-arrow-grey.webp"
-                  alt="Arrow"
-                  className="pointer-events-none absolute right-0 top-[1rem] w-[1.5rem] object-contain"
+              <div className="w-full mb-[2.5rem] xl:mb-[4rem] md:w-[48%] lg:w-[23%]">
+                <input
+                  type="text"
+                  placeholder="Year"
+                  className={`${inputStyles}`}
                 />
               </div>
-              <div className="w-full relative mb-[2.5rem] xl:mb-[3.5rem] md:w-[48%] lg:w-[23%]">
+              <div className="w-full relative mb-[2.5rem] xl:mb-[4rem] md:w-[48%] lg:w-[23%]">
+                <input
+                  type="text"
+                  placeholder="Fuel"
+                  className={`${inputStyles}`}
+                />
+              </div>
+              <div className="w-full relative mb-[2.5rem] xl:mb-[4rem] md:w-[48%] lg:w-[23%]">
+                <input
+                  type="text"
+                  placeholder="State"
+                  className={`${inputStyles}`}
+                />
+              </div>
+              {/* <div className="w-full relative mb-[2.5rem] xl:mb-[4rem] md:w-[48%] lg:w-[23%]">
                 <select
                   name=""
                   id=""
@@ -210,9 +197,94 @@ const SellYourCar = () => {
                   alt="Arrow"
                   className="pointer-events-none absolute right-0 top-[1rem] w-[1.5rem] object-contain"
                 />
+              </div> */}
+
+              <div className="w-[48%] mb-[2.5rem] xl:mb-[4rem] lg:w-[23%] relative h-[10rem] sm:h-[15rem] xl:h-[18rem]">
+                <input
+                  type="file"
+                  className="opacity-0 block w-full h-full"
+                  id="img1"
+                />
+                <label
+                  htmlFor="img1"
+                  className="absolute w-full h-full cursor-pointer left-0 top-0 flex items-center justify-center border border-dotted border-[#555555] rounded-[1rem] "
+                >
+                  <img
+                    src="https://cdn.bigboytoyz.com/new-version/assets/images/sellcar-placeholderimg.png"
+                    alt="Image 1"
+                    className="max-w-[40px]"
+                  />
+                </label>
+              </div>
+              <div className="w-[48%] mb-[2.5rem] xl:mb-[4rem] lg:w-[23%] relative h-[10rem] sm:h-[15rem] xl:h-[18rem]">
+                <input
+                  type="file"
+                  className="opacity-0 block w-full h-full"
+                  id="img2"
+                />
+                <label
+                  htmlFor="img2"
+                  className="absolute w-full h-full cursor-pointer left-0 top-0 flex items-center justify-center border border-dotted border-[#555555] rounded-[1rem] "
+                >
+                  <img
+                    src="https://cdn.bigboytoyz.com/new-version/assets/images/sellcar-placeholderimg.png"
+                    alt="Image 2"
+                    className="max-w-[40px]"
+                  />
+                </label>
+              </div>
+              <div className="w-[48%] mb-[2.5rem] xl:mb-[4rem] lg:w-[23%] relative h-[10rem] sm:h-[15rem] xl:h-[18rem]">
+                <input
+                  type="file"
+                  className="opacity-0 block w-full h-full"
+                  id="img3"
+                />
+                <label
+                  htmlFor="img3"
+                  className="absolute w-full h-full cursor-pointer left-0 top-0 flex items-center justify-center border border-dotted border-[#555555] rounded-[1rem] "
+                >
+                  <img
+                    src="https://cdn.bigboytoyz.com/new-version/assets/images/sellcar-placeholderimg.png"
+                    alt="Image 3"
+                    className="max-w-[40px]"
+                  />
+                </label>
+              </div>
+              <div className="w-[48%] mb-[2.5rem] xl:mb-[4rem] lg:w-[23%] relative h-[10rem] sm:h-[15rem] xl:h-[18rem]">
+                <input
+                  type="file"
+                  className="opacity-0 block w-full h-full"
+                  id="img4"
+                />
+                <label
+                  htmlFor="img4"
+                  className="absolute w-full h-full cursor-pointer left-0 top-0 flex items-center justify-center border border-dotted border-[#555555] rounded-[1rem] "
+                >
+                  <img
+                    src="https://cdn.bigboytoyz.com/new-version/assets/images/sellcar-placeholderimg.png"
+                    alt="Image 4"
+                    className="max-w-[40px]"
+                  />
+                </label>
               </div>
 
-              <button type="submit" className="bg-black urbanist w-full px-[3rem] py-[1.4rem] text-white text-[1.8rem] rounded-[4rem] font-medium cursor-pointer md:w-max md:mx-auto md:px-[5rem] md:mt-[1rem] lg:mr-0 xl:text-[2.2rem] xl:px-[7rem] xl:py-[1.9rem] xl:rounded-[8rem] transition-all duration-500 hover:bg-[#FE0000]">Submit</button>
+              <div className="w-full relative mb-[2.5rem] xl:mb-[4rem] md:px-[1rem] xl:px-[1.25rem]">
+                <textarea
+                  name=""
+                  id=""
+                  placeholder="Message"
+                  className={`${inputStyles} border border-[#727272] p-[1rem] lg:p-[2rem] rounded-[7px] h-[120px] lg:h-[18rem] `}
+                ></textarea>
+              </div>
+
+              <div className="w-full flex justify-end">
+                <button
+                  type="submit"
+                  className="bg-black urbanist w-full px-[3rem] py-[1.4rem] text-white text-[1.8rem] rounded-[4rem] font-medium cursor-pointer md:w-max md:mx-auto md:px-[5rem] md:mt-[1rem] lg:mr-0 xl:text-[2.2rem] xl:px-[7rem] xl:py-[1.9rem] xl:rounded-[8rem] transition-all duration-500 hover:bg-[#FE0000]"
+                >
+                  Submit
+                </button>
+              </div>
             </div>
           </form>
         </div>

@@ -11,7 +11,7 @@ const page = () => {
   return (
     <>
       <BannerSection />
-      <WhyUs />
+      {/* <WhyUs /> */}
       <LatestAdditions />
       <Testimonials />
       <ProcessSection />
