@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 
 const quotes = [
@@ -32,19 +32,55 @@ const quotes = [
     avatar: "/images/homepage/hp-quote-avatar.webp",
   },
 ];
-
+let settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  centerMode: false,
+  autoplay: true,
+  autoplaySpeed: 3000,
+};
 const SellYourCar = () => {
-  let settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    centerMode: false,
-    autoplay: true,
-    autoplaySpeed: 3000,
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [brandModel, setBrandModel] = useState("");
+  const [year, setYear] = useState("");
+  const [fuelType, setFuelType] = useState("");
+  const [state, setState] = useState("");
+  const [message, setMessage] = useState("");
+  const [carImage1, setCarImage1] = useState("");
+  const [carImage2, setCarImage2] = useState("");
+  const [carImage3, setCarImage3] = useState("");
+  const [carImage4, setCarImage4] = useState("");
+
+  const handleImageChange = (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    const previewUrl = URL.createObjectURL(file);
+
+    switch (e.target.id) {
+      case "img1":
+        setCarImage1(previewUrl);
+        break;
+      case "img2":
+        setCarImage2(previewUrl);
+        break;
+      case "img3":
+        setCarImage3(previewUrl);
+        break;
+      case "img4":
+        setCarImage4(previewUrl);
+        break;
+      default:
+        break;
+    }
   };
+
   return (
     <section className="py-[6rem] bg-white xl:py-[13rem]">
       <div className="container">
@@ -137,6 +173,8 @@ const SellYourCar = () => {
                   type="text"
                   placeholder="Full Name"
                   className={`${inputStyles}`}
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                 />
               </div>
               <div className="w-full mb-[2.5rem] xl:mb-[4rem] md:w-[31%]">
@@ -144,6 +182,8 @@ const SellYourCar = () => {
                   type="tel"
                   placeholder="Mobile"
                   className={`${inputStyles}`}
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
                 />
               </div>
               <div className="w-full mb-[2.5rem] xl:mb-[4rem] md:w-[31%]">
@@ -151,6 +191,8 @@ const SellYourCar = () => {
                   type="email"
                   placeholder="Email"
                   className={`${inputStyles}`}
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div className="w-full relative mb-[2.5rem] xl:mb-[4rem] md:w-[48%] lg:w-[23%]">
@@ -158,6 +200,8 @@ const SellYourCar = () => {
                   type="text"
                   placeholder="Brand Model"
                   className={`${inputStyles}`}
+                  value={brandModel}
+                  onChange={(e) => setBrandModel(e.target.value)}
                 />
               </div>
               <div className="w-full mb-[2.5rem] xl:mb-[4rem] md:w-[48%] lg:w-[23%]">
@@ -165,6 +209,8 @@ const SellYourCar = () => {
                   type="text"
                   placeholder="Year"
                   className={`${inputStyles}`}
+                  value={year}
+                  onChange={(e) => setYear(e.target.value)}
                 />
               </div>
               <div className="w-full relative mb-[2.5rem] xl:mb-[4rem] md:w-[48%] lg:w-[23%]">
@@ -172,6 +218,8 @@ const SellYourCar = () => {
                   type="text"
                   placeholder="Fuel"
                   className={`${inputStyles}`}
+                  value={fuelType}
+                  onChange={(e) => setFuelType(e.target.value)}
                 />
               </div>
               <div className="w-full relative mb-[2.5rem] xl:mb-[4rem] md:w-[48%] lg:w-[23%]">
@@ -179,6 +227,8 @@ const SellYourCar = () => {
                   type="text"
                   placeholder="State"
                   className={`${inputStyles}`}
+                  value={state}
+                  onChange={(e) => setState(e.target.value)}
                 />
               </div>
               {/* <div className="w-full relative mb-[2.5rem] xl:mb-[4rem] md:w-[48%] lg:w-[23%]">
@@ -199,71 +249,111 @@ const SellYourCar = () => {
                 />
               </div> */}
 
-              <div className="w-[48%] mb-[2.5rem] xl:mb-[4rem] lg:w-[23%] relative h-[10rem] sm:h-[15rem] xl:h-[18rem]">
+              <div className="w-[48%] mb-[2.5rem] xl:mb-[4rem] lg:w-[23%] relative overflow-hidden h-[10rem] sm:h-[15rem] xl:h-[18.6rem] rounded-[1rem]">
                 <input
                   type="file"
                   className="opacity-0 block w-full h-full"
                   id="img1"
+                  accept="image/*"
+                  onChange={handleImageChange}
                 />
                 <label
                   htmlFor="img1"
-                  className="absolute w-full h-full cursor-pointer left-0 top-0 flex items-center justify-center border border-dotted border-[#555555] rounded-[1rem] "
+                  className="absolute w-full h-full cursor-pointer left-0 top-0 flex items-center justify-center border border-dotted border-[#555555] rounded-[1rem] p-[5px]"
                 >
                   <img
-                    src="https://cdn.bigboytoyz.com/new-version/assets/images/sellcar-placeholderimg.png"
+                    src={
+                      carImage1
+                        ? carImage1
+                        : "https://cdn.bigboytoyz.com/new-version/assets/images/sellcar-placeholderimg.png"
+                    }
                     alt="Image 1"
-                    className="max-w-[40px]"
+                    className={
+                      carImage1
+                        ? "w-full h-full object-contain"
+                        : "max-w-[40px] object-contain"
+                    }
                   />
                 </label>
               </div>
-              <div className="w-[48%] mb-[2.5rem] xl:mb-[4rem] lg:w-[23%] relative h-[10rem] sm:h-[15rem] xl:h-[18rem]">
+              <div className="w-[48%] mb-[2.5rem] xl:mb-[4rem] lg:w-[23%] relative overflow-hidden h-[10rem] sm:h-[15rem] xl:h-[18.6rem] rounded-[1rem]">
                 <input
                   type="file"
                   className="opacity-0 block w-full h-full"
                   id="img2"
+                  accept="image/*"
+                  onChange={handleImageChange}
                 />
                 <label
                   htmlFor="img2"
-                  className="absolute w-full h-full cursor-pointer left-0 top-0 flex items-center justify-center border border-dotted border-[#555555] rounded-[1rem] "
+                  className="absolute w-full h-full cursor-pointer left-0 top-0 flex items-center justify-center border border-dotted border-[#555555] rounded-[1rem] p-[5px]"
                 >
                   <img
-                    src="https://cdn.bigboytoyz.com/new-version/assets/images/sellcar-placeholderimg.png"
+                    src={
+                      carImage2
+                        ? carImage2
+                        : "https://cdn.bigboytoyz.com/new-version/assets/images/sellcar-placeholderimg.png"
+                    }
                     alt="Image 2"
-                    className="max-w-[40px]"
+                    className={
+                      carImage2
+                        ? "w-full h-full object-contain"
+                        : "max-w-[40px] object-contain"
+                    }
                   />
                 </label>
               </div>
-              <div className="w-[48%] mb-[2.5rem] xl:mb-[4rem] lg:w-[23%] relative h-[10rem] sm:h-[15rem] xl:h-[18rem]">
+              <div className="w-[48%] mb-[2.5rem] xl:mb-[4rem] lg:w-[23%] relative overflow-hidden h-[10rem] sm:h-[15rem] xl:h-[18.6rem] rounded-[1rem]">
                 <input
                   type="file"
                   className="opacity-0 block w-full h-full"
                   id="img3"
+                  accept="image/*"
+                  onChange={handleImageChange}
                 />
                 <label
                   htmlFor="img3"
-                  className="absolute w-full h-full cursor-pointer left-0 top-0 flex items-center justify-center border border-dotted border-[#555555] rounded-[1rem] "
+                  className="absolute w-full h-full cursor-pointer left-0 top-0 flex items-center justify-center border border-dotted border-[#555555] rounded-[1rem] p-[5px]"
                 >
                   <img
-                    src="https://cdn.bigboytoyz.com/new-version/assets/images/sellcar-placeholderimg.png"
+                    src={
+                      carImage3
+                        ? carImage3
+                        : "https://cdn.bigboytoyz.com/new-version/assets/images/sellcar-placeholderimg.png"
+                    }
                     alt="Image 3"
-                    className="max-w-[40px]"
+                    className={
+                      carImage3
+                        ? "w-full h-full object-contain"
+                        : "max-w-[40px] object-contain"
+                    }
                   />
                 </label>
               </div>
-              <div className="w-[48%] mb-[2.5rem] xl:mb-[4rem] lg:w-[23%] relative h-[10rem] sm:h-[15rem] xl:h-[18rem]">
+              <div className="w-[48%] mb-[2.5rem] xl:mb-[4rem] lg:w-[23%] relative overflow-hidden h-[10rem] sm:h-[15rem] xl:h-[18.6rem] rounded-[1rem]">
                 <input
                   type="file"
                   className="opacity-0 block w-full h-full"
                   id="img4"
+                  accept="image/*"
+                  onChange={handleImageChange}
                 />
                 <label
                   htmlFor="img4"
-                  className="absolute w-full h-full cursor-pointer left-0 top-0 flex items-center justify-center border border-dotted border-[#555555] rounded-[1rem] "
+                  className="absolute w-full h-full cursor-pointer left-0 top-0 flex items-center justify-center border border-dotted border-[#555555] rounded-[1rem] p-[5px]"
                 >
                   <img
-                    src="https://cdn.bigboytoyz.com/new-version/assets/images/sellcar-placeholderimg.png"
+                    src={
+                      carImage4
+                        ? carImage4
+                        : "https://cdn.bigboytoyz.com/new-version/assets/images/sellcar-placeholderimg.png"
+                    }
                     alt="Image 4"
-                    className="max-w-[40px]"
+                    className={
+                      carImage4
+                        ? "w-full h-full object-contain"
+                        : "max-w-[40px] object-contain"
+                    }
                   />
                 </label>
               </div>
@@ -274,6 +364,8 @@ const SellYourCar = () => {
                   id=""
                   placeholder="Message"
                   className={`${inputStyles} border border-[#727272] p-[1rem] lg:p-[2rem] rounded-[7px] h-[120px] lg:h-[18rem] `}
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                 ></textarea>
               </div>
 
