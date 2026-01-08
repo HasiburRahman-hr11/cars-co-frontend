@@ -46,7 +46,7 @@ const BannerSection = () => {
       <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-between pt-[9rem] xl:pt-[15rem] 3xl:pt-[20rem]">
         <div className="container ">
           <div className="text-center xl:max-w-[79rem] 1xl:mx-auto">
-            <h6 className="w-max mx-auto bg-white px-[3rem] py-[1.4rem] text-black text-[1.3rem] uppercase rounded-[4rem] leading-1 mb-[2rem] xl:text-[2rem] xl:leading-[1] xl:mb-[3rem] font-[600]">
+            <h6 className="w-max mx-auto bg-white px-[3rem] py-[1rem] text-black text-[1.3rem] uppercase rounded-[4rem] leading-[1.6] mb-[2rem] xl:text-[2rem] xl:mb-[3rem] font-[600]">
               About Us
             </h6>
             <h1 className="text-[#ffffff] text-center text-[3rem] font-[500] leading-[1.3] xl:text-[6rem] lx:leading-[1.1] ">
