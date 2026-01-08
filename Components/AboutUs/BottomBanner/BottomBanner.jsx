@@ -23,7 +23,7 @@ const BottomBanner = () => {
       <div className="absolute top-0 left-0 w-full h-full flex flex-col pt-[8rem] md:justify-center md:py-[8rem]">
         <div className="container text-center md:text-left">
           <div className="w-full max-w-[540px] mx-auto md:ml-0 lg:max-w-none lg:w-[57%] xl:w-[63%] 1xl:w-[55%]">
-            <h6 className="w-max mx-auto bg-[#202020] px-[3rem] py-[1rem] text-[#AEAEAE] text-[1.3rem] uppercase rounded-[4rem] leading-[1.6] mb-[2rem] xl:text-[2rem] xl:mb-[3rem] font-medium md:ml-0">
+            <h6 className="w-max mx-auto bg-[#202020] px-[3rem] pb-[1rem] pt-[1.3rem] text-[#AEAEAE] text-[1.3rem] uppercase rounded-[4rem] leading-[1.6] mb-[2rem] xl:text-[2rem] xl:mb-[3rem] font-medium md:ml-0">
               start your journey
             </h6>
             <h2 className="text-black leading-[1.3] text-[2.6rem] [&>br]:hidden md:[&>br]:block xl:text-[4.5rem] xl:leading-[1.2] lg:w-[80%] xl:w-[75%]">
