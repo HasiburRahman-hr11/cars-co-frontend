@@ -29,7 +29,7 @@ const HeroBanner = ({
         <div className="container ">
           <div className="text-center xl:max-w-[79rem] 1xl:mx-auto">
             {pageTitle && (
-              <h6 className="w-max mx-auto bg-white px-[3rem] pb-[1rem] pt-[1.3rem] text-black text-[1.3rem] uppercase rounded-[4rem] leading-[1.6] mb-[2rem] xl:text-[2rem] font-[600]">
+              <h6 className="w-max mx-auto bg-white px-[3rem] pb-[0.5rem] pt-[0.8rem] text-black text-[1.3rem] uppercase rounded-[4rem] leading-[1.6] mb-[2rem] xl:text-[2rem] font-[600]">
                 {pageTitle}
               </h6>
             )}

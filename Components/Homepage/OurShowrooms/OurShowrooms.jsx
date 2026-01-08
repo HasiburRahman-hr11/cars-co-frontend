@@ -12,7 +12,7 @@ const OurShowrooms = () => {
     <section className="bg-[#161616] py-[6rem] text-white xl:py-[13rem]">
       <div className="container">
         <div className="section-header xl:hidden">
-          <h6 className="w-max bg-[#202020] px-[3rem] pb-[1rem] pt-[1.3rem] text-[#AEAEAE] text-[1.3rem] uppercase rounded-[4rem] leading-[1.6] mb-[2rem] xl:text-[2rem]">
+          <h6 className="w-max bg-[#202020] px-[3rem] pb-[0.5rem] pt-[0.8rem] text-[#AEAEAE] text-[1.3rem] uppercase rounded-[4rem] leading-[1.6] mb-[2rem] xl:text-[2rem]">
             Our Showrooms
           </h6>
           <h2 className="text-white leading-[1.4] text-[2.6rem] [&>br]:hidden md:[&>br]:block xl:text-[4.5rem] xl:leading-[1.2]">

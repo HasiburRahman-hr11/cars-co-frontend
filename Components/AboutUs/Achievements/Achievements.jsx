@@ -47,7 +47,7 @@ const Achievements = () => {
     <section className="bg-white py-[6rem] lg:pb-[0] xl:pt-[13rem]">
       <div className="container">
         <div className="text-center section-header lg:text-left lg:w-[50%] 2xl:w-[43%]">
-          <h6 className="w-max mx-auto bg-white border border-[#4D4D4D] px-[3rem] pb-[1rem] pt-[1.3rem] text-[#4D4D4D] text-[1.3rem] uppercase rounded-[4rem] leading-[1.6] mb-[2rem] xl:text-[2rem] xl:mb-[3rem] font-medium lg:ml-0">
+          <h6 className="w-max mx-auto bg-white border border-[#4D4D4D] px-[3rem] pb-[0.5rem] pt-[0.8rem] text-[#4D4D4D] text-[1.3rem] uppercase rounded-[4rem] leading-[1.6] mb-[2rem] xl:text-[2rem] xl:mb-[3rem] font-medium lg:ml-0">
             Achievements
           </h6>
           <h2 className="text-[#202020] leading-[1.3] text-[2.6rem] [&>br]:hidden md:[&>br]:block xl:text-[4.5rem] xl:leading-[1.2]">

@@ -7,7 +7,7 @@ const ProcessSection = () => {
       <div className="container">
         <div className="py-[6rem] border-t border-t-[#7C7C7C] lg:flex lg:flex-wrap lg:justify-between xl:py-[13rem]">
           <div className="text-center section-header lg:text-left lg:w-[30%]">
-            <h6 className="w-max mx-auto bg-[#202020] px-[3rem] pb-[1rem] pt-[1.3rem] text-[#AEAEAE] text-[1.3rem] uppercase rounded-[4rem] leading-[1.6] mb-[2rem] xl:text-[2rem] xl:mb-[3rem] font-medium lg:ml-0">
+            <h6 className="w-max mx-auto bg-[#202020] px-[3rem] pb-[0.5rem] pt-[0.8rem] text-[#AEAEAE] text-[1.3rem] uppercase rounded-[4rem] leading-[1.6] mb-[2rem] xl:text-[2rem] xl:mb-[3rem] font-medium lg:ml-0">
               The Process
             </h6>
             <h2 className="text-white leading-[1.3] text-[2.6rem] [&>br]:hidden md:[&>br]:block xl:text-[4.5rem] xl:leading-[1.2]">
