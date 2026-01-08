@@ -25,6 +25,7 @@ const Header = () => {
             width="175"
             height="39"
             className="object-contain w-full h-auto"
+            loading="eager"
           />
         </Link>
 

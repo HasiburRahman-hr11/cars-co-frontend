@@ -19,12 +19,7 @@ function NextArrow(props) {
       className={`bg-[#303030] w-[7.5rem] h-[7.5rem] rounded-[50%] inline-flex justify-center items-center dark-slider-arrow ${className}`}
       onClick={onClick}
     >
-      <Image
-        src="/images/slider-arrow-next-white.webp"
-        alt="Next Slide"
-        width="12"
-        height="22"
-      />
+      <img src="/images/slider-arrow-next-white.webp" alt="Next Slide" />
     </div>
   );
 }
@@ -36,12 +31,7 @@ function PrevArrow(props) {
       className={`bg-[#303030] w-[7.5rem] h-[7.5rem] rounded-[50%] inline-flex justify-center items-center dark-slider-arrow ${className}`}
       onClick={onClick}
     >
-      <Image
-        src="/images/slider-arrow-prev-white.webp"
-        alt="Previous Slide"
-        width="12"
-        height="22"
-      />
+      <img src="/images/slider-arrow-prev-white.webp" alt="Previous Slide" />
     </div>
   );
 }
@@ -91,11 +81,15 @@ const ClientStories = () => {
       </div>
       <div className="container">
         <div className="text-center text-[1.6rem] xl:text-[2.6rem] text-white font-medium mt-[4rem] max-w-[540px] mx-auto xl:max-w-[937px] xl:mt-[6rem]">
-            "Buying my dream car at PreOwn Luxury Cars was effortless. The team was professional, honest, and made sure every detail was perfect. I drove off feeling confident and thrilled with my luxury ride!"
+          "Buying my dream car at PreOwn Luxury Cars was effortless. The team
+          was professional, honest, and made sure every detail was perfect. I
+          drove off feeling confident and thrilled with my luxury ride!"
         </div>
         <div className="flex flex-col items-center mt-[3rem] xl:mt-[5rem]">
-            <span className="w-[8rem] h-[1px] bg-[#D9D9D9] inline-block mb-[1rem]"></span>
-            <p className="text-center font-medium [&>span]:font-[300] text-white text-[1.3rem] xl:text-[2.4rem]">Rohit Sharma, <span>BMW i8</span></p>
+          <span className="w-[8rem] h-[1px] bg-[#D9D9D9] inline-block mb-[1rem]"></span>
+          <p className="text-center font-medium [&>span]:font-[300] text-white text-[1.3rem] xl:text-[2.4rem]">
+            Rohit Sharma, <span>BMW i8</span>
+          </p>
         </div>
       </div>
     </section>

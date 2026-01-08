@@ -1,7 +1,6 @@
 "use client";
 import { useRef, useEffect, useState } from "react";
 import Slider from "react-slick";
-import Image from "next/image";
 import Link from "next/link";
 
 const testimonials = [
@@ -50,12 +49,7 @@ function NextArrow(props) {
       className={`bg-[#303030] w-[7.5rem] h-[7.5rem] rounded-[50%] inline-flex justify-center items-center ${className}`}
       onClick={onClick}
     >
-      <Image
-        src="/images/slider-arrow-next-white.webp"
-        alt="Next Slide"
-        width="12"
-        height="22"
-      />
+      <img src="/images/slider-arrow-next-white.webp" alt="Next Slide" />
     </div>
   );
 }
@@ -67,12 +61,7 @@ function PrevArrow(props) {
       className={`bg-[#303030] w-[7.5rem] h-[7.5rem] rounded-[50%] inline-flex justify-center items-center ${className}`}
       onClick={onClick}
     >
-      <Image
-        src="/images/slider-arrow-prev-white.webp"
-        alt="Previous Slide"
-        width="12"
-        height="22"
-      />
+      <img src="/images/slider-arrow-prev-white.webp" alt="Previous Slide" />
     </div>
   );
 }
