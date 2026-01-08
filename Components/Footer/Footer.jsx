@@ -89,17 +89,17 @@ const Footer = () => {
             </div>
             <ul className="hidden md:flex items-center flex-wrap gap-[1rem] mt-[2rem]">
               {socialLinks.map((item, index) => (
-                <li key={index} className="w-max">
+                <li key={index} className="w-max group">
                   <a
                     href={item.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-[4rem] h-[4rem] rounded-[50%] border border-[#5B5B5B] flex items-center justify-center p-[1rem] xl:w-[6.1rem] xl:h-[6.1rem] group hover:bg-[#FE0000] transition-all duration-500 hover:border-[#FE0000]"
+                    className="w-[4rem] h-[4rem] rounded-[50%] border border-[#5B5B5B] flex items-center justify-center p-[1rem] xl:w-[6.1rem] xl:h-[6.1rem] group hover:bg-[#ffffff] transition-all duration-500 hover:border-[#ffffff]"
                   >
                     <img
                       src={item.icon}
                       alt={item?.title || "Icon"}
-                      className="max-h-[1.5rem] max-w-[1.5rem] object-contain xl:max-h-[2.2rem] xl:max-w-[2.2rem]"
+                      className="max-h-[1.5rem] max-w-[1.5rem] object-contain xl:max-h-[2.2rem] xl:max-w-[2.2rem] group-hover:invert transition-all duration-500"
                     />
                   </a>
                 </li>

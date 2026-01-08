@@ -44,8 +44,6 @@
   }
 }
 
-
-
 * {
   box-sizing: border-box;
 }
@@ -204,6 +202,29 @@ footer .active-menu img {
 .dark-slider-arrow.slick-arrow {
   display: none;
 }
+.contact-location-section .location-tag::before {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  width: 10px;
+  height: 10px;
+  bottom: -3px;
+  left: 2rem;
+  transform: rotate(45deg);
+  z-index: -1;
+  transition: all 0.5s ease;
+}
+.contact-location-section .location-tag.location-2::before {
+  left: unset;
+  right: 2rem;
+}
+.contact-location-section .location-tag.location-3::before,
+.contact-location-section .location-tag.location-5::before {
+  left: unset;
+  bottom: unset;
+  top: -3px;
+  right: 2rem;
+}
 @media only screen and (max-width: 639px) {
   html {
     font-size: 2.5vw;
@@ -228,10 +249,13 @@ footer .active-menu img {
   .hp-sellcar-usps li:nth-last-child(2) {
     border-bottom: 1px solid #d4d4d4;
   }
+  .contact-location-section .location-tag:hover::before {
+    background-color: black;
+  }
 }
 @media only screen and (min-width: 1200px) {
   html {
-    font-size: 0.64vw;
+    font-size: 0.6vw;
   }
   .container {
     width: 90%;
