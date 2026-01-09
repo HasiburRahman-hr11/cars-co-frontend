@@ -16,7 +16,7 @@ const carsCoWorldMenu = [
   { title: "Blog", link: "#" },
   { title: "About Us", link: "/about-us" },
   { title: "Contact Us", link: "/contact" },
-  { title: "Testimonials", link: "#" },
+  { title: "Testimonials", link: "/testimonials" },
 ];
 const stylesMenu = [
   { title: "Bike", link: "#" },
