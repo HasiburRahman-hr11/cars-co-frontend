@@ -35,35 +35,35 @@ const BannerSection = () => {
             </p>
           </div>
           <div className="flex flex-wrap justify-center mt-[5rem] gap-[3rem] max-w-[540px] mx-auto lg:block lg:absolute lg:w-[30%] lg:left-[3rem] lg:top-[-3vw] lg:mt-0 xl:left-0 xl:top-0 3xl:left-[-4rem]">
-            <span className="avatar w-[8rem] h-[8rem] border-4 inline-block border-white rounded-[1rem] overflow-hidden lg:absolute left-0 top-0 lg:w-[8vw] lg:h-[8vw] 3xl:w-[13rem] 3xl:h-[13rem]">
+            <span className="avatar pulse w-[8rem] h-[8rem] border-4 inline-block border-white rounded-[1rem] overflow-hidden lg:absolute left-0 top-0 lg:w-[8vw] lg:h-[8vw] 3xl:w-[13rem] 3xl:h-[13rem]">
               <img
                 src="/images/testimonials/banner-avatar-1.webp"
                 alt="Avatar"
                 className="w-full h-full object-cover"
               />
             </span>
-            <span className="avatar w-[8rem] h-[8rem] border-4 inline-block border-white rounded-[50%] overflow-hidden lg:absolute left-[12vw] lg:top-[4vw] lg:w-[7vw] lg:h-[7vw] 3xl:w-[12rem] 3xl:h-[12rem] 3xl:left-[20rem] 3xl:top-[8rem]">
+            <span className="avatar pulse w-[8rem] h-[8rem] border-4 inline-block border-white rounded-[50%] overflow-hidden lg:absolute left-[12vw] lg:top-[4vw] lg:w-[7vw] lg:h-[7vw] 3xl:w-[12rem] 3xl:h-[12rem] 3xl:left-[20rem] 3xl:top-[8rem]">
               <img
                 src="/images/testimonials/banner-avatar-2.webp"
                 alt="Avatar"
                 className="w-full h-full object-cover"
               />
             </span>
-            <span className="avatar w-[8rem] h-[8rem] border-4 inline-block border-white rounded-[1rem] overflow-hidden lg:absolute left-[8vw] lg:top-[14vw] lg:w-[11vw] lg:h-[11vw] xl:w-[10vw] xl:h-[10vw] 3xl:w-[17rem] 3xl:h-[17rem] 3xl:left-[15rem] 3xl:top-[26rem]">
+            <span className="avatar pulse w-[8rem] h-[8rem] border-4 inline-block border-white rounded-[1rem] overflow-hidden lg:absolute left-[8vw] lg:top-[14vw] lg:w-[11vw] lg:h-[11vw] xl:w-[10vw] xl:h-[10vw] 3xl:w-[17rem] 3xl:h-[17rem] 3xl:left-[15rem] 3xl:top-[26rem]">
               <img
                 src="/images/testimonials/banner-avatar-3.webp"
                 alt="Avatar"
                 className="w-full h-full object-cover"
               />
             </span>
-            <span className="avatar w-[8rem] h-[8rem] border-4 inline-block border-white rounded-[50%] overflow-hidden lg:absolute left-0 lg:top-[27vw] lg:w-[7vw] lg:h-[7vw] 3xl:w-[12rem] 3xl:h-[12rem] 3xl:top-[47rem]">
+            <span className="avatar pulse w-[8rem] h-[8rem] border-4 inline-block border-white rounded-[50%] overflow-hidden lg:absolute left-0 lg:top-[27vw] lg:w-[7vw] lg:h-[7vw] 3xl:w-[12rem] 3xl:h-[12rem] 3xl:top-[47rem]">
               <img
                 src="/images/testimonials/banner-avatar-4.webp"
                 alt="Avatar"
                 className="w-full h-full object-cover"
               />
             </span>
-            <span className="avatar w-[8rem] h-[8rem] border-4 inline-block border-white rounded-[1rem] overflow-hidden lg:absolute left-[18vw] lg:top-[29vw] lg:w-[8vw] lg:h-[8vw] 3xl:w-[12rem] 3xl:h-[12rem] 3xl:left-[38rem] 3xl:top-[55rem]">
+            <span className="avatar pulse w-[8rem] h-[8rem] border-4 inline-block border-white rounded-[1rem] overflow-hidden lg:absolute left-[18vw] lg:top-[29vw] lg:w-[8vw] lg:h-[8vw] 3xl:w-[12rem] 3xl:h-[12rem] 3xl:left-[38rem] 3xl:top-[55rem]">
               <img
                 src="/images/testimonials/banner-avatar-5.webp"
                 alt="Avatar"
@@ -73,35 +73,35 @@ const BannerSection = () => {
           </div>
 
           <div className="hidden md:flex flex-wrap justify-center gap-[3rem] mt-[3rem] max-w-[540px] mx-auto lg:block lg:absolute lg:w-[30%] lg:right-[3rem] lg:top-[-3vw] lg:mt-0 xl:right-0 xl:top-0 3xl:right-[-4rem]">
-            <span className="avatar w-[7rem] h-[7rem] border-4 inline-block border-white rounded-[1rem] overflow-hidden lg:absolute right-0 top-0 lg:w-[8vw] lg:h-[8vw] 3xl:w-[13rem] 3xl:h-[13rem]">
+            <span className="avatar pulse w-[7rem] h-[7rem] border-4 inline-block border-white rounded-[1rem] overflow-hidden lg:absolute right-0 top-0 lg:w-[8vw] lg:h-[8vw] 3xl:w-[13rem] 3xl:h-[13rem]">
               <img
                 src="/images/testimonials/banner-avatar-6.webp"
                 alt="Avatar"
                 className="w-full h-full object-cover"
               />
             </span>
-            <span className="avatar w-[7rem] h-[7rem] border-4 inline-block border-white rounded-[50%] overflow-hidden lg:absolute right-[12vw] lg:top-[4vw] lg:w-[7vw] lg:h-[7vw] 3xl:w-[12rem] 3xl:h-[12rem] 3xl:right-[20rem] 3xl:top-[8rem]">
+            <span className="avatar pulse w-[7rem] h-[7rem] border-4 inline-block border-white rounded-[50%] overflow-hidden lg:absolute right-[12vw] lg:top-[4vw] lg:w-[7vw] lg:h-[7vw] 3xl:w-[12rem] 3xl:h-[12rem] 3xl:right-[20rem] 3xl:top-[8rem]">
               <img
                 src="/images/testimonials/banner-avatar-7.webp"
                 alt="Avatar"
                 className="w-full h-full object-cover"
               />
             </span>
-            <span className="avatar w-[7rem] h-[7rem] border-4 inline-block border-white rounded-[1rem] overflow-hidden lg:absolute right-[8vw] lg:top-[14vw] lg:w-[11vw] lg:h-[11vw] xl:w-[10vw] xl:h-[10vw] 3xl:w-[17rem] 3xl:h-[17rem] 3xl:right-[15rem] 3xl:top-[26rem]">
+            <span className="avatar pulse w-[7rem] h-[7rem] border-4 inline-block border-white rounded-[1rem] overflow-hidden lg:absolute right-[8vw] lg:top-[14vw] lg:w-[11vw] lg:h-[11vw] xl:w-[10vw] xl:h-[10vw] 3xl:w-[17rem] 3xl:h-[17rem] 3xl:right-[15rem] 3xl:top-[26rem]">
               <img
                 src="/images/testimonials/banner-avatar-8.webp"
                 alt="Avatar"
                 className="w-full h-full object-cover"
               />
             </span>
-            <span className="avatar w-[7rem] h-[7rem] border-4 inline-block border-white rounded-[50%] overflow-hidden lg:absolute right-0 lg:top-[27vw] lg:w-[7vw] lg:h-[7vw] 3xl:w-[12rem] 3xl:h-[12rem] 3xl:top-[47rem]">
+            <span className="avatar pulse w-[7rem] h-[7rem] border-4 inline-block border-white rounded-[50%] overflow-hidden lg:absolute right-0 lg:top-[27vw] lg:w-[7vw] lg:h-[7vw] 3xl:w-[12rem] 3xl:h-[12rem] 3xl:top-[47rem]">
               <img
                 src="/images/testimonials/banner-avatar-9.webp"
                 alt="Avatar"
                 className="w-full h-full object-cover"
               />
             </span>
-            <span className="avatar w-[7rem] h-[7rem] border-4 inline-block border-white rounded-[1rem] overflow-hidden lg:absolute right-[18vw] lg:top-[29vw] lg:w-[8vw] lg:h-[8vw] 3xl:w-[12rem] 3xl:h-[12rem] 3xl:right-[38rem] 3xl:top-[55rem]">
+            <span className="avatar pulse w-[7rem] h-[7rem] border-4 inline-block border-white rounded-[1rem] overflow-hidden lg:absolute right-[18vw] lg:top-[29vw] lg:w-[8vw] lg:h-[8vw] 3xl:w-[12rem] 3xl:h-[12rem] 3xl:right-[38rem] 3xl:top-[55rem]">
               <img
                 src="/images/testimonials/banner-avatar-10.webp"
                 alt="Avatar"

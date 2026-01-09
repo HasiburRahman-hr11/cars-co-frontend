@@ -243,6 +243,25 @@ footer .active-menu img {
 .scroll-dot {
   animation: scrollDotUpDown 2s ease-in-out infinite;
 }
+.pulse {
+  animation: pulseScale 1.8s ease-in-out infinite;
+}
+
+@keyframes pulseScale {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
 @media only screen and (max-width: 639px) {
   html {
     font-size: 2.5vw;
