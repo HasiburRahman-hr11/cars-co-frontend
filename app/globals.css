@@ -225,6 +225,24 @@ footer .active-menu img {
   top: -3px;
   right: 2rem;
 }
+
+@keyframes scrollDotUpDown {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(2rem);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.scroll-dot {
+  animation: scrollDotUpDown 2s ease-in-out infinite;
+}
 @media only screen and (max-width: 639px) {
   html {
     font-size: 2.5vw;
