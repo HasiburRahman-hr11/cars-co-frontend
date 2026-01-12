@@ -100,7 +100,7 @@ const ShowroomSection = () => {
                     className="py-[3rem] flex flex-col justify-between h-full w-full"
                   >
                     <div>
-                      <h6 className="flex items-center text-[13px] xl:text-[15px] font-[600] text-black">
+                      <h6 className="flex items-center text-[14px] xl:text-[15px] font-[600] text-black">
                         {showroom.title}
                         {showroom.isHeadQuarter && (
                           <span className="text-white text-[11px] bg-[#FE0000] inline-block px-[8px] py-[3px] leading-[1] font-[700] rounded-[3rem] ml-[5px]">
@@ -108,7 +108,7 @@ const ShowroomSection = () => {
                           </span>
                         )}
                       </h6>
-                      <p className="mt-[1.5rem] text-[#737373] text-[12px] xl:text-[14px]">
+                      <p className="mt-[1.5rem] text-[#737373] text-[13px] xl:text-[14px]">
                         {showroom.address}
                       </p>
                     </div>
