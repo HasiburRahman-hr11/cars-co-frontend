@@ -66,7 +66,7 @@ function PrevArrow(props) {
   );
 }
 
-const Testimonials = () => {
+const VideoTestimonials = () => {
   const sliderRef = useRef(null);
   const videoRefs = useRef([]);
   const progressRefs = useRef([]);
@@ -345,4 +345,4 @@ const Testimonials = () => {
   );
 };
 
-export default Testimonials;
+export default VideoTestimonials;

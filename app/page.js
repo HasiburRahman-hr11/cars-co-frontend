@@ -3,7 +3,7 @@ import LatestAdditions from '@/Components/Homepage/LatestAdditions/LatestAdditio
 import OurShowrooms from '@/Components/Homepage/OurShowrooms/OurShowrooms'
 import ProcessSection from '@/Components/Homepage/ProcessSection/ProcessSection'
 import SellYourCar from '@/Components/Homepage/SellYourCar/SellYourCar'
-import Testimonials from '@/Components/Homepage/Testimonials/Testimonials'
+import VideoTestimonials from '@/Components/Homepage/VideoTestimonials/VideoTestimonials'
 import WhyUs from '@/Components/Homepage/WhyUs/WhyUs'
 import React from 'react'
 
@@ -13,7 +13,7 @@ const page = () => {
       <BannerSection />
       {/* <WhyUs /> */}
       <LatestAdditions />
-      <Testimonials />
+      <VideoTestimonials />
       <ProcessSection />
       <SellYourCar />
       <OurShowrooms />
