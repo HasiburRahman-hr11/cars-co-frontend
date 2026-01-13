@@ -82,7 +82,7 @@ const ListYourCar = () => {
           />
           <div className="w-full text-white md:w-[80%] mx-auto lg:w-[70%] xl:max-w-[90rem] mt-[1rem]">
             <h2 className=" leading-[1.3] text-[2.6rem] [&>br]:hidden md:[&>br]:block xl:text-[4.5rem] xl:leading-[1.2]">
-              Upload <b>Your Cars details</b>
+              Upload <b>Your Car Details</b>
             </h2>
             <p className="mt-[1rem] xl:text-[2.2rem] xl:mt-[2rem]">
               From the start, we’ve focused on people — understanding their

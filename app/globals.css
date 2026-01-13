@@ -397,7 +397,7 @@ footer .active-menu img {
   }
   .container {
     width: 85%;
-    max-width: 1525px;
+    max-width: 1500px;
   }
 }
 @media only screen and (min-width: 1920px) {

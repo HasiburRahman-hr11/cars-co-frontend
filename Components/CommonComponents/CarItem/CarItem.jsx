@@ -53,7 +53,7 @@ const CarItem = ({ data, togglePopup }) => {
         </div>
       </Link>
 
-      <div className="px-[2rem] pt-8 md:px-10 xl:px-[3rem] 1xl:px-[4rem] 3xl:px-[5rem] 1xl:pt-[2.5rem] 3xl:pt-[3rem] ">
+      <div className="px-[2rem] pt-8 md:px-10 xl:px-[3rem] 1xl:px-[4rem] 1xl:pt-[2.5rem] 3xl:pt-[3rem] ">
         <Link href={`/cars/${data._id}`} className="block">
           <div>
             <p

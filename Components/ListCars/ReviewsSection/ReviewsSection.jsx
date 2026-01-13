@@ -102,7 +102,7 @@ const ReviewsSection = () => {
     <section className="bg-black ">
       <div className="container">
         <div className="py-[6rem] xl:py-[13rem] border-t border-t-[#7C7C7C] ">
-          <div className="flex flex-wrap lg:justify-between">
+          <div className="flex flex-wrap lg:justify-between lg:items-end">
             <div className="text-center w-full lg:w-[40%] lg:text-left">
               <h6 className="w-max mx-auto bg-[#202020] px-[3rem] py-[1.4rem] text-[#AEAEAE] text-[1.3rem] uppercase rounded-[4rem] leading-1 mb-[2rem] xl:text-[2rem] xl:leading-[1] xl:mb-[3rem] lg:ml-0">
                 Reviews
