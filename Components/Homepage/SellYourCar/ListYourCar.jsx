@@ -43,7 +43,7 @@ let settings = {
   autoplay: true,
   autoplaySpeed: 3000,
 };
-const SellYourCar = () => {
+const ListYourCar = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -87,7 +87,7 @@ const SellYourCar = () => {
         <div className="block md:flex md:justify-between md:items-end">
           <div className="section-header md:w-[60%] xl:w-[75%]">
             <h2 className="leading-[1.3] text-[2.6rem] [&>br]:hidden md:[&>br]:block xl:text-[4.5rem] xl:leading-[1.2]">
-              What happens when <br /> you <b>sell your car with us</b>
+              What happens when you <br /> <b>List your car with us</b>
             </h2>
             <p className="mt-[2rem] text-[#656565] xl:text-[2.2rem] xl:font-medium">
               When you sell your car with us, enjoy a fast, hassle-free process,
@@ -109,7 +109,7 @@ const SellYourCar = () => {
             Enjoy Free Doorstep Car Pickup and Inspection
           </li>
           <li className=" text-[#333333] font-medium py-[2rem] xl:text-[2.5rem] xl:py-[3.5rem]">
-            Fast and Secure Payment Directly to Your Bank
+            List Your Car with Complete Transparency
           </li>
           <li className=" text-[#333333] font-medium py-[2rem] xl:text-[2.5rem] xl:py-[3.5rem]">
             Receive the Best Market Price for Cars
@@ -145,10 +145,10 @@ const SellYourCar = () => {
                     <img
                       src={item.avatar}
                       alt={item.name}
-                      className="block w-[5.8rem] h-[5.8rem] rounded-[1rem] mr-[1rem] xl:w-[8rem] xl:h-[8rem]"
+                      className="block w-[5.8rem] h-[5.8rem] rounded-[1rem] mr-[1rem] xl:w-[8rem] xl:h-[8rem] xl:mr-[2rem]"
                     />
                     <div>
-                      <h6 className="text-[1.7rem] text-[#333333] leading-[1.3] xl:text-[2.4rem]">
+                      <h6 className="text-[1.7rem] font-medium text-[#333333] leading-[1.3] xl:text-[2.4rem]">
                         Rajesh Kumar
                       </h6>
                       <span className="text-[1.1rem] text-[#333333] xl:text-[1.5rem]">
@@ -164,7 +164,7 @@ const SellYourCar = () => {
 
         <div className="mt-[4rem] bg-[#F0F0F0] rounded-[1.5rem] py-[4rem] px-[1.5rem] lg:px-[2.5rem] xl:px-[4rem]">
           <h3 className="text-[2.2rem] font-medium xl:text-[4rem]">
-            List your car
+            Get free car evaluation
           </h3>
           <form action="" className="block mt-[3rem]">
             <div className="flex flex-wrap justify-around">
@@ -259,7 +259,7 @@ const SellYourCar = () => {
                 />
                 <label
                   htmlFor="img1"
-                  className="absolute w-full h-full cursor-pointer left-0 top-0 flex items-center justify-center border border-dotted border-[#555555] rounded-[1rem] p-[5px]"
+                  className="absolute w-full h-full cursor-pointer left-0 top-0 flex items-center justify-center border border-dashed border-[#555555] rounded-[1rem] p-[5px]"
                 >
                   <img
                     src={
@@ -286,7 +286,7 @@ const SellYourCar = () => {
                 />
                 <label
                   htmlFor="img2"
-                  className="absolute w-full h-full cursor-pointer left-0 top-0 flex items-center justify-center border border-dotted border-[#555555] rounded-[1rem] p-[5px]"
+                  className="absolute w-full h-full cursor-pointer left-0 top-0 flex items-center justify-center border border-dashed border-[#555555] rounded-[1rem] p-[5px]"
                 >
                   <img
                     src={
@@ -313,7 +313,7 @@ const SellYourCar = () => {
                 />
                 <label
                   htmlFor="img3"
-                  className="absolute w-full h-full cursor-pointer left-0 top-0 flex items-center justify-center border border-dotted border-[#555555] rounded-[1rem] p-[5px]"
+                  className="absolute w-full h-full cursor-pointer left-0 top-0 flex items-center justify-center border border-dashed border-[#555555] rounded-[1rem] p-[5px]"
                 >
                   <img
                     src={
@@ -340,7 +340,7 @@ const SellYourCar = () => {
                 />
                 <label
                   htmlFor="img4"
-                  className="absolute w-full h-full cursor-pointer left-0 top-0 flex items-center justify-center border border-dotted border-[#555555] rounded-[1rem] p-[5px]"
+                  className="absolute w-full h-full cursor-pointer left-0 top-0 flex items-center justify-center border border-dashed border-[#555555] rounded-[1rem] p-[5px]"
                 >
                   <img
                     src={
@@ -363,7 +363,7 @@ const SellYourCar = () => {
                   name=""
                   id=""
                   placeholder="Message"
-                  className={`${inputStyles} border border-[#727272] p-[1rem] lg:p-[2rem] rounded-[7px] h-[120px] lg:h-[18rem] `}
+                  className={inputStyles}
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                 ></textarea>
@@ -388,4 +388,4 @@ const SellYourCar = () => {
 const inputStyles =
   "w-full text-black bg-transparent outline-none border-b border-b-[#727272] text-[1.6rem] pb-[1.6rem] xl:text-[2rem]";
 
-export default SellYourCar;
+export default ListYourCar;

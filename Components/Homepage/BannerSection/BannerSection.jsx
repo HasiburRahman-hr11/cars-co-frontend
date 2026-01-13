@@ -48,7 +48,7 @@ const BannerSection = () => {
       <div className="absolute top-[0] left-[0] text-center w-full h-full flex flex-col justify-between pt-[9rem] xl:pt-[15rem] 3xl:pt-[20rem]">
         <div className="container w-full">
           <h1 className="text-[#ffffff] text-center text-[3rem] font-[500] leading-[1.3] xl:text-[6rem] lx:leading-[1.1]">
-            You deserve the luxury you work hard for
+            You Deserve the Luxury You Work Hard For
           </h1>
           <div className="mt-[2rem] bg-white rounded-[5rem] pl-[1.5rem] py-[0.5rem] pr-[0.5rem] flex justify-between items-center sm:w-[70%] sm:mx-auto lg:w-[50%] xl:w-full xl:max-w-[79rem] xl:mt-[3rem]">
             <div className="flex items-center flex-[1]">

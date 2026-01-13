@@ -1,11 +1,13 @@
 import ListCarStickyBar from "@/Components/CommonComponents/ListCarStickyBar/ListCarStickyBar";
 import BannerSection from "@/Components/Homepage/BannerSection/BannerSection";
 import LatestAdditions from "@/Components/Homepage/LatestAdditions/LatestAdditions";
-import OurShowrooms from "@/Components/Homepage/OurShowrooms/OurShowrooms";
+// import OurShowrooms from "@/Components/Homepage/OurShowrooms/OurShowrooms";
 import ProcessSection from "@/Components/Homepage/ProcessSection/ProcessSection";
-import SellYourCar from "@/Components/Homepage/SellYourCar/SellYourCar";
+import ListYourCar from "@/Components/Homepage/SellYourCar/ListYourCar";
+
 import VideoTestimonials from "@/Components/Homepage/VideoTestimonials/VideoTestimonials";
-import WhyUs from "@/Components/Homepage/WhyUs/WhyUs";
+// import WhyUs from "@/Components/Homepage/WhyUs/WhyUs";
+import WrittenTestimonials from "@/Components/Homepage/WrittenTestimonials/WrittenTestimonials";
 import React from "react";
 
 const page = () => {
@@ -17,8 +19,9 @@ const page = () => {
         <LatestAdditions />
         <VideoTestimonials />
         <ProcessSection />
-        <SellYourCar />
-        <OurShowrooms />
+        <ListYourCar />
+        {/* <OurShowrooms /> */}
+        <WrittenTestimonials />
       </div>
       <ListCarStickyBar />
     </>

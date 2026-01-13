@@ -152,6 +152,33 @@ h2 b {
 .hp-testimonial-slider .slick-arrow {
   display: none;
 }
+.hp-testimonial-slider.hp-written-testimonials .slick-arrow {
+  display: inline-flex;
+}
+.hp-testimonial-slider .slick-arrow,
+.dark-slider-arrow.slick-arrow {
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  background-color: #303030;
+  z-index: 10;
+  transition: all 0.5s ease;
+}
+.hp-testimonial-slider .slick-arrow:hover,
+.dark-slider-arrow.slick-arrow:hover {
+  background-color: #fe0000;
+}
+.hp-testimonial-slider .slick-arrow.slick-disabled,
+.dark-slider-arrow.slick-arrow.slick-disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.5;
+}
+.slick-arrow:before,
+.dark-slider-arrow.slick-arrow::before {
+  display: none;
+}
 .hp-testimonial-slider .content {
   background: linear-gradient(
     180deg,
@@ -312,6 +339,17 @@ footer .active-menu img {
 @media only screen and (max-width: 1023px) {
 }
 @media only screen and (max-width: 1199px) {
+  .hp-testimonial-slider.hp-written-testimonials .slick-prev,
+  .hp-testimonial-slider.hp-written-testimonials .slick-next {
+    top: unset;
+    bottom: -10rem;
+  }
+  .hp-testimonial-slider.hp-written-testimonials .slick-prev {
+    left: calc(50% - 6rem);
+  }
+  .hp-testimonial-slider.hp-written-testimonials .slick-next {
+    right: calc(50% - 6rem);
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -362,16 +400,15 @@ footer .active-menu img {
   .hp-testimonial-slider .slick-slide {
     margin: 0 2rem;
   }
+  .hp-testimonial-slider.hp-written-testimonials .slick-slide {
+    margin: 0 1.5rem;
+  }
+
   .hp-testimonial-slider .slick-arrow,
   .dark-slider-arrow.slick-arrow {
     display: flex;
-    align-items: center;
-    justify-content: center;
     width: 7.5rem;
     height: 7.5rem;
-    background-color: #303030;
-    z-index: 10;
-    transition: all 0.5s ease;
   }
   .hp-testimonial-slider .slick-arrow:hover,
   .dark-slider-arrow.slick-arrow:hover {
@@ -382,10 +419,6 @@ footer .active-menu img {
     cursor: not-allowed;
     pointer-events: none;
     opacity: 0.5;
-  }
-  .slick-arrow:before,
-  .dark-slider-arrow.slick-arrow::before {
-    display: none;
   }
   .red-tick-list li {
     padding-left: 4rem;
@@ -410,6 +443,9 @@ footer .active-menu img {
   }
   .list-car-process-count {
     -webkit-text-stroke: 2px #fe0000;
+  }
+  .list-car-process-item:nth-child(even) .text-box > div{
+    margin-left: auto;
   }
 }
 @media only screen and (min-width: 1360px) {

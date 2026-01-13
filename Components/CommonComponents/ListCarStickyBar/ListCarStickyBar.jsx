@@ -39,7 +39,7 @@ const ListCarStickyBar = () => {
               : "opacity-[0] bottom-[100rem]"
           }`}
         >
-          <div className="bg-white py-[4rem] px-[2rem] rounded-[1rem] w-[95%] max-w-[600px] xl:max-w-[1140px] mx-auto lg:w-[70%] xl:pl-[3rem] xl:rounded-[2rem] 1xl:max-w-[1240px] 1xl:px-[4rem] 1xl:rounded-[2.5rem] 3xl:px-[6rem] 3xl:py-[5rem] shadow-slate-400 z-100 transition-all duration-500 ease-in-out relative">
+          <div className="bg-white py-[4rem] px-[2rem] rounded-[1rem] w-[95%] max-w-[600px] xl:max-w-[1140px] mx-auto lg:w-[70%] xl:pl-[3rem] xl:rounded-[2rem] 1xl:max-w-[1240px] 1xl:px-[4rem] 1xl:rounded-[2.5rem] 3xl:px-[6rem] 3xl:py-[5rem] shadow-xl z-100 transition-all duration-500 ease-in-out relative">
             <div
               className=" absolute top-[1.5rem] right-[1.5rem] w-[2rem] h-[2rem] cursor-pointer"
               onClick={() => setForceCloseForm(true)}

@@ -15,7 +15,7 @@ const LatestAdditions = () => {
     <section className="bg-[#F3F3F3] py-[6rem] overflow-hidden] xl:py-[13rem]">
       <div className="container">
         <h2 className="relative text-center leading-[1.3] text-[2.6rem] md:text-left md:flex md:items-center md:justify-between [&>br]:hidden md:[&>br]:block xl:text-[4.5rem] xl:leading-[1.2]">
-          Explore {" "} <b> latest additions</b>
+          <span>Explore latest  <b>  additions</b></span>
           <span className="hidden md:block md:h-[1px] md:bg-[#0A0909] md:ml-[1rem] md:flex-[1]"></span>
         </h2>
 
