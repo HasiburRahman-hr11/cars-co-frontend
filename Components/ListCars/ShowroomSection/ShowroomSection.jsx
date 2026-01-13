@@ -97,7 +97,7 @@ const ShowroomSection = () => {
                     href={showroom.googleMapLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="py-[3rem] flex flex-col justify-between h-full w-full xl:py-[2rem]"
+                    className="py-[3rem] flex flex-col justify-between h-full w-full xl:py-[2rem] group"
                   >
                     <div>
                       <h6 className="flex items-center text-[14px] 2xl:text-[14px] font-[600] text-black">
@@ -115,7 +115,7 @@ const ShowroomSection = () => {
                     <img
                       src="/images/link-arrow-black.webp"
                       alt="Arrow"
-                      className="object-contain w-[12px] 2xl:w-[13px] mt-[2rem]"
+                      className="object-contain w-[12px] 2xl:w-[13px] mt-[2rem] group-hover:rotate-[45deg] transition-all duration-500"
                     />
                   </a>
                 </li>
