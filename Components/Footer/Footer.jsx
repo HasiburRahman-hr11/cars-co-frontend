@@ -64,7 +64,7 @@ const Footer = () => {
 
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
   return (
-    <footer className="footer bg-black pt-[7rem] xl:pt-[13rem]">
+    <footer className="footer bg-black pt-[7rem] xl:pt-[13rem]" id="footer">
       <div className="max-w-[1920px] mx-auto px-[1.5rem] xl:w-[97%] xl:max-w-[1790px] xl:px-[30px]">
         <div className="flex flex-wrap xl:justify-between xl:pb-[5rem]">
           <div className="w-full xl:w-[25%] xl:flex xl:flex-col xl:justify-between">

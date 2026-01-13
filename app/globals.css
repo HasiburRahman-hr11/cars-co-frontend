@@ -275,7 +275,33 @@ footer .active-menu img {
 .list-car-process-count {
   -webkit-text-stroke: 1px #fe0000;
 }
+.show-from-bottom {
+  animation: showFromBottom 1s ease-in-out;
+}
+.show-from-top {
+  animation: showFromTop 1s ease-in-out;
+}
+@keyframes showFromBottom {
+  0% {
+    transform: translateY(15rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+}
 
+@keyframes showFromTop {
+  0% {
+    transform: translateY(-15rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+}
 @media only screen and (max-width: 639px) {
   html {
     font-size: 2.5vw;
