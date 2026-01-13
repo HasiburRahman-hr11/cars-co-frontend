@@ -188,6 +188,56 @@ const VideoTestimonials = () => {
             Hear from customers about their luxurious, <br /> smooth,{" "}
             <b>and hassle-free rides.</b>
           </h2>
+
+          <div className="hidden lg:flex items-center mt-[5rem] justify-between max-w-[84rem] xl:max-w-[100rem] mx-auto">
+            <div className="flex-[1] flex items-center gap-[3rem] h-[6rem] xl:h-[6.5rem] border border-[#666666] border-r-0 pl-[3rem] rounded-l-[5rem]">
+              <div className="flex items-center gap-[5px]">
+                <img
+                  src="/images/star-full.webp"
+                  alt=""
+                  className="object-contain w-[1.9rem] xl:w-[2.3rem]"
+                />
+                <img
+                  src="/images/star-full.webp"
+                  alt=""
+                  className="object-contain w-[1.9rem] xl:w-[2.3rem]"
+                />
+                <img
+                  src="/images/star-full.webp"
+                  alt=""
+                  className="object-contain w-[1.9rem] xl:w-[2.3rem]"
+                />
+                <img
+                  src="/images/star-full.webp"
+                  alt=""
+                  className="object-contain w-[1.9rem] xl:w-[2.3rem]"
+                />
+                <img
+                  src="/images/star-full.webp"
+                  alt=""
+                  className="object-contain w-[1.9rem] xl:w-[2.3rem]"
+                />
+              </div>
+              <p className="text-[#A3A3A3] xl:text-[2.2rem]">
+                Explore what our customers have to say!
+              </p>
+            </div>
+            <div className="w-max ml-[-3rem]">
+              <Link
+                href="/testimonials"
+                className="bg-white text-black flex justify-center items-center px-[5rem] py-[1rem] h-[6rem] xl:h-[6.5rem] rounded-[5rem] group transition-all duration-500 hover:bg-[#FE0000] hover:text-white"
+              >
+                <span className="text-[1.8rem] font-medium  inline-block mr-[3rem]">
+                  Read More Reviews
+                </span>
+                <img
+                  src="/images/btn-arrow-black.webp"
+                  alt=""
+                  className="object-contain w-[1.3rem] transition-all duration-500 group-hover:invert"
+                />
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
       {isMobile ? (
@@ -328,7 +378,7 @@ const VideoTestimonials = () => {
 
       <div className="mt-[5rem] lg:hidden w-[85%] mx-auto max-w-[40rem]">
         <Link
-          href="#"
+          href="/testimonials"
           className="bg-white flex justify-center items-center px-[5rem] py-[1.5rem] rounded-[5rem]"
         >
           <span className="text-[1.8rem] font-medium text-black inline-block mr-[3rem]">

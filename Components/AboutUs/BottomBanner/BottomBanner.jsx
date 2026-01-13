@@ -37,13 +37,13 @@ const BottomBanner = () => {
             </p>
             <div className="flex flex-wrap justify-center items-center gap-x-[1rem] md:justify-start mt-[3rem] xl:mt-[5rem]">
               <Link
-                href="#"
+                href="/buy-cars"
                 className="inline-block bg-[#FE0000] text-white text-[1.5rem] px-[3rem] py-[1.3rem]  rounded-[5rem] xl:text-[2.2rem] xl:py-[1.8rem] xl:px-[6rem] hover:bg-white hover:text-black transition-all duration-500"
               >
                 Buy Cars
               </Link>
               <Link
-                href="#"
+                href="/list-cars"
                 className="inline-block bg-[transparent border border-black text-black text-[1.5rem] px-[3rem] py-[1.3rem]  rounded-[5rem] xl:text-[2.2rem] xl:py-[1.8rem] xl:px-[6rem] hover:bg-black hover:text-white transition-all duration-500"
               >
                 List Cars

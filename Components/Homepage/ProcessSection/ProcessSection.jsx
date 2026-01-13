@@ -123,7 +123,7 @@ const ProcessSection = () => {
             </div>
             <div className="w-max mt-[2rem] md:mt-0">
               <Link
-                href="#"
+                href="/list-cars"
                 className="bg-black inline-block text-white leading-[1] text-[1.8rem] px-[3rem] py-[1.4rem] rounded-[3rem] xl:text-[2.2rem] xl:px-[7rem] xl:py-[2.4rem] xl:rounded-[8rem] transition-all duration-500 hover:bg-white hover:text-black"
               >
                 Sell Yours?
