@@ -48,14 +48,14 @@ const WhyUs = () => {
               {usps.map((usp, index) => (
                 <li
                   key={index}
-                  className="text-center bg-[#212121] flex flex-col items-center py-[3rem] px-[1rem] rounded-[1rem] text-white lg:even:translate-y-[6rem] lg:text-left lg:items-start lg:px-[2.5rem] xl:pt-[5rem] xl:pb-[4rem] xl:px-[4rem]"
+                  className="text-center bg-[#212121] flex flex-col items-center py-[3rem] px-[1rem] rounded-[1rem] text-white lg:even:translate-y-[6rem] lg:text-left lg:items-start lg:px-[2.5rem] xl:pt-[5rem] xl:pb-[4rem] xl:px-[4rem] xl:rounded-[1.5rem]"
                 >
                   <img
                     src={usp.icon}
                     alt="USP Icon"
                     className="object-contain w-[6rem] h-[6rem] xl:w-[12rem] xl:h-[11rem] mx-auto"
                   />
-                  <h6 className="block mt-[2rem] text-center font-medium text-[1.8rem] xl:text-[2.8rem]">
+                  <h6 className="block mt-[2rem] text-center font-medium text-[1.8rem] xl:text-[2.8rem] xl:mt-[4rem]">
                     {usp.title}
                   </h6>
                 </li>

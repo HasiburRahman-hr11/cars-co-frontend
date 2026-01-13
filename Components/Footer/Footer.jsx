@@ -9,7 +9,7 @@ import {
 import Link from "next/link";
 
 const carsCoWorldMenu = [
-  { title: "List Cars", link: "#" },
+  { title: "List Cars", link: "/list-cars" },
   { title: "How it works", link: "#" },
   { title: "Why Us", link: "#" },
   { title: "Compare Cars", link: "#" },

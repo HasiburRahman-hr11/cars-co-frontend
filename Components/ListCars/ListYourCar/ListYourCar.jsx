@@ -92,8 +92,8 @@ const ListYourCar = () => {
           </div>
         </div>
 
-        <div className="bg-[#191919] rounded-[2rem] xl:rounded-[4rem] py-[3rem] px-[2rem] mt-[4rem] block w-full relative">
-          <span className="count absolute top-[2rem] right-[2rem] inline-flex items-end leading-[1]">
+        <div className="bg-[#191919] rounded-[2rem] xl:rounded-[4rem] py-[3rem] px-[2rem] mt-[4rem] block w-full relative lg:px-[5rem] lg:py-[5rem] xl:px-[12rem] xl:py-[8rem] xl:mt-[6rem]">
+          <span className="count absolute top-[2rem] right-[2rem] inline-flex items-end leading-[1] lg:top-[3rem] lg:right-[4rem] xl:top-[5rem] xl:right-[6rem]">
             <span className="text-[#AEAEAE] text-[1.7rem] xl:text-[3.5rem]">
               0{currentStep}
             </span>
@@ -106,7 +106,7 @@ const ListYourCar = () => {
               <h6 className={inputTitle}>1.Select Your Car Brand.</h6>
               <div className="relative w-full">
                 <select
-                  className={inputStyle}
+                  className={`${inputStyle} pl-[1rem]`}
                   value={formData.carBrand}
                   onChange={(e) => handleChange("carBrand", e.target.value)}
                 >
@@ -204,11 +204,11 @@ const ListYourCar = () => {
           {currentStep === 6 && (
             <div className="flex flex-col items-center">
               <h6 className={inputTitle}>6. Upload some images of your car.</h6>
-              <div className="grid grid-cols-2 gap-4 w-full">
+              <div className="grid grid-cols-2 gap-4 w-full md:grid-cols-4 xl:gap-[3rem]">
                 {formData.carImages.map((image, index) => (
                   <label
                     key={index}
-                    className="w-full h-[10rem] border border-[#6A6A6A] rounded-lg flex items-center justify-center cursor-pointer overflow-hidden"
+                    className="w-full h-[10rem] border-dashed border-1 border-[#6A6A6A] rounded-lg flex items-center justify-center cursor-pointer overflow-hidden sm:h-[15rem] md:h-[11rem] lg:h-[13rem] xl:h-[15rem] xl:rounded-[1rem]"
                   >
                     <input
                       type="file"
@@ -229,7 +229,7 @@ const ListYourCar = () => {
                       <img
                         src="/images/list-cars/camera-icon.png"
                         alt="Upload Image"
-                        className="w-[7rem] h-[5rem] object-contain"
+                        className="w-[7rem] h-[5rem] object-contain xl:w-[9.6rem] xl:h-[7.4rem]"
                       />
                     )}
                   </label>
@@ -245,7 +245,7 @@ const ListYourCar = () => {
                 <img
                   src="/images/btn-double-arrow.png"
                   alt="Arrow"
-                  className="w-[1rem] object-contain inline-block mr-[3rem] rotate-[180deg]"
+                  className="w-[1rem] object-contain inline-block mr-[3rem] rotate-[180deg] xl:mr-[4rem] xl:w-[1.5rem] group-hover:invert transition-all duration-500"
                 />
                 Previous
               </button>
@@ -264,7 +264,7 @@ const ListYourCar = () => {
                 <img
                   src="/images/btn-double-arrow.png"
                   alt="Arrow"
-                  className="w-[1rem] object-contain inline-block ml-[3rem]"
+                  className="w-[1rem] object-contain inline-block ml-[3rem] xl:ml-[4rem] xl:w-[1.5rem] group-hover:invert transition-all duration-500"
                 />
               </button>
             )}
@@ -283,7 +283,7 @@ const ListYourCar = () => {
                 <img
                   src="/images/btn-double-arrow.png"
                   alt="Arrow"
-                  className="w-[1rem] object-contain inline-block ml-[3rem]"
+                  className="w-[1rem] object-contain inline-block ml-[3rem] xl:ml-[4rem] xl:w-[1.5rem] group-hover:invert transition-all duration-500"
                 />
               </button>
             )}
@@ -305,6 +305,6 @@ export default ListYourCar;
 const inputStyle =
   "w-full border-b border-b-[rgb(217,217,217)] outline-none pb-[2rem] text-[1.5rem] xl:text-[2.5rem] text-white [&>option]:text-black [&>option]:pl-[1rem] appearance-none";
 const btnStyle =
-  "flex items-center justify-between bg-white px-[2rem] h-[4.2rem] rounded-[5rem] font-medium mt-[3rem]";
+  "flex items-center justify-between bg-white px-[2rem] h-[4.2rem] rounded-[5rem] font-medium mt-[3rem] xl:h-[6.8rem] xl:text-[2.2rem] xl:px-[4rem] xl:mt-[5rem] cursor-pointer group hover:bg-[#FE0000] transition-all duration-500 hover:text-white";
 const inputTitle =
-  "text-white font-medium mb-[3rem] text-[2rem] xl:text-[4.5rem] w-full pr-[2rem] mt-[1rem]";
+  "text-white font-medium mb-[3rem] text-[2rem] xl:text-[4.5rem] w-full pr-[2rem] mt-[1rem] xl:mt-[3rem] xl:mb-[5rem]";

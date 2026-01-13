@@ -47,10 +47,10 @@ const ShowroomSection = () => {
   const [carName, setCarName] = useState("");
   const [cityName, setCityName] = useState("");
   return (
-    <section className="bg-white py-[6rem] lg:pb-[0] xl:pt-[13rem]">
+    <section className="bg-white py-[6rem] xl:py-[13rem]">
       <div className="container">
-        <div className="flex flex-wrap">
-          <div className="w-full text-center">
+        <div className="flex flex-wrap max-w-[540px] mx-auto lg:max-w-full lg:justify-between">
+          <div className="w-full text-center lg:w-[40%] lg:text-left">
             <h6 className="w-max mx-auto bg-white border border-[#333333] px-[3rem] pb-[0.5rem] pt-[0.8rem] text-[#333333] text-[1.3rem] uppercase rounded-[4rem] leading-[1.6] mb-[2rem] xl:text-[2rem] xl:mb-[3rem] font-medium lg:ml-0">
               VISIT SHOWROOM
             </h6>
@@ -58,7 +58,7 @@ const ShowroomSection = () => {
               You Can Also <br />
               <b>Visit Our Showroom.</b>
             </h2>
-            <div className="grid grid-cols-2 gap-[1rem] mt-[4rem]">
+            <div className="grid grid-cols-2 gap-[1rem] mt-[4rem] xl:mt-[10rem]">
               <div className="flex flex-col gap-[1rem] items-end">
                 <img
                   src="/images/list-cars/showroom-img-1.webp"
@@ -86,7 +86,7 @@ const ShowroomSection = () => {
             </div>
           </div>
 
-          <div className="w-full mt-[5rem]">
+          <div className="w-full mt-[5rem] lg:w-[55%] lg:mt-0 xl:w-[52%]">
             <ul className="showrooms flex flex-wrap justify-between">
               {showrooms.map((showroom, index) => (
                 <li
@@ -97,10 +97,10 @@ const ShowroomSection = () => {
                     href={showroom.googleMapLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="py-[3rem] flex flex-col justify-between h-full w-full"
+                    className="py-[3rem] flex flex-col justify-between h-full w-full xl:py-[2rem]"
                   >
                     <div>
-                      <h6 className="flex items-center text-[14px] xl:text-[15px] font-[600] text-black">
+                      <h6 className="flex items-center text-[14px] 2xl:text-[14px] font-[600] text-black">
                         {showroom.title}
                         {showroom.isHeadQuarter && (
                           <span className="text-white text-[11px] bg-[#FE0000] inline-block px-[8px] py-[3px] leading-[1] font-[700] rounded-[3rem] ml-[5px]">
@@ -108,14 +108,14 @@ const ShowroomSection = () => {
                           </span>
                         )}
                       </h6>
-                      <p className="mt-[1.5rem] text-[#737373] text-[13px] xl:text-[14px]">
+                      <p className="mt-[1.5rem] text-[#737373] text-[13px] font-medium lg:text-[12px] 2xl:text-[13px]">
                         {showroom.address}
                       </p>
                     </div>
                     <img
                       src="/images/link-arrow-black.webp"
                       alt="Arrow"
-                      className="object-contain w-[12px] xl:w-[16px] mt-[2rem]"
+                      className="object-contain w-[12px] 2xl:w-[13px] mt-[2rem]"
                     />
                   </a>
                 </li>
@@ -124,7 +124,7 @@ const ShowroomSection = () => {
 
             <form
               action=""
-              className="block w-full bg-[#F3F3F3] p-[2.5rem] rounded-[1rem] mt-[4rem]"
+              className="block w-full bg-[#F3F3F3] p-[2.5rem] rounded-[1rem] mt-[4rem] xl:p-[4rem]"
             >
               <h4 className="text-[2rem] xl:text-[3rem] font-medium mb-[2rem]">
                 Get A Call Back Today.
@@ -183,7 +183,7 @@ const ShowroomSection = () => {
                 value={cityName}
                 onChange={(e) => setCityName(e.target.value)}
               />
-              <button type="submit" className="bg-black text-white w-full text-[1.6rem] xl:text-[1.9rem] rounded-[0.5rem] py-[1.2rem]">Submit</button>
+              <button type="submit" className="bg-black font-medium text-white w-full text-[1.6rem] xl:text-[1.9rem] rounded-[0.5rem] py-[1.2rem] xl:h-[6.8rem] hover:bg-[#FE0000] transition-all duration-500 cursor-pointer">Submit</button>
             </form>
           </div>
         </div>
@@ -195,4 +195,4 @@ const ShowroomSection = () => {
 export default ShowroomSection;
 
 const inputStyle =
-  "w-full border border-[#7F7F7F] rounded-[0.5rem] p-[1rem] text-[1.4rem] text-black mb-[1.5rem] xl:text-[1.67rem] outline-none";
+  "w-full border border-[#7F7F7F] font-medium rounded-[0.5rem] p-[1rem] text-[1.4rem] text-black mb-[1.5rem] xl:text-[1.7rem] outline-none xl:h-[6.8rem] xl:pl-[2rem] xl:rounded-[0.5rem]";
