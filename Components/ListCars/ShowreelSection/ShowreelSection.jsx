@@ -50,7 +50,7 @@ const ShowreelSection = () => {
               <video
                 src="/videos/showroom-video.mp4"
                 poster="/images/list-cars/showreel-video-thumb.webp"
-                className="w-full h-[55rem] sm:h-auto block object-cover rounded-[1rem] xl:rounded-[2rem]"
+                className="w-full h-[55rem] sm:h-auto block object-cover rounded-[1rem] xl:h-[73rem] xl:rounded-[2rem]"
                 ref={videoRef}
                 playsInline
                 preload="auto"
