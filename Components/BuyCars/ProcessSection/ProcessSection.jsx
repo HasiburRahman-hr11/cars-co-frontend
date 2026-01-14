@@ -31,8 +31,8 @@ const ProcessSection = () => {
   return (
     <section className="bg-white py-[6rem] xl:py-[13rem]">
       <div className="container">
-        <div className="text-center md:w-[60%] md:mx-auto mb-[4rem] md:mb-[5rem]">
-          <h6 className="w-max mx-auto bg-white border border-[#333333] px-[3rem] pb-[0.5rem] pt-[0.8rem] text-[#333333] text-[1.3rem] uppercase rounded-[4rem] leading-[1.6] mb-[2rem] xl:text-[2rem] xl:mb-[3rem] font-medium">
+        <div className="text-center md:w-[60%] md:mx-auto mb-[4rem] md:mb-[5rem] lg:w-[48%] lg:text-left lg:ml-0">
+          <h6 className="w-max mx-auto bg-white border border-[#333333] px-[3rem] pb-[0.5rem] pt-[0.8rem] text-[#333333] text-[1.3rem] uppercase rounded-[4rem] leading-[1.6] mb-[2rem] xl:text-[2rem] xl:mb-[3rem] font-medium lg:ml-0">
             How It Works
           </h6>
           <h2 className="text-[#222222] leading-[1.3] text-[2.6rem] [&>br]:hidden md:[&>br]:block xl:text-[4.5rem] xl:leading-[1.2]">
@@ -44,9 +44,9 @@ const ProcessSection = () => {
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-between">
+        <div className="flex flex-wrap justify-between max-w-[600px] mx-auto md:max-w-full md:gap-y-[5rem]">
           {processList.map((process, index) => (
-            <div key={index} className="mt-[4rem] pt-[4rem] border-t border-t-[#dddddd] first:mt-0 first:pt-0 first:border-t-0">
+            <div key={index} className="mt-[4rem] pt-[4rem] border-t border-t-[#dddddd] first:mt-0 first:pt-0 first:border-t-0 w-full md:w-[48%] md:mt-0 md:pt-0 md:border-t-o lg:even:-translate-y-[20rem]">
               <img
                 src={process.thumbnail}
                 alt="Process Image"

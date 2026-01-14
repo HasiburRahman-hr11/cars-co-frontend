@@ -23,7 +23,7 @@ const WhyUs = () => {
   return (
     <section className="bg-black py-[6rem] overflow-hidden xl:py-[13rem]">
       <div className="container">
-        <div className="w-full text-center">
+        <div className="w-full text-center lg:w-[65%] mx-auto">
           <h6 className="w-max mx-auto bg-[#202020] px-[3rem] py-[1.4rem] text-[#AEAEAE] text-[1.3rem] uppercase rounded-[4rem] leading-1 mb-[2rem] xl:text-[2rem] xl:leading-[1] xl:mb-[3rem]">
             Why Buy From Us
           </h6>
@@ -38,11 +38,11 @@ const WhyUs = () => {
           </p>
         </div>
 
-        <ul className="list-none grid grid-cols-2 mt-[5rem] gap-[2rem]">
+        <ul className="list-none grid grid-cols-2 mt-[5rem] gap-[2rem] md:grid-cols-4 lg:mb-[5rem] lg:w-[80%] mx-auto">
           {usps.map((usp, index) => (
             <li
               key={index}
-              className="text-center px-[1.5rem] relative bg-[#111111] rounded-[1rem] py-[3rem]"
+              className="text-center px-[1.5rem] relative bg-[#111111] rounded-[1rem] py-[3rem] lg:bg-transparent lg:mt-[5rem] lg:odd:mt-[15rem]"
             >
               <img
                 src={usp.icon}
@@ -56,7 +56,7 @@ const WhyUs = () => {
               <img
                 src="/images/buy-cars/usp-pulse.webp"
                 alt="Pulse Icon"
-                className="object-contain hidden absolute left-0 top-0 w-[2rem]"
+                className="object-contain hidden absolute left-0 top-[3rem] w-[2.5rem] lg:inline-block xl:w-[3.4rem]"
               />
             </li>
           ))}
