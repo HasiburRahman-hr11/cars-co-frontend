@@ -76,7 +76,7 @@ const BuyYourCar = () => {
           </div>
         </div>
 
-        <div className="mt-[5rem] bg-[#191919] rounded-[2rem] px-[2rem] py-[4rem] xl:rounded-[4rem] text-white lg:px-[4rem] lg:py-[6rem]">
+        <div className="mt-[5rem] bg-[#191919] rounded-[2rem] px-[2rem] py-[4rem] xl:rounded-[4rem] text-white lg:px-[4rem] lg:py-[6rem] xl:mt-[8rem] xl:px-[8rem] xl:py-[7rem]">
           {/* BRANDS */}
           <div>
             <div className="flex items-center justify-between lg:gap-x-[2rem]">
@@ -86,26 +86,26 @@ const BuyYourCar = () => {
               <span className="hidden lg:block flex-[1] h-[1px] bg-[#363636]"></span>
               <Link
                 href="#"
-                className="text-white border border-white w-max items-center justify-center px-[2.5rem] leading-[1] h-[4rem] rounded-[5rem] transition-all duration-300 hover:bg-white hover:text-black hidden lg:flex"
+                className="text-white border border-white w-max items-center justify-center px-[2.5rem] leading-[1] h-[4rem] rounded-[5rem] transition-all duration-300 hover:bg-white hover:text-black hidden lg:flex xl:h-[5rem] xl:px-[3rem] xl:text-[2.2rem]"
               >
                 View All
               </Link>
             </div>
 
-            <ul className="list-none grid grid-cols-3 mt-[4rem] gap-y-[3rem] sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 lg:mt-[5rem]">
+            <ul className="list-none grid grid-cols-3 mt-[4rem] gap-y-[3rem] sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 lg:mt-[5rem] xl:grid-cols-8">
               {brands.map((brand, index) => (
                 <li
                   key={index}
-                  className="border-l border-l-[#333333] border-r border-r-[#333333] group hover:bg-white hover:border-0 hover-rounded-[1rem] transition-all"
+                  className="border-l border-l-[#333333] border-r border-r-[#333333] group hover:bg-white hover:border-0 hover:rounded-[1rem] transition-all duration-300 xl:hover:rounded-[2rem]"
                 >
                   <Link
                     href={brand.link}
-                    className="flex justify-center items-center w-full h-full px-[2rem] py-[2rem] lg:px-[3rem] "
+                    className="flex justify-center items-center w-full h-full px-[2rem] py-[2rem] lg:px-[3rem] xl:py-[4rem]"
                   >
                     <img
                       src={brand.logo}
                       alt={brand.title}
-                      className="object-contain inline-block max-w-full transition-all group-hover:invert lg:max-h-[7rem] xl:max-h-[9rem]"
+                      className="object-contain inline-block max-w-full transition-all group-hover:invert lg:max-h-[7rem] xl:max-h-[8rem]"
                     />
                   </Link>
                 </li>
@@ -123,7 +123,7 @@ const BuyYourCar = () => {
           </div>
 
           {/* CATEGORIES */}
-          <div className="mt-[5rem] pt-[5rem] border-t border-t-[#444444] lg:pt-0 lg:border-t-0 lg:mt-[6rem]">
+          <div className="mt-[5rem] pt-[5rem] border-t border-t-[#444444] lg:pt-0 lg:border-t-0 lg:mt-[6rem] xl:mt-[8rem]">
             <div className="flex items-center justify-between lg:gap-x-[2rem]">
               <h3 className="text-[2rem] xl:text-[3.5rem] w-full lg:w-max text-center">
                 Browse By Categories
@@ -131,12 +131,12 @@ const BuyYourCar = () => {
               <span className="hidden lg:block flex-[1] h-[1px] bg-[#363636]"></span>
             </div>
 
-            <ul className="grid grid-cols-2 gap-[2rem] mt-[4rem] sm:grid-cols-3 md:grid-cols-4 lg:mt-[5rem]">
+            <ul className="grid grid-cols-2 gap-[2rem] mt-[4rem] sm:grid-cols-3 md:grid-cols-4 lg:mt-[5rem] xl:mt-[6rem] xl:gap-[5rem]">
                 {categories.map((category , index) => (
                     <li key={index}>
-                        <Link href={category.link} className="flex flex-col justify-center items-center px-[2rem] py-[2.5rem] border border-[#AAAAAA] rounded-[1rem]">
+                        <Link href={category.link} className="flex flex-col justify-center items-center px-[2rem] py-[2.5rem] border border-[#444444] rounded-[1rem] xl:pt-[5rem] transition-all duration-300 hover:bg-black hover:border-black">
                         <img src={category.logo} alt={category.title} className="object-contain h-[5.5rem] max-w-full lg:max-w-[10rem] xl:max-w-[13rem]" />
-                        <h6 className="text-white mt-[1.5rem] font-medium text-[1.8rem] xl:text-[2.8rem]">{category.title}</h6>
+                        <h6 className="text-white mt-[1.5rem] font-medium text-[1.8rem] xl:text-[2.8rem] xl:mt-[2.5rem]">{category.title}</h6>
                         </Link>
                     </li>
                 ))}

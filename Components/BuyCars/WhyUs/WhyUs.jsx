@@ -28,7 +28,7 @@ const WhyUs = () => {
             Why Buy From Us
           </h6>
           <h2 className="text-white leading-[1.3] text-[2.6rem] [&>br]:hidden md:[&>br]:block xl:text-[4.5rem] xl:leading-[1.2]">
-            Because Buying a <b>Car Should Be Stress-Free.</b>
+            Because Buying a <br /> <b>Car Should Be Stress-Free.</b>
           </h2>
           <p className="mt-[1rem] text-[#818181] xl:text-[2.2rem] xl:mt-[2rem]">
             Buying a car should be exciting—not confusing. We ensure trusted
@@ -42,12 +42,12 @@ const WhyUs = () => {
           {usps.map((usp, index) => (
             <li
               key={index}
-              className="text-center px-[1.5rem] relative bg-[#111111] rounded-[1rem] py-[3rem] lg:bg-transparent lg:mt-[5rem] lg:odd:mt-[15rem]"
+              className="text-center px-[1.5rem] relative bg-[#111111] rounded-[1rem] py-[3rem] lg:bg-transparent lg:mt-[5rem] lg:odd:mt-[15rem] xl:odd:mt-[20rem]"
             >
               <img
                 src={usp.icon}
                 alt="USP Icon"
-                className="object-contain inline-block w-[6rem] h-[6rem] mx-auto"
+                className="object-contain inline-block w-[6rem] h-[6rem] mx-auto xl:w-[10rem] xl:h-[8rem]"
               />
               <h6
                 className="text-white text-[1.7rem] xl:text-[2.8rem] font-medium mt-[2rem]"

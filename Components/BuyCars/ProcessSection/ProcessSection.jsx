@@ -31,7 +31,7 @@ const ProcessSection = () => {
   return (
     <section className="bg-white py-[6rem] xl:py-[13rem]">
       <div className="container">
-        <div className="text-center md:w-[60%] md:mx-auto mb-[4rem] md:mb-[5rem] lg:w-[48%] lg:text-left lg:ml-0">
+        <div className="text-center md:w-[60%] md:mx-auto mb-[4rem] md:mb-[5rem] lg:w-[48%] lg:text-left lg:ml-0 xl:pr-[5rem]">
           <h6 className="w-max mx-auto bg-white border border-[#333333] px-[3rem] pb-[0.5rem] pt-[0.8rem] text-[#333333] text-[1.3rem] uppercase rounded-[4rem] leading-[1.6] mb-[2rem] xl:text-[2rem] xl:mb-[3rem] font-medium lg:ml-0">
             How It Works
           </h6>
@@ -44,15 +44,15 @@ const ProcessSection = () => {
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-between max-w-[600px] mx-auto md:max-w-full md:gap-y-[5rem]">
+        <div className="flex flex-wrap justify-between max-w-[600px] mx-auto md:max-w-full md:gap-y-[5rem] xl:gap-y-[7rem] lg:flex-row-reverse">
           {processList.map((process, index) => (
-            <div key={index} className="mt-[4rem] pt-[4rem] border-t border-t-[#dddddd] first:mt-0 first:pt-0 first:border-t-0 w-full md:w-[48%] md:mt-0 md:pt-0 md:border-t-o lg:even:-translate-y-[20rem]">
+            <div key={index} className="mt-[4rem] pt-[4rem] border-t border-t-[#dddddd] first:mt-0 first:pt-0 first:border-t-0 w-full md:w-[48%] md:mt-0 md:pt-0 md:border-t-o lg:odd:-translate-y-[20rem] xl:odd:-translate-y-[33rem]">
               <img
                 src={process.thumbnail}
                 alt="Process Image"
                 className="object-cover block aspect-square rounded-[1rem] xl:rounded-[1.5rem]"
               />
-              <div className="flex items-center gap-x-[2rem] mt-[2rem]">
+              <div className="flex items-center gap-x-[2rem] mt-[2rem] xl:gap-x-[5rem] xl:mt-[3rem]">
                 <span className="w-max inline-block list-car-process-count font-[700] text-[8rem] xl:text-[17rem] leading-[1] text-transparent">
                   0{index + 1}
                 </span>
