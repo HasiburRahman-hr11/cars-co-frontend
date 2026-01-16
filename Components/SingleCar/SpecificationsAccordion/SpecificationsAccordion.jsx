@@ -2,7 +2,7 @@ import React from 'react'
 
 const SpecificationsAccordion = () => {
   return (
-    <div>SpecificationsAccordion</div>
+    <div className='hidden md:block'>SpecificationsAccordion</div>
   )
 }
 

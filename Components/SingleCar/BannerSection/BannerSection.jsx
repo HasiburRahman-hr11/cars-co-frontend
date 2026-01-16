@@ -68,14 +68,15 @@ let settingsMobile = {
   speed: 700,
   slidesToShow: 1,
   slidesToScroll: 1,
-  arrows: true,
-  centerMode: false,
-  autoplay: true,
-  autoplaySpeed: 3000,
+  arrows: false,
   nextArrow: <NextArrow />,
   prevArrow: <PrevArrow />,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  variableWidth: true,
   pauseOnHover: false,
   pauseOnFocus: false,
+  centerMode: true,
 };
 
 const images = [
@@ -91,7 +92,7 @@ const BannerSection = () => {
     <section className="productPageBanner overflow-hidden bg-white">
       <div className="max-1920">
         {/* For Desktop */}
-        <div className="hidden md:block">
+        <div className="hidden">
           <Slider {...settings} className="details-banner-slider">
             {images.map((src, index) => (
               <div className="md:px-[1.3rem] outline-none" key={index}>
@@ -108,16 +109,14 @@ const BannerSection = () => {
         </div>
 
         {/* For Mobile */}
-        <div className="md:hidden">
+        <div className="block">
           <Slider {...settingsMobile} className="details-banner-slider">
             {images.map((src, index) => (
-              <div className="outline-none" key={index}>
+              <div className="outline-none px-[0.5rem]" key={index}>
                 <img
                   src={src}
                   alt={`Product Image ${index + 1}`}
-                  className="w-full object-cover block"
-                  width="1025"
-                  height="730"
+                  className="w-[100vw] object-cover block md:w-[70vw]"
                 />
               </div>
             ))}

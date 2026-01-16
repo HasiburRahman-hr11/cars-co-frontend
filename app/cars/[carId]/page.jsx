@@ -2,6 +2,11 @@
 import BannerSection from "@/Components/SingleCar/BannerSection/BannerSection";
 import BasicDetails from "@/Components/SingleCar/BasicDetails/BasicDetails";
 import CarSummary from "@/Components/SingleCar/CarSummery/CarSummary";
+import FinanceSection from "@/Components/SingleCar/FinanceSection/FinanceSection";
+import OurShowrooms from "@/Components/SingleCar/OurShowrooms/OurShowrooms";
+import RelatedCars from "@/Components/SingleCar/RelatedCars/RelatedCars";
+import ShopByBrand from "@/Components/SingleCar/ShopByBrand/ShopByBrand";
+import ShopByStyle from "@/Components/SingleCar/ShopByStyle/ShopByStyle";
 import SpecificationsAccordion from "@/Components/SingleCar/SpecificationsAccordion/SpecificationsAccordion";
 import SpecificationTabs from "@/Components/SingleCar/SpecificationTabs/SpecificationTabs";
 import React, { useState } from "react";
@@ -362,6 +367,13 @@ const SingleCarPage = () => {
           <SpecificationTabs specifications={specifications} />
 
           <SpecificationsAccordion specifications={specifications} />
+          <RelatedCars />
+          <FinanceSection />
+          <section className="bg-white py-[6rem] xl:py-[13rem]">
+            <ShopByBrand />
+            <ShopByStyle />
+          </section>
+          <OurShowrooms />
         </div>
       </section>
     </>

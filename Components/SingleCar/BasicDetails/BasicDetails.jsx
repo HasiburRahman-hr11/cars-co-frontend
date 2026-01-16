@@ -26,25 +26,25 @@ const BasicDetails = () => {
           {popupOpen && (
             <RequestCallPopup active={popupOpen} togglePopup={togglePopup} />
           )}
-          <div className="block lg:flex lg:flex-wrap lg:justify-between">
-            <div className="w-full">
+          <div className="block sm:flex sm:flex-wrap sm:justify-between">
+            <div className="w-full sm:w-[40%] md:w-[45%]">
               <p
                 className={`inline-block bg-black text-[#AEAEAE] text-center rounded-2xl text-base px-5 py-2 mb-5 leading-4 lg:text-sm lg:py-1 3xl:text-[2rem]  xl:py-1 xl:px-7`}
               >
                 Reg.Year : 2022 | EMI STARTS @ 45,000
               </p>
               <h4 className=" text-[2.3rem] tracking-tight xl:text-[6rem] font-medium leading-[1.3]">
-                Mercedes Benz A200 Limousine 
+                Mercedes Benz A200 Limousine
               </h4>
               <p className="text-[2rem] tracking-tight xl:text-[4.5rem] font-medium mt-[0.5rem]">
                 ₹ 62,50,000
               </p>
             </div>
 
-            <div className="mt-[4rem] sm:flex sm:flex-wrap sm:items-center sm:justify-between xl:w-4/6 xl:pl-10">
-              <div className="sm:w-60% xl:w-[63%]">
+            <div className="mt-[4rem] sm:w-[56%] sm:flex sm:flex-wrap sm:items-center sm:justify-between md:w-[50%]">
+              <div className="w-full">
                 <ul
-                  className={`${styles.detailInfoUsp} flex carCommonInfo [&>*:first-child]:pl-0 [&>*:first-child]:border-0`}
+                  className={`${styles.detailInfoUsp} flex carCommonInfo [&>*:first-child]:pl-0 [&>*:first-child]:border-0 sm:[&>*:first-child]:border-l sm:[&>*:first-child]:border-l-[rgb(207,207,207)] sm:[&>*:first-child]:pl-[1.2rem]`}
                 >
                   <li className="w-2/6 pl-[1.7rem] border-l border-[rgb(207,207,207)] sm:pl-[1.2rem]">
                     <img
@@ -89,8 +89,9 @@ const BasicDetails = () => {
               </div>
 
               {/* Call Buttons For Mobile */}
-              <div className="lg:hidden flex flex-wrap justify-center items-center py-[1.5rem] px-[3rem] bg-white fixed bottom-0 left-0 w-full z-10">
-                <div className="h-[4.5rem] bg-black flex-grow text-white rounded-[7px] flex justify-center items-center mr-[1rem]">
+              <div className="lg:hidden  py-[1.5rem] px-[3rem] bg-white fixed bottom-0 left-0 w-full z-10">
+                <div className="flex flex-wrap justify-center items-center max-w-[450px] mx-auto">
+                  <div className="h-[4.5rem] bg-black flex-grow text-white rounded-[7px] flex justify-center items-center mr-[1rem]">
                   Reserve The Car
                 </div>
                 <div className="w-[4.5rem] h-[4.5rem] border border-[#333] rounded-[7px] flex justify-center items-center bg-white">
@@ -101,6 +102,7 @@ const BasicDetails = () => {
                     width="25"
                     height="25"
                   />
+                </div>
                 </div>
               </div>
 
@@ -151,7 +153,7 @@ const BasicDetails = () => {
                         className="border border-[#A0A0A0] rounded-[1rem] flex justify-center items-center cursor-pointer py-4 px-2 xl:py-5 2xl:py-6 3xl:py-8 mt-4 3xl:mt-6 group transition-all duration-500 ease-in-out hover:bg-black"
                       >
                         <Image
-                          src="/images/compare-btn-icon.webp"
+                          src="/images/single-car/emi-icon.png"
                           alt="Reserve Icon"
                           width="26"
                           height="26"

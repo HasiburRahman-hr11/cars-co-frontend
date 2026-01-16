@@ -14,7 +14,7 @@ const SpecificationTabs = ({specifications}) => {
   };
 
   return (
-    <div className="block md:hidden">
+    <div className="block md:hidden pb-[6rem]">
       <div className="container">
         <div className="border-t border-t-[#dddddd] block my-[4rem]"></div>
       </div>

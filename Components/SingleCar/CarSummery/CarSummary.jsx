@@ -8,42 +8,42 @@ import styles from "../SingleCar.module.css";
 
 const dummyData = [
   {
-    icon: "/images/single-car/detail-summery-usp-1.webp",
+    icon: "/images/single-car/car-summary-engine.png",
     title: "Engine",
     description: "6592cc, Twin Turbocharged, V12, DOHC",
   },
   {
-    icon: "/images/single-car/detail-summery-usp-2.webp",
+    icon: "/images/single-car/car-summary-transmission.png",
     title: "Transmission",
     description: "8 Speed <br> Automatic ZF 8HP90 Transmission",
   },
   {
-    icon: "/images/single-car/detail-summery-usp-3.webp",
+    icon: "/images/single-car/car-summary-torque.png",
     title: "Peak Torque",
     description: "780Nm <br> @1500 RPM",
   },
   {
-    icon: "/images/single-car/detail-summery-usp-4.webp",
+    icon: "/images/single-car/car-summary-hp.png",
     title: "Peak Power",
     description: "571PS / 563BHP <br> @ 5250 RPM",
   },
   {
-    icon: "/images/single-car/detail-summery-usp-5.webp",
+    icon: "/images/single-car/car-summary-seat.png",
     title: "Seating Capacity",
     description: "Available <br> Seats (04) Persons",
   },
   {
-    icon: "/images/single-car/detail-summery-usp-6.webp",
+    icon: "/images/single-car/car-summary-body.png",
     title: "Vehicle Type",
     description: "Body Type <br> Luxury Sedan",
   },
   {
-    icon: "/images/single-car/detail-summery-usp-7.webp",
+    icon: "/images/single-car/car-summary-drive.png",
     title: "Drive ",
     description: "(RWD) <br> Rear Wheel Drive",
   },
   {
-    icon: "/images/single-car/detail-summery-usp-8.webp",
+    icon: "/images/single-car/car-summary-color.png",
     title: "Exterior Color",
     description: `Blue With <br> Shades of Silver`,
   },
@@ -84,8 +84,9 @@ const CarSummary = () => {
   return (
     <div className="lg:pt-16 lg:pb-16 xl:py-28 2xl:py-36 3xl:py-52">
       <div className="container">
-        <h6 className="flex items-center justify-between text-[2rem] xl:text-[4.8rem] mb-[2rem] pt-[3rem] border-t border-t-[#dddddd]">
+        <h6 className="flex items-center justify-center md:justify-between text-[2rem] xl:text-[4.8rem] mb-[2rem] pt-[3rem] border-t border-t-[#dddddd]">
          <span className="w-max"> <b>Car</b> Summary</span>
+         <span className="hidden md:block md:h-[1px] md:bg-[#0A0909] md:ml-[1rem] md:flex-[1]"></span>
         </h6>
       </div>
 
@@ -97,7 +98,7 @@ const CarSummary = () => {
         </Slider>
       </div>
       <div className="container hidden sm:block lg:mt-20 xl:mt-32 3xl:mt-48">
-        <ul className="md:grid grid-cols-3 lg:grid-cols-4">
+        <ul className="sm:grid grid-cols-3 lg:grid-cols-4 gap-y-[3rem]">
           {dummyData.map((data, index) => (
             <li
               key={index}
