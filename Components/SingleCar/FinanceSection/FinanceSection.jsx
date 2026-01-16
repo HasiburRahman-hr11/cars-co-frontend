@@ -45,12 +45,12 @@ const FinanceSection = () => {
 
   return (
     <section
-      className="bg-black py-24 lg:py-36 1xl:py-44 2xl:py-52 3xl:py-64"
+      className="bg-black py-24 lg:py-36 xl:py-[15rem]"
       id="singleEmiCalculator"
     >
       <div className="container">
-        <div className="lg:flex lg:flex-row-reverse lg:items-center max-w-[600px] mx-auto">
-          <div className="bg-[#1D1D1D] px-[2rem] py-[4rem] rounded-[1.5rem]">
+        <div className="lg:flex lg:flex-row-reverse lg:items-center lg:justify-between max-w-[600px] mx-auto lg:max-w-full">
+          <div className="bg-[#1D1D1D] px-[2rem] py-[4rem] rounded-[1.5rem] lg:w-[45%] xl:w-[40%] xl:rounded-[3rem] xl:py-[6rem] xl:px-[4rem]">
             <div className="text-center text-white">
               <h2 className=" leading-[1.3] text-[2.6rem] [&>br]:hidden md:[&>br]:block xl:text-[4.5rem] xl:leading-[1.2]">
                 Get Your Ride <b>Financed Today!</b>
@@ -59,12 +59,12 @@ const FinanceSection = () => {
                 Easy and hassle free Emi options available.
               </p>
             </div>
-            <div className="relative text-white  text-center mx-auto px-5 py-8 mt-16 border border-[#ffffff80] rounded-[1rem] max-w-[24rem] lg:w-max lg:rounded-[0.6rem] lg:mt-10 lg:py-5 lg:px-8 xl:mt-12 3xl:mt-20 3xl:px-16 3xl:py-9 3xl:max-w-[40rem]">
-              <p className="absolute w-max bg-[#1D1D1D] px-[1.5rem] left-[50%] top-[-1rem] translate-x-[-50%] text-xl lg:top-[-0.8rem] xl:text-[2rem] before:absolute before:content-[''] before:w-[5px] before:h-[5px] before:rounded-[50%] before:bg-[#ffffff80] before:top-[50%] before:translate-y-[-50%] before:left-0 after:absolute after:content-[''] after:w-[5px] after:h-[5px] after:rounded-[50%] after:bg-[#ffffff80] after:top-[50%] after:translate-y-[-50%] after:right-0">
+            <div className="relative text-white  text-center mx-auto px-5 py-8 mt-16 border border-[#ffffff80] rounded-[1rem] max-w-[24rem] lg:w-max lg:rounded-[0.6rem] lg:mt-10 lg:py-5 lg:px-8 xl:mt-12 xl:max-w-[30rem]">
+              <p className="absolute w-max bg-[#1D1D1D] px-[1.5rem] left-[50%] top-[-1rem] translate-x-[-50%] text-xl lg:top-[-0.8rem] xl:text-[2rem] before:absolute before:content-[''] before:w-[5px] before:h-[5px] before:rounded-[50%] before:bg-[#ffffff80] before:top-[50%] before:translate-y-[-50%] before:left-0 after:absolute after:content-[''] after:w-[5px] after:h-[5px] after:rounded-[50%] after:bg-[#ffffff80] after:top-[50%] after:translate-y-[-50%] after:right-0 xl:top-[-1.5rem]">
                 EMI Starts @
               </p>
-              <h5 className="text-[1.5rem] xl:text-[2.1rem] font-medium">
-                ₹ {monthlyEmi}/- <span className="font-light">Per Month</span>
+              <h5 className="text-[1.5rem] xl:text-[2.1rem] font-medium xl:mt-[2rem]">
+                ₹ {monthlyEmi}/- <span className="font-light text-[#888888]">Per Month</span>
               </h5>
             </div>
 
@@ -127,7 +127,7 @@ const FinanceSection = () => {
             </div>
 
             {/* Interest Rate Slider */}
-            <div className="mt-8 xl:mt-12">
+            <div className="mt-10 xl:mt-12">
               <div className="flex justify-between flex-wrap items-center text-white">
                 <p className="text-[1.2rem] xl:text-[1.6rem]">
                   Annual Interest Rate (%)
@@ -177,10 +177,10 @@ const FinanceSection = () => {
             </div>
           </div>
 
-          <div className="block w-full mt-[3rem] lg:mt-0 lg:w-60%">
+          <div className="block w-full mt-[3rem] lg:mt-0 lg:w-[50%] xl:w-[57%] xl:rounded-[3rem]">
             <img
               src="/images/single-car/finance-thumb.webp"
-              className="w-full object-cover block rounded-[1rem]"
+              className="w-full object-cover block rounded-[1rem] xl:h-[65rem] xl:rounded-[3rem]"
               alt="Car Image"
             />
           </div>

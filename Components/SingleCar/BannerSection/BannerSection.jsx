@@ -109,14 +109,14 @@ const BannerSection = () => {
         </div>
 
         {/* For Mobile */}
-        <div className="block">
+        <div className="block min-h-[20rem] sm:min-h-[35rem] lg:min-h-[47rem] xl:min-h-[60rem] xl:mb-[3rem]">
           <Slider {...settingsMobile} className="details-banner-slider">
             {images.map((src, index) => (
-              <div className="outline-none px-[0.5rem]" key={index}>
+              <div className="outline-none px-[0.5rem] lg:px-[1rem] xl:px-[1.8rem]" key={index}>
                 <img
                   src={src}
                   alt={`Product Image ${index + 1}`}
-                  className="w-[100vw] object-cover block md:w-[70vw]"
+                  className="w-[100vw] object-cover block md:w-[70vw] xl:w-[65vw] xl:max-w-[90rem] 3xl:max-w-[110rem]"
                 />
               </div>
             ))}

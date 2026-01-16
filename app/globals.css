@@ -469,6 +469,10 @@ footer .active-menu img {
   .contact-location-section .location-tag:hover::before {
     background-color: black;
   }
+  .detail-basic-shadow{
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+  }
+  
 }
 @media only screen and (min-width: 1200px) {
   html {
@@ -552,6 +556,28 @@ footer .active-menu img {
   .emiPercent::before {
     height: 1.9rem;
   }
+  .detail-style-slider .dark-slider-arrow.slick-arrow {
+    top: -10rem;
+    background-color: #f3f3f3;
+    width: 6.8rem;
+    height: 6.8rem;
+  }
+  .detail-style-slider .dark-slider-arrow.slick-arrow:hover {
+    background-color: #000;
+  }
+  .detail-style-slider .dark-slider-arrow.slick-arrow img {
+    filter: invert();
+  }
+  .detail-style-slider .dark-slider-arrow.slick-arrow:hover img {
+    filter: none;
+  }
+  .detail-style-slider .dark-slider-arrow.slick-next {
+    right: 15rem;
+  }
+  .detail-style-slider .dark-slider-arrow.slick-prev {
+    left: unset;
+    right: 23rem;
+  }
 }
 @media only screen and (min-width: 1360px) {
   html {
@@ -570,5 +596,11 @@ footer .active-menu img {
 @media only screen and (min-width: 1920px) {
   html {
     font-size: 10px;
+  }
+  .detail-style-slider .dark-slider-arrow.slick-next {
+    right: 23rem;
+  }
+  .detail-style-slider .dark-slider-arrow.slick-prev {
+    right: 32rem;
   }
 }

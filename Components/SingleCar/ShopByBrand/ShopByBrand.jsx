@@ -85,17 +85,17 @@ const ShopByBrand = () => {
 
         <Link
           href="#"
-          className="text-white bg-black border border-black w-max items-center justify-center px-[2.5rem] leading-[1] h-[4rem] rounded-[5rem] transition-all duration-300 hover:bg-white hover:text-black hidden lg:flex xl:h-[5rem] xl:px-[3rem] xl:text-[2.2rem]"
+          className="text-white bg-black border border-black w-max items-center justify-center px-[2.5rem] leading-[1] h-[4rem] rounded-[5rem] transition-all duration-300 hover:bg-white hover:text-black hidden lg:flex xl:px-[3rem] xl:text-[2.2rem] xl:h-[7rem]"
         >
-          View All
+          View All Brands
         </Link>
       </div>
 
-      <ul className="list-none grid grid-cols-3 mt-[4rem] gap-y-[3rem] sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 lg:mt-[5rem] xl:grid-cols-8">
+      <ul className="list-none grid grid-cols-3 mt-[4rem] gap-y-[3rem] sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 lg:mt-[5rem] xl:grid-cols-8 xl:mt-[8rem]">
         {brands.map((brand, index) => (
           <li
             key={index}
-            className="border-l border-l-[#D9D9D9] border-r border-r-[#D9D9D9] group hover:bg-[#F3F3F3] hover:border-0 hover:rounded-[1rem] transition-all duration-300 xl:hover:rounded-[2rem]"
+            className="border-l border-l-[#eeeeee] border-r border-r-[#eeeeee] group hover:bg-[#F3F3F3] hover:border-0 hover:rounded-[1rem] transition-all duration-300 xl:hover:rounded-[2rem]"
           >
             <Link
               href={brand.link}
@@ -104,7 +104,7 @@ const ShopByBrand = () => {
               <img
                 src={brand.logo}
                 alt={brand.title}
-                className="object-contain inline-block max-w-full max-h-[4rem] transition-all group-hover:invert lg:max-h-[7rem] xl:max-h-[8rem]"
+                className="object-contain inline-block max-w-full max-h-[4rem] transition-all lg:max-h-[7rem] xl:max-h-[8rem]"
               />
             </Link>
           </li>
@@ -116,7 +116,7 @@ const ShopByBrand = () => {
           href="#"
           className="text-white border border-black bg-black w-max flex items-center justify-center px-[2.5rem] leading-[1] h-[4rem] rounded-[5rem] transition-all duration-300 "
         >
-          View All
+          View All Brands
         </Link>
       </div>
     </div>

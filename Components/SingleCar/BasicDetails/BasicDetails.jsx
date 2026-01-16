@@ -20,65 +20,65 @@ const BasicDetails = () => {
     }
   };
   return (
-    <div className="lg:sticky top-0 bg-white z-[20] lg:shadow-detail-space">
-      <div className="max-1920">
-        <div className="py-[4rem] px-[2rem]  xl:px-0 xl:w-[92%] xl:mx-auto xl:py-20 2xl:py-[6rem]  3xl:py-28">
+    <div className="lg:sticky top-0 bg-white z-[20] detail-basic-shadow">
+      <div className="max-w-[1920px] mx-auto">
+        <div className="py-[4rem] px-[2rem]  xl:px-0 xl:w-[92%] xl:mx-auto xl:py-[3rem] 3xl:py-[4.5rem]">
           {popupOpen && (
             <RequestCallPopup active={popupOpen} togglePopup={togglePopup} />
           )}
           <div className="block sm:flex sm:flex-wrap sm:justify-between">
-            <div className="w-full sm:w-[40%] md:w-[45%]">
+            <div className="w-full sm:w-[40%] md:w-[45%] lg:w-[35%]">
               <p
-                className={`inline-block bg-black text-[#AEAEAE] text-center rounded-2xl text-base px-5 py-2 mb-5 leading-4 lg:text-sm lg:py-1 3xl:text-[2rem]  xl:py-1 xl:px-7`}
+                className={`inline-block bg-black text-[#AEAEAE] text-center rounded-2xl text-base px-5 py-2 mb-5 leading-4   xl:text-[2rem] xl:py-[1.2rem] xl:px-[1.8rem] xl:rounded-[5rem]`}
               >
                 Reg.Year : 2022 | EMI STARTS @ 45,000
               </p>
-              <h4 className=" text-[2.3rem] tracking-tight xl:text-[6rem] font-medium leading-[1.3]">
+              <h4 className=" text-[2.3rem] tracking-tight xl:text-[4rem] font-medium leading-[1.3] xl:leading-[1.15]">
                 Mercedes Benz A200 Limousine
               </h4>
-              <p className="text-[2rem] tracking-tight xl:text-[4.5rem] font-medium mt-[0.5rem]">
+              <p className="text-[2rem] tracking-tight xl:text-[3rem] font-medium mt-[0.5rem]">
                 ₹ 62,50,000
               </p>
             </div>
 
-            <div className="mt-[4rem] sm:w-[56%] sm:flex sm:flex-wrap sm:items-center sm:justify-between md:w-[50%]">
-              <div className="w-full">
+            <div className="mt-[4rem] sm:w-[56%] sm:flex sm:flex-wrap sm:items-center sm:justify-between md:w-[50%] lg:w-[60%] lg:gap-x-[3rem] lg:mt-0">
+              <div className="w-full lg:flex-[1]">
                 <ul
                   className={`${styles.detailInfoUsp} flex carCommonInfo [&>*:first-child]:pl-0 [&>*:first-child]:border-0 sm:[&>*:first-child]:border-l sm:[&>*:first-child]:border-l-[rgb(207,207,207)] sm:[&>*:first-child]:pl-[1.2rem]`}
                 >
-                  <li className="w-2/6 pl-[1.7rem] border-l border-[rgb(207,207,207)] sm:pl-[1.2rem]">
+                  <li className="w-2/6 pl-[1.7rem] border-l border-[rgb(207,207,207)] sm:pl-[1.2rem] xl:py-[2rem]">
                     <img
                       src="/images/single-car/km-icon.png"
                       alt="Icon"
                       className="h-[1.7rem] object-contain xl:h-[2.5rem]"
                     />
-                    <p className="text-[1.2rem] text-[#767778] mt-[1rem]">
+                    <p className="text-[1.2rem] text-[#767778] mt-[1rem] xl:text-[2rem]">
                       Kilometers Driven
                     </p>
                     <h6 className="font-medium text-[1.5rem] mt-[0.5rem] xl:text-[2.8rem]">
                       3500 km
                     </h6>
                   </li>
-                  <li className="w-2/6 pl-[1.7rem] border-l border-[#cfcfcf] sm:pl-[1.2rem]">
+                  <li className="w-2/6 pl-[1.7rem] border-l border-[#cfcfcf] sm:pl-[1.2rem] xl:py-[2rem]">
                     <img
                       src="/images/single-car/fuel-icon.png"
                       alt="Icon"
                       className="h-[1.7rem] object-contain xl:h-[2.5rem]"
                     />
-                    <p className="text-[1.2rem] text-[#767778] mt-[1rem]">
+                    <p className="text-[1.2rem] text-[#767778] mt-[1rem] xl:text-[2rem]">
                       Fuel / Gas Type
                     </p>
                     <h6 className="font-medium text-[1.5rem] mt-[0.5rem] xl:text-[2.8rem]">
                       Petrol
                     </h6>
                   </li>
-                  <li className="w-2/6 pl-[1.7rem] border-l border-[#cfcfcf] sm:pl-[1.2rem]">
+                  <li className="w-2/6 pl-[1.7rem] border-l border-[#cfcfcf] sm:pl-[1.2rem] xl:py-[2rem]">
                     <img
                       src="/images/single-car/registration-icon.png"
                       alt="Icon"
                       className="h-[1.7rem] object-contain xl:h-[2.5rem]"
                     />
-                    <p className="text-[1.2rem] text-[#767778] mt-[1rem]">
+                    <p className="text-[1.2rem] text-[#767778] mt-[1rem] xl:text-[2rem]">
                       Registration State
                     </p>
                     <h6 className="font-medium text-[1.5rem] mt-[0.5rem] xl:text-[2.8rem]">
@@ -107,82 +107,16 @@ const BasicDetails = () => {
               </div>
 
               {/* Call Button For Desktop */}
-              <div className=" mt-12 overflow-hidden  sm:w-40% sm:mt-0 xl:w-[37%] hidden lg:block">
-                {isSold ? (
-                  <div className="sm:pl-5 1xl:pl-10 3xl:pl-24">
-                    <p className="font-light [&_strong]:font-medium mb-4 text-center xl:text-left xl:mb-6 1xl:text-[2rem] 3xl:text-[2.2rem]">
-                      Sorry This Car is Sold !! <br />{" "}
-                      <strong>Still want to know more ?</strong>
-                    </p>
-                    <div
-                      className="bg-black w-full flex justify-center cursor-pointer items-center py-7 px-10 rounded-[5px] xl:rounded-[1rem] transition-all duration-500 ease-in-out group hover:bg-white hover:border hover:border-black"
-                      onClick={togglePopup}
-                    >
-                      <Image
-                        src="/images/square-btn-call-icon.webp"
-                        alt="Reserve Icon"
-                        width="30"
-                        height="30"
-                        className=" object-contain inline-block mr-8 w-[2rem] h-auto 2xl:w-[2.5rem] 3xl:w-[2.9rem] group-hover:invert transition-all duration-500 ease-in-out"
-                      />
-                      <span className="text-[1.3rem] text-white font-medium text-center 1xl:text-[1.5rem] 3xl:text-[1.7rem] group-hover:text-black transition-all duration-500 ease-in-out">
-                        Request a Call Back
-                      </span>
-                    </div>
-                  </div>
-                ) : (
-                  <div className="flex flex-wrap justify-between md:pl-5 1xl:pl-10 3xl:pl-14">
-                    <div className="hidden md:block md:w-[48%] lg:hidden xl:block xl:w-[55%]">
-                      <div
-                        className="border border-[#A0A0A0] rounded-[1rem] flex justify-center items-center cursor-pointer py-4 px-2 xl:py-5 2xl:py-6 3xl:py-8 group transition-all duration-500 ease-in-out hover:bg-black"
-                        onClick={handleScroll}
-                      >
-                        <Image
-                          src="/images/single-car/emi-icon.png"
-                          alt="Reserve Icon"
-                          width="26"
-                          height="26"
-                          className=" object-contain mr-8 w-[2rem] h-auto hidden lg:inline-block xl:w-[1.8rem] xl:mr-3 2xl:w-[2.2rem] 3xl:w-[2.7rem] group-hover:invert"
-                        />
-                        <span className="text-[1.3rem] font-[600] 1xl:text-[1.5rem] 3xl:text-[1.8rem] group-hover:text-white tracking-[-1.1px]">
-                          EMI Calculator
-                        </span>
-                      </div>
-                      <Link
-                        href="/compare-cars"
-                        className="border border-[#A0A0A0] rounded-[1rem] flex justify-center items-center cursor-pointer py-4 px-2 xl:py-5 2xl:py-6 3xl:py-8 mt-4 3xl:mt-6 group transition-all duration-500 ease-in-out hover:bg-black"
-                      >
-                        <Image
-                          src="/images/single-car/emi-icon.png"
-                          alt="Reserve Icon"
-                          width="26"
-                          height="26"
-                          className=" object-contain mr-8 w-[2rem] h-auto hidden lg:inline-block xl:w-[1.8rem] xl:mr-3 2xl:w-[2.2rem] 3xl:w-[2.7rem] group-hover:invert"
-                        />
-                        <span className="text-[1.3rem] font-[600] 1xl:text-[1.5rem] 3xl:text-[1.8rem] group-hover:text-white tracking-[-1.1px]">
-                          Compare Car
-                        </span>
-                      </Link>
-                    </div>
-                    <div className="w-full md:w-[48%] lg:w-full xl:w-[40%]">
-                      <Link
-                        href="/booking"
-                        className="bg-black w-full flex justify-center items-center py-7 px-10 rounded-[5px] md:flex-col xl:rounded-[1rem] xl:h-full 3xl:py-12 transition-all duration-500 ease-in-out  group hover:bg-white hover:border hover:border-black"
-                      >
-                        <Image
-                          src="/images/single-car/reserve-car-icon.png"
-                          alt="Reserve Icon"
-                          width="30"
-                          height="30"
-                          className=" object-contain inline-block mr-8 w-[2rem] h-auto md:mr-0 md:mb-6 xl:mb-4 2xl:w-[2.5rem] 3xl:w-[2.9rem] group-hover:invert transition-all duration-500 ease-in-out"
-                        />
-                        <span className="text-[1.3rem] text-white font-medium text-center 1xl:text-[1.5rem] 3xl:text-[1.7rem] 3xl:max-w-[6.9rem] 3xl:mx-auto group-hover:text-black transition-all duration-500 ease-in-out">
-                          Reserve Car
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-                )}
+              <div className="overflow-hidden hidden lg:block lg:max-w-[17rem] xl:max-w-[27rem]">
+                <a href="#" className="outline-none font-medium w-full flex items-center justify-center border border-black transition-all duration-300 px-[2rem] text-[1.2rem] xl:text-[2.2rem] h-[5rem] xl:h-[7.5rem] rounded-[5rem] hover:bg-black hover:text-white group">
+                  <img src="/images/single-car/emi-icon.png" alt="EMI Calculator" className="object-contain w-[1.8rem] xl:w-[2.6rem] inline-block mr-[2rem] transition-all duration-300 group-hover:invert" />
+                  <span>Emi Calculator</span>
+                </a>
+
+                <button href="#" className="outline-none font-medium w-full flex items-center justify-center border bg-black border-black transition-all duration-300 px-[2rem] text-[1.2rem] xl:text-[2.2rem] h-[5rem] xl:h-[7.5rem] rounded-[5rem] hover:bg-[#222222] text-white group mt-[1rem] group cursor-pointer">
+                  <img src="/images/single-car/reserve-car-icon.png" alt="EMI Calculator" className="object-contain w-[1.8rem] xl:w-[2.6rem] inline-block mr-[2rem] transition-all duration-300 " />
+                  <span>Reserve Car </span>
+                </button>
               </div>
             </div>
           </div>

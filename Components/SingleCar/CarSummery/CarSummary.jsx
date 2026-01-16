@@ -63,13 +63,13 @@ let settings = {
 
 const CarSummaryCard = ({ data }) => {
   return (
-    <div className="py-8 rounded-2xl border border-neutral-400 px-5 mr-7 sm:border-0 sm:mr-0 xl:py-14 3xl:py-20 h-full">
+    <div className="py-8 rounded-2xl border border-neutral-400 px-5 mr-7 sm:border-0 sm:mr-0 h-full xl:pl-[4rem] xl:pr-[3rem] xl:py-[4rem]">
       <img
         src={data.icon}
         alt="Icon"
         className="object-contain max-h-[2rem] xl:max-h-[4rem]"
       />
-      <p className="mt-[2rem] text-[#989898] text-[1.2rem] xl:text-[2rem]">
+      <p className="mt-[2rem] text-[#989898] text-[1.2rem] xl:text-[2rem] xl:mt-[5rem]">
         {data.title}
       </p>
       <p
@@ -82,9 +82,9 @@ const CarSummaryCard = ({ data }) => {
 
 const CarSummary = () => {
   return (
-    <div className="lg:pt-16 lg:pb-16 xl:py-28 2xl:py-36 3xl:py-52">
+    <div className="">
       <div className="container">
-        <h6 className="flex items-center justify-center md:justify-between text-[2rem] xl:text-[4.8rem] mb-[2rem] pt-[3rem] border-t border-t-[#dddddd]">
+        <h6 className="flex items-center justify-center md:justify-between text-[2rem] xl:text-[4.8rem] mb-[2rem] pt-[3rem] border-t border-t-[#dddddd] lg:border-t-0 xl:pt-[10rem]">
          <span className="w-max"> <b>Car</b> Summary</span>
          <span className="hidden md:block md:h-[1px] md:bg-[#0A0909] md:ml-[1rem] md:flex-[1]"></span>
         </h6>
@@ -97,8 +97,8 @@ const CarSummary = () => {
           ))}
         </Slider>
       </div>
-      <div className="container hidden sm:block lg:mt-20 xl:mt-32 3xl:mt-48">
-        <ul className="sm:grid grid-cols-3 lg:grid-cols-4 gap-y-[3rem]">
+      <div className="container hidden sm:block lg:mt-20 ">
+        <ul className="sm:grid grid-cols-3 lg:grid-cols-4 gap-y-[3rem] xl:mt-[10rem] xl:gap-y-[4rem]">
           {dummyData.map((data, index) => (
             <li
               key={index}

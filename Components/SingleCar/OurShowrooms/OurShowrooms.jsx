@@ -40,10 +40,10 @@ const showrooms = [
 
 const OurShowrooms = () => {
   return (
-    <section className="bg-[#F3F3F3] py-[6rem] lg:pb-[0] xl:pt-[13rem]">
+    <section className="bg-[#F3F3F3] py-[6rem] xl:py-[15rem]">
       <div className="container">
-        <div className="flex flex-wrap justify-between gap-y-[3rem]">
-          <div className="w-full text-center section-header lg:text-left lg:w-[50%] 2xl:w-[43%]">
+        <div className="flex flex-wrap justify-between gap-y-[3rem] lg:grid lg:grid-cols-3 lg:gap-[3rem]">
+          <div className="w-full text-center section-header lg:text-left lg:w-full">
             <h6 className="w-max mx-auto bg-[#F3F3F3] border border-[#4D4D4D] px-[3rem] pb-[0.5rem] pt-[0.8rem] text-[1.3rem] uppercase rounded-[4rem] leading-[1.6] mb-[2rem] xl:text-[2rem] xl:mb-[3rem] font-medium lg:ml-0">
               Our Showrooms
             </h6>
@@ -63,7 +63,7 @@ const OurShowrooms = () => {
           {showrooms.map((showroom, index) => (
             <div
               key={index}
-              className="w-full relative overflow-hidden rounded-[1.5rem] sm:w-[48%]"
+              className="w-full relative overflow-hidden rounded-[1.5rem] sm:w-[48%] lg:w-full group xl:rounded-[3rem]"
             >
               <div className="img-box h-full">
                 <img
@@ -72,12 +72,25 @@ const OurShowrooms = () => {
                   className="block object-cover w-full"
                 />
               </div>
-              <div className="content flex flex-col justify-end px-[2rem] py-[3rem] absolute w-full h-full left-0 top-0 bg-gradient-to-t from-[rgba(0,0,0,0.9)] to-[rgba(0,0,0,0.1)]">
-                <h6 className="text-white text-[2rem] xl:text-[2.8rem] font-[600]">{showroom.title}</h6>
-                <p className="mt-[1rem] text-white font-medium xl:text-[2.2rem]">
-                    {showroom.address}
-                </p>
-                <a href={showroom.googleMapLink} target="_blank" rel="noopener noreferrer" className="mt-[2rem] xl:text-[2rem] text-[#f9f9f9]">Locate On Map</a>
+              <div className="content absolute w-full h-full flex flex-col justify-end  left-0 top-0 bg-gradient-to-t from-[rgba(0,0,0,0.9)] to-[rgba(0,0,0,0.1)] px-[2rem] py-[3rem] xl:px-[4rem] xl:py-[6rem]">
+                <div className="transition-all duration-300 xl:translate-y-[17rem] group-hover:translate-y-0">
+                  <h6 className="text-white text-[2rem] xl:text-[2.8rem] font-[600]">
+                    {showroom.title}
+                  </h6>
+                  <div className="overflow-hidden transition-all duration-500 xl:h-[16rem] xl:flex flex-col justify-between">
+                    <p className="mt-[1rem] text-white xl:text-[2rem] xl:mt-[5rem] transition-all duration-500 group-hover:xl:mt-[1.5rem]">
+                      {showroom.address}
+                    </p>
+                    <a
+                      href={showroom.googleMapLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-[2rem] inline-block xl:text-[2rem] text-[#f9f9f9] transition-all duration-300 hover:text-[#FE0000]"
+                    >
+                      Locate On Map
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           ))}
