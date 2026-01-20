@@ -1,6 +1,6 @@
 import ListCarStickyBar from "@/Components/CommonComponents/ListCarStickyBar/ListCarStickyBar";
 import BannerSection from "@/Components/Homepage/BannerSection/BannerSection";
-import LatestAdditions from "@/Components/Homepage/LatestAdditions/LatestAdditions";
+import LatestAdditions from "@/Components/CommonComponents/LatestAdditions/LatestAdditions";
 // import OurShowrooms from "@/Components/Homepage/OurShowrooms/OurShowrooms";
 import ProcessSection from "@/Components/Homepage/ProcessSection/ProcessSection";
 import ListYourCar from "@/Components/Homepage/SellYourCar/ListYourCar";
