@@ -84,13 +84,26 @@ export default function EmiCalculator() {
   const formatCurrency = (value) =>
     `₹${value.toLocaleString("en-IN", { maximumFractionDigits: 0 })}`;
 
+  const getTrackBackground = (value, min, max) => {
+    const percent = ((value - min) / (max - min)) * 100;
+    return {
+      background: `linear-gradient(
+      to right,
+      #ef4444 0%,
+      #ef4444 ${percent}%,
+      #CBCBCB ${percent}%,
+      #CBCBCB 100%
+    )`,
+    };
+  };
+
   return (
     <section className="bg-white py-[6rem] xl:py-[13rem] overflow-hidden">
       <div className="container">
         <h2 className="text-[#222222] leading-[1.3] text-[2.6rem] [&>br]:hidden md:[&>br]:block xl:text-[4.5rem] xl:leading-[1.2] text-center">
           <b>EMI</b> Calculator
         </h2>
-        <div className="max-w-[600px] xl:max-w-[1240px] mx-auto mt-[4rem] xl:mt-[6rem]">
+        <div className="max-w-[600px] xl:max-w-[1240px] xl:w-[70%] mx-auto mt-[4rem] xl:mt-[6rem]">
           <div className="relative">
             <select className={dropdownStyle}>
               <option>Select Brand</option>
@@ -138,6 +151,7 @@ export default function EmiCalculator() {
               value={downPayment}
               onChange={(e) => setDownPayment(Number(e.target.value))}
               className={sliderStyle}
+              style={getTrackBackground(downPayment, carPrice * 0.2, carPrice)}
             />
           </div>
 
@@ -157,12 +171,13 @@ export default function EmiCalculator() {
             <input
               ref={rateRef}
               type="range"
-              min={2}
-              max={20}
-              step={0.5}
+              min="7"
+              max="15"
+              step="0.1"
               value={interestRate}
               onChange={(e) => setInterestRate(Number(e.target.value))}
               className={sliderStyle}
+              style={getTrackBackground(interestRate, 7, 15)}
             />
           </div>
 
@@ -182,12 +197,13 @@ export default function EmiCalculator() {
             <input
               ref={tenureRef}
               type="range"
-              min={6}
-              max={36}
-              step={1}
+              min="1"
+              max="84"
+              step="1"
               value={tenure}
               onChange={(e) => setTenure(Number(e.target.value))}
               className={sliderStyle}
+              style={getTrackBackground(tenure, 1, 84)}
             />
           </div>
 
@@ -226,7 +242,7 @@ export default function EmiCalculator() {
 }
 
 const dropdownStyle =
-  "w-full border border-[#C5C5C5] rounded-lg px-4 py-3 text-gray-500 text-[1.4rem] xl:text-[2.8rem] outline-none bg-[#F3F3F3] appearance-none xl:py-[2rem] xl:px-[3rem] xl:rounded-[1.5rem]";
+  "w-full border border-[#C5C5C5] rounded-lg px-4 py-3 text-gray-500 text-[1.4rem] xl:text-[2.8rem] outline-none bg-[#F3F3F3] appearance-none xl:py-[2rem] xl:px-[3rem] xl:rounded-[1.5rem] cursor-pointer";
 const labelStyle = "text-[1.2rem] font-medium xl:text-[2rem]";
 const sliderStyle =
-  "w-full accent-red-500 h-[5px] bg-[#CBCBCB] border-0 outline-none shadow-none";
+  "w-full accent-red-500 h-[5px] bg-[#CBCBCB] border-0 outline-none shadow-none range-slider";

@@ -20,7 +20,7 @@ const CarItem = ({ data, togglePopup }) => {
       <Link href={`/cars/${data._id}`} className="block relative">
         <Slider {...settings} className="collection-gallery-slider">
           {data.gallery.map((galleryImage, index) => (
-            <div key={index} className="relative">
+            <div key={index} className="relative outline-none">
               <img
                 src={galleryImage}
                 alt="Product Image"

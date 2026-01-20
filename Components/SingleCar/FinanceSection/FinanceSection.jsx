@@ -2,11 +2,10 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-
 const FinanceSection = () => {
   const [carPrice, setCarPrice] = useState(4900000);
   const [downPaymentAmount, setDownPaymentAmount] = useState(
-    Math.round((50 / 100) * 4900000)
+    Math.round((50 / 100) * 4900000),
   );
   const [downPaymentPercent, setDownPaymentPercent] = useState(50);
   const [annualInterest, setAnnualInterest] = useState(10);
@@ -26,22 +25,34 @@ const FinanceSection = () => {
     setTermPeriod(e.target.value);
   };
 
-    //   Calculate EMI
-    useEffect(() => {
-      const loanAmount = carPrice - downPaymentAmount;
-      const monthlyInterestRate = annualInterest / (12 * 100); // Convert annual interest rate to a monthly interest rate
-      const emi =
-        (loanAmount *
-          monthlyInterestRate *
-          Math.pow(1 + monthlyInterestRate, termPeriod)) /
-        (Math.pow(1 + monthlyInterestRate, termPeriod) - 1);
-      const totalAmountToPay = emi * termPeriod;
-      const totalInterestToPay = totalAmountToPay - loanAmount;
-      setMonthlyEmi(emi.toFixed(2));
-      setTotalAmountToPay(totalAmountToPay.toFixed(2));
-      setTotalInterestToPay(totalInterestToPay.toFixed(2));
-    }, [downPaymentAmount, annualInterest, termPeriod]);
+  //   Calculate EMI
+  useEffect(() => {
+    const loanAmount = carPrice - downPaymentAmount;
+    const monthlyInterestRate = annualInterest / (12 * 100); // Convert annual interest rate to a monthly interest rate
+    const emi =
+      (loanAmount *
+        monthlyInterestRate *
+        Math.pow(1 + monthlyInterestRate, termPeriod)) /
+      (Math.pow(1 + monthlyInterestRate, termPeriod) - 1);
+    const totalAmountToPay = emi * termPeriod;
+    const totalInterestToPay = totalAmountToPay - loanAmount;
+    setMonthlyEmi(emi.toFixed(2));
+    setTotalAmountToPay(totalAmountToPay.toFixed(2));
+    setTotalInterestToPay(totalInterestToPay.toFixed(2));
+  }, [downPaymentAmount, annualInterest, termPeriod]);
 
+  const getTrackBackground = (value, min, max) => {
+    const percent = ((value - min) / (max - min)) * 100;
+    return {
+      background: `linear-gradient(
+      to right,
+      #ef4444 0%,
+      #ef4444 ${percent}%,
+      #CBCBCB ${percent}%,
+      #CBCBCB 100%
+    )`,
+    };
+  };
 
   return (
     <section
@@ -64,7 +75,8 @@ const FinanceSection = () => {
                 EMI Starts @
               </p>
               <h5 className="text-[1.5rem] xl:text-[2.1rem] font-medium xl:mt-[2rem]">
-                ₹ {monthlyEmi}/- <span className="font-light text-[#888888]">Per Month</span>
+                ₹ {monthlyEmi}/-{" "}
+                <span className="font-light text-[#888888]">Per Month</span>
               </h5>
             </div>
 
@@ -79,13 +91,6 @@ const FinanceSection = () => {
                 </p>
               </div>
               <div className="mt-8">
-                {/* <RangeSlider
-                  className="emiSlider"
-                  value={downPaymentPercent}
-                  onInput={setDownPaymentPercent}
-                  step={1}
-                  max={70}
-                /> */}
                 <input
                   type="range"
                   name=""
@@ -96,6 +101,7 @@ const FinanceSection = () => {
                   className="w-full h-[3px] block emiSlider cursor-pointer"
                   value={downPaymentPercent}
                   onChange={downPaymentPercentChange}
+                  style={getTrackBackground(downPaymentPercent, 20, 80)}
                 />
                 <div className="relative overflow-hidden emiPercentBox h-[3rem] [&>span]:top-[1rem] lg:[&>span]:pt-[0.7rem]">
                   <span className="absolute text-white font-light emiPercent text-[1.2rem] xl:text-[1rem] leftOne left-0 lg:h-[4rem]">
@@ -147,6 +153,7 @@ const FinanceSection = () => {
                   className="w-full h-[3px] block emiSlider cursor-pointer"
                   value={annualInterest}
                   onChange={annualInterestRateChange}
+                  style={getTrackBackground(annualInterest, 7, 15)}
                 />
               </div>
             </div>
@@ -157,9 +164,7 @@ const FinanceSection = () => {
                 <p className="text-[1.2rem] xl:text-[1.6rem]">
                   Term/Period (Month)
                 </p>
-                <p className="text-[1.2rem] xl:text-[1.6rem]">
-                  {termPeriod}
-                </p>
+                <p className="text-[1.2rem] xl:text-[1.6rem]">{termPeriod}</p>
               </div>
               <div className="mt-8 mb-16 lg:mb-0 lg:mt-5">
                 <input
@@ -172,6 +177,7 @@ const FinanceSection = () => {
                   className="w-full h-[3px] block emiSlider cursor-pointer"
                   value={termPeriod}
                   onChange={termPeriodChange}
+                  style={getTrackBackground(termPeriod, 1, 84)}
                 />
               </div>
             </div>
@@ -185,8 +191,6 @@ const FinanceSection = () => {
             />
           </div>
         </div>
-
-  
       </div>
     </section>
   );
