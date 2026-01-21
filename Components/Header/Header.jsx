@@ -13,7 +13,7 @@ const phoneNumbers = [
   { label: "CARS.CO.IN - 9999 9999 08", link: "tel:+919999999908" },
 ];
 
-const Header = () => {
+const Header = ({ forceBlack = false }) => {
   const pathName = usePathname();
 
   // Define static routes and dynamic route prefixes
@@ -24,6 +24,7 @@ const Header = () => {
   const isSingleBlog = pathName.startsWith("/blogs/") && pathName !== "/blogs";
 
   const isBlackHeader =
+    forceBlack ||
     staticRoutes.includes(pathName) ||
     dynamicPrefixes.some((prefix) => pathName.startsWith(prefix)) ||
     isSingleBlog;
