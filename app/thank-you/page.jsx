@@ -1,18 +1,15 @@
-import Footer from "@/Components/Footer/Footer";
-import Header from "@/Components/Header/Header";
 import Link from "next/link";
 import React from "react";
 
 const ThankYou = () => {
   return (
     <>
-      <Header forceBlack />
       <div className="bg-white py-[6rem] xl:py-[13rem]">
         <div className="container">
           <div className="flex flex-wrap justify-between items-center">
             <div className="w-full text-center lg:w-[45%]">
               <h1 className="text-[3rem] xl:text-[6rem] font-medium">
-            Thank you!
+                Thank you!
               </h1>
               <img
                 src="/images/thank-you.png"
@@ -20,7 +17,8 @@ const ThankYou = () => {
                 className="block object-contain my-[3rem] lg:hidden"
               />
               <p className="text-[#6D6D6D] xl:text-[2rem] mt-[2rem]">
-              Your request has been received our experts team will review your application and revert you back soon.
+                Your request has been received our experts team will review your
+                application and revert you back soon.
               </p>
 
               <Link
@@ -40,7 +38,6 @@ const ThankYou = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

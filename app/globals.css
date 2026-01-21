@@ -481,9 +481,11 @@ footer .active-menu img {
 }
 .blog-detail-content h1 {
   font-size: 3rem;
+  line-height: 1.1;
 }
 .blog-detail-content h2 {
   font-size: 2.6rem;
+  line-height: 1.2;
 }
 .blog-detail-content h3 {
   font-size: 2.2rem;
@@ -497,7 +499,9 @@ footer .active-menu img {
 .blog-detail-content h6 {
   font-size: 1.6rem;
 }
-
+.blog-detail-content a:hover {
+  color: #ef3024;
+}
 
 @media only screen and (max-width: 639px) {
   html {
@@ -689,6 +693,11 @@ footer .active-menu img {
   .blog-detail-content h6 {
     margin-bottom: 4rem;
     margin-top: 6rem;
+  }
+  .blog-detail-content p,
+  .blog-detail-content ul,
+  .blog-detail-content ol {
+    margin-bottom: 4rem;
   }
 }
 @media only screen and (min-width: 1360px) {
