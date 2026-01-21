@@ -17,7 +17,7 @@ const Header = ({ forceBlack = false }) => {
   const pathName = usePathname();
 
   // Define static routes and dynamic route prefixes
-  const staticRoutes = ["/emi-calculator", "/privacy-policy", "/thank-you"];
+  const staticRoutes = ["/emi-calculator", "/privacy-policy", "/thank-you", "/terms-and-conditions" , "/refund-policy"];
   const dynamicPrefixes = ["/cars"];
 
   // single blog page: /blogs/{id}

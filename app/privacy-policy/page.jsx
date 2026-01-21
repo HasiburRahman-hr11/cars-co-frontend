@@ -150,7 +150,7 @@ const PrivacyPolicy = () => {
                 India
               </b>
             </p>
-            <p><a href="mailto:info@bigboytoyz.com"><b>info@bigboytoyz.com</b></a></p>
+            <p><a href="mailto:sales@cars.co.in.com"><b>sales@cars.co.in.com</b></a></p>
             <p><a href="tel:++919999999908">+91 9999 9999 08</a></p>
           </div>
         </div>
