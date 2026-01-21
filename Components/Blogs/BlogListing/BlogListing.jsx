@@ -53,7 +53,7 @@ const BlogListing = () => {
                   <img
                     src="/images/link-arrow-red.png"
                     alt="Read More Link Arrow"
-                    className="object-contain w-[1rem] xl:w-[1.5rem] inline-block ml-[5px] xl:ml-[8px] transition-all duration-300 group-hover:rotate-45"
+                    className="object-contain w-[1rem] xl:w-[1.5rem] inline-block ml-[5px] xl:ml-[12px] transition-all duration-300 group-hover:rotate-45"
                   />
                 </span>
               </div>

@@ -13,7 +13,7 @@ const carsCoWorldMenu = [
   { title: "Buy Cars", link: "/buy-cars" },
   { title: "Why Us", link: "#" },
   { title: "Compare Cars", link: "#" },
-  { title: "Blog", link: "#" },
+  { title: "Blogs", link: "/blogs" },
   { title: "About Us", link: "/about-us" },
   { title: "Contact Us", link: "/contact" },
   { title: "Testimonials", link: "/testimonials" },

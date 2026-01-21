@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -20,15 +20,18 @@ const Header = () => {
   const staticRoutes = ["/emi-calculator"];
   const dynamicPrefixes = ["/cars"];
 
-  // Check for matching static or dynamic routes
+  // single blog page: /blogs/{id}
+  const isSingleBlog = pathName.startsWith("/blogs/") && pathName !== "/blogs";
+
   const isBlackHeader =
     staticRoutes.includes(pathName) ||
-    dynamicPrefixes.some((prefix) => pathName.startsWith(prefix));
+    dynamicPrefixes.some((prefix) => pathName.startsWith(prefix)) ||
+    isSingleBlog;
 
   return (
     <header
       className={`header left-[0] top-[0] z-[20] w-full ${
-        isBlackHeader ? "bg-[#000] relative" : "bg-transparent absolute"
+        isBlackHeader ? "black-header " : "bg-transparent absolute"
       }`}
       id="header"
     >

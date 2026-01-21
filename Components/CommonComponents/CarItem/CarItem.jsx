@@ -101,7 +101,7 @@ const CarItem = ({ data, togglePopup }) => {
                 Fuel / Gas Type
               </p>
               <h6
-                className={`text-lg 3xl:text-[1.4rem] font-[600] `}
+                className={`text-lg xl:text-[1.4rem] font-[600] `}
               >
                 {data?.fuelType ? data.fuelType : "Petrol"}
               </h6>
@@ -118,7 +118,7 @@ const CarItem = ({ data, togglePopup }) => {
                 Registration State
               </p>
               <h6
-                className={`text-lg 3xl:text-[1.4rem] font-[600] `}
+                className={`text-lg xl:text-[1.4rem] font-[600] `}
               >
                 {data?.registrationState ? data.registrationState : "Delhi"}
               </h6>
