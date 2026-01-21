@@ -18,17 +18,17 @@ const Header = () => {
 
   // Define static routes and dynamic route prefixes
   const staticRoutes = ["/emi-calculator"];
-  const dynamicPrefixes = ["/cars", "/blogs"];
+  const dynamicPrefixes = ["/cars"];
 
   // Check for matching static or dynamic routes
-  const isPageHeader =
+  const isBlackHeader =
     staticRoutes.includes(pathName) ||
     dynamicPrefixes.some((prefix) => pathName.startsWith(prefix));
 
   return (
     <header
       className={`header left-[0] top-[0] z-[20] w-full ${
-        isPageHeader ? "page-header bg-[#000] relative" : "bg-transparent absolute"
+        isBlackHeader ? "bg-[#000] relative" : "bg-transparent absolute"
       }`}
       id="header"
     >
