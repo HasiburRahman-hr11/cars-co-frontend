@@ -22,11 +22,7 @@ const RefundPolicy = () => {
             <p>
               <b>
                 You need to carry and submit your Token Invoice Number as
-                generated on
-                <a href="/" target="_blank" rel="noopener noreferrer">
-                  www.bigboytoyz.com
-                </a>
-                at the time of booking.
+                generated on <a href="/" target="_blank" rel="noopener noreferrer"> www.bigboytoyz.com </a> at the time of booking.
               </b>
             </p>
 
