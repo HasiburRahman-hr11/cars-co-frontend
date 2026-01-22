@@ -65,7 +65,7 @@ const TestimonialSection = () => {
     }
   };
 
-  const handleClick = (e, hash) => {
+  const handleHashClick = (e, hash) => {
     e.preventDefault();
 
     const target = document.querySelector(hash);
@@ -96,7 +96,7 @@ const TestimonialSection = () => {
                       ? "text-[#FE0000]"
                       : "text-white"
                   }`}
-                  onClick={(e) => handleClick(e, "#videoTestimonials")}
+                  onClick={(e) => handleHashClick(e, "#videoTestimonials")}
                 >
                   <img
                     src="/images/right-arrow-white.webp"
@@ -114,7 +114,7 @@ const TestimonialSection = () => {
                       ? "text-[#FE0000]"
                       : "text-white"
                   }`}
-                  onClick={(e) => handleClick(e, "#googleTestimonials")}
+                  onClick={(e) => handleHashClick(e, "#googleTestimonials")}
                 >
                   <img
                     src="/images/right-arrow-white.webp"
@@ -132,7 +132,7 @@ const TestimonialSection = () => {
                       ? "text-[#FE0000]"
                       : "text-white"
                   }`}
-                  onClick={(e) => handleClick(e, "#writtenTestimonials")}
+                  onClick={(e) => handleHashClick(e, "#writtenTestimonials")}
                 >
                   <img
                     src="/images/right-arrow-white.webp"

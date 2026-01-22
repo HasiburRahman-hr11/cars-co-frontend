@@ -24,7 +24,7 @@ const RelatedCars = () => {
         )}
 
         <div className="mt-[4rem] flex flex-wrap gap-y-[3rem] sm:max-w-[40rem] sm:mx-auto md:max-w-none md:grid md:grid-cols-2 md:gap-x-[2.5rem] md:gap-y-[4rem] lg:grid-cols-3 lg:gap-y-[5rem] xl:mt-[6rem]">
-          {cars.map((car, index) => (
+          {cars.slice(0, 3).map((car, index) => (
             <div key={index}  className="w-full [&_.item-divider]:hidden">
               <CarItem data={car}  togglePopup={togglePopup} />
             </div>
