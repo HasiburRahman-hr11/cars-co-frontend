@@ -95,7 +95,7 @@ const BannerSection = () => {
                 />
               </span>
               <Link
-                href="#"
+                href="/collections"
                 className="bg-[#010101] text-white font-[500] text-[1.1rem] px-[1.5rem] py-[1.1rem] rounded-[3rem] ml-[1rem] xl:text-[2rem] xl:py-[1.6rem] xl:px-[4.2rem] transition-all duration-500 hover:bg-[#FE0000]"
               >
                 View Collection

@@ -26,6 +26,7 @@ const Header = ({ forceBlack = false }) => {
     "/thank-you",
     "/terms-and-conditions",
     "/refund-policy",
+    "/collections",
   ];
   const dynamicPrefixes = ["/cars"];
 
