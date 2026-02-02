@@ -13,7 +13,7 @@ const AboutUs = () => {
     <IntroSection />
     <Achievements />
     <ClientStories />
-    <ProcessSection />
+    {/* <ProcessSection /> */}
     <BottomBanner />
     </>
   )

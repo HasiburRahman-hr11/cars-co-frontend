@@ -25,7 +25,7 @@ const bannerUsps = [
 
 const BannerSection = () => {
   return (
-    <section className="bg-[#1B1A1D] text-white relative overflow-hidden">
+    <section className="bg-[#111111] text-white relative overflow-hidden">
       <div className="relative">
         <img
           src="/images/about-us/banner-image-desktop.webp"

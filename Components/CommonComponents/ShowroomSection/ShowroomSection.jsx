@@ -24,13 +24,6 @@ const showrooms = [
     googleMapLink: "https://maps.app.goo.gl/hH1jvrxkL89TPR6u9",
   },
   {
-    title: "Ahmedabad",
-    isHeadQuarter: false,
-    address:
-      "Cama Motors, Rustom Cama Marg, Old City, Lal Darwaja, Ahmedabad, Gujarat 380001",
-    googleMapLink: "https://maps.app.goo.gl/CYhXfh1RNMzWRmMp9",
-  },
-  {
     title: "Bengaluru",
     isHeadQuarter: false,
     address:
@@ -44,8 +37,7 @@ const ShowroomSection = () => {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [carName, setCarName] = useState("");
-  const [cityName, setCityName] = useState("");
+
   return (
     <section className="bg-white py-[6rem] xl:py-[13rem]">
       <div className="container">
@@ -58,7 +50,7 @@ const ShowroomSection = () => {
               You Can Also <br />
               <b>Visit Our Showroom.</b>
             </h2>
-            <div className="grid grid-cols-2 gap-[1rem] mt-[4rem] xl:mt-[10rem]">
+            <div className="grid grid-cols-2 gap-[1rem] mt-[4rem] xl:mt-[5rem]">
               <div className="flex flex-col gap-[1rem] items-end">
                 <img
                   src="/images/list-cars/showroom-img-1.webp"
@@ -91,7 +83,7 @@ const ShowroomSection = () => {
               {showrooms.map((showroom, index) => (
                 <li
                   key={index}
-                  className="border-t border-t-[#CDCDCD] w-[48%] last:w-full last:border-b last:border-b-[#CDCDCD]"
+                  className="border-t border-t-[#CDCDCD] w-[48%] border-b border-b-[#CDCDCD]"
                 >
                   <a
                     href={showroom.googleMapLink}
@@ -148,42 +140,31 @@ const ShowroomSection = () => {
                   value={lastName}
                   onChange={(e) => setLastName(e.target.value)}
                 />
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  placeholder="Email Address"
-                  className={inputStyle}
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-                <input
-                  type="tel"
-                  name="phone"
-                  id=""
-                  placeholder="Mobile Number"
-                  className={inputStyle}
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                />
               </div>
               <input
-                type="text"
-                name="carName"
-                placeholder="Type Your Car Name"
+                type="email"
+                name="email"
+                required
+                placeholder="Email Address"
                 className={inputStyle}
-                value={carName}
-                onChange={(e) => setCarName(e.target.value)}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
               <input
-                type="text"
-                name="cityName"
-                placeholder="Type Your City Name"
+                type="tel"
+                name="phone"
+                id=""
+                placeholder="Mobile Number"
                 className={inputStyle}
-                value={cityName}
-                onChange={(e) => setCityName(e.target.value)}
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
               />
-              <button type="submit" className="bg-black font-medium text-white w-full text-[1.6rem] xl:text-[1.9rem] rounded-[0.5rem] py-[1.2rem] xl:h-[6.8rem] hover:bg-[#FE0000] transition-all duration-500 cursor-pointer">Submit</button>
+              <button
+                type="submit"
+                className="bg-black font-medium text-white w-full text-[1.6rem] xl:text-[1.9rem] rounded-[0.5rem] py-[1.2rem] xl:h-[6.8rem] hover:bg-[#FE0000] transition-all duration-500 cursor-pointer"
+              >
+                Submit
+              </button>
             </form>
           </div>
         </div>

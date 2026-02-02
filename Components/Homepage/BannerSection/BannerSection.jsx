@@ -1,6 +1,9 @@
+"use client";
+import FilterPopup from "@/Components/FilterPopup/FilterPopup";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+
+import React, { useState } from "react";
 import Marquee from "react-fast-marquee";
 
 const logos = [
@@ -27,8 +30,12 @@ const logos = [
 ];
 
 const BannerSection = () => {
+  const [filterOpen, setFilterOpen] = useState(false);
+  const togglePopup = () => {
+    setFilterOpen(!filterOpen);
+  };
   return (
-    <section className="bg-[#141313] relative overflow-hidden ">
+    <section className="bg-[#111111] relative overflow-hidden ">
       <div className="h-full w-full">
         <img
           src="/images/homepage/hp-banner-desktop.webp"
@@ -40,17 +47,15 @@ const BannerSection = () => {
         <img
           src="/images/homepage/hp-banner-mobile.webp"
           alt="Banner Image"
-          width="390"
-          height="685"
-          className="block w-full md:hidden object-cover h-[80vh] min-h-[67rem] max-h-[95vh]"
+          className="block w-full md:hidden object-cover h-[85vh] min-h-[70rem] max-h-[95vh]"
         />
       </div>
-      <div className="absolute top-[0] left-[0] text-center w-full h-full flex flex-col justify-between pt-[9rem] xl:pt-[15rem] 3xl:pt-[20rem]">
+      <div className="absolute top-[0] left-[0] text-center w-full h-full flex flex-col justify-between pt-[12rem] xl:pt-[15rem] 3xl:pt-[20rem]">
         <div className="container w-full">
           <h1 className="text-[#ffffff] text-center text-[3rem] font-[500] leading-[1.3] xl:text-[6rem] lx:leading-[1.1]">
             You Deserve the Luxury You Work Hard For
           </h1>
-          <div className="mt-[2rem] bg-white rounded-[5rem] pl-[1.5rem] py-[0.5rem] pr-[0.5rem] flex justify-between items-center sm:w-[70%] sm:mx-auto lg:w-[50%] xl:w-full xl:max-w-[79rem] xl:mt-[3rem]">
+          <div className="mt-[2rem] bg-white rounded-[5rem] pl-[1.5rem] py-[0.5rem] pr-[0.5rem] flex justify-between items-center sm:w-[70%] sm:mx-auto lg:w-[50%] xl:w-full xl:max-w-[79rem] xl:mt-[3rem] xl:pl-[2.5rem]">
             <div className="flex items-center flex-[1]">
               <span>
                 <Image
@@ -68,13 +73,16 @@ const BannerSection = () => {
               />
             </div>
             <div className="w-max flex items-center">
-              <span>
+              <span
+                className="inline-flex items-center justify-center group transition-all duration-300 xl:w-[5rem] xl:h-[5rem] xl:hover:bg-[black] xl:rounded-[50%]"
+                onClick={togglePopup}
+              >
                 <Image
                   src="/images/filter-icon-black.webp"
                   alt=""
                   width="30"
                   height="30"
-                  className="w-[2rem] object-contain h-auto xl:w-[2.8rem] cursor-pointer transition-all duration-500 hover:scale-110"
+                  className="w-[2rem] object-contain h-auto xl:w-[2.8rem] xl:max-h-[2.5rem] cursor-pointer transition-all duration-300 group-hover:invert"
                 />
               </span>
               <Link
@@ -105,6 +113,9 @@ const BannerSection = () => {
           </Marquee>
         </div>
       </div>
+      {filterOpen && (
+        <FilterPopup active={filterOpen} togglePopup={togglePopup} />
+      )}
     </section>
   );
 };

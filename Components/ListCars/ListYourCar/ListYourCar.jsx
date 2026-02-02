@@ -5,6 +5,7 @@ const ListYourCar = () => {
   const [totalStep, setTotalStep] = useState(6);
   const [currentStep, setCurrentStep] = useState(1);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [allowNext, setAllowNext] = useState(true);
 
   const [formData, setFormData] = useState({
     carBrand: "",
@@ -32,8 +33,14 @@ const ListYourCar = () => {
   };
 
   const nextStep = () => {
+    setIsSubmitted(false);
+    if (!isCurrentStepValid()) {
+      setAllowNext(false);
+      return;
+    }
     if (currentStep < 6) {
       setCurrentStep((prev) => prev + 1);
+      setAllowNext(true);
     }
   };
 
@@ -253,12 +260,10 @@ const ListYourCar = () => {
             {currentStep < totalStep && (
               <button
                 className={`${btnStyle} ${
-                  isCurrentStepValid()
-                    ? "opacity-100"
-                    : "opacity-50 pointer-events-none"
+                  isCurrentStepValid() ? "opacity-100" : "opacity-50"
                 }`}
                 onClick={nextStep}
-                disabled={!isCurrentStepValid()}
+                // disabled={!isCurrentStepValid()}
               >
                 Next
                 <img
@@ -288,6 +293,12 @@ const ListYourCar = () => {
               </button>
             )}
           </div>
+
+          {!allowNext && (
+            <p className="text-center text-white mt-[3rem] xl:text-[2.4rem]">
+              Please fill the form properly!
+            </p>
+          )}
 
           {isSubmitted && (
             <p className="text-center text-white mt-[3rem] xl:text-[2.4rem]">

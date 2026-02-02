@@ -3,29 +3,9 @@ import React, { useState } from "react";
 
 const socialLinks = [
   {
-    title: "Facebook",
-    icon: "/images/contact/fb-icon.webp",
-    link: "#",
-  },
-  {
-    title: "X",
-    icon: "/images/contact/x-icon.webp",
-    link: "#",
-  },
-  {
-    title: "Linked In",
-    icon: "/images/contact/linkedin-icon.webp",
-    link: "#",
-  },
-  {
     title: "Instagram",
     icon: "/images/contact/insta-icon.webp",
-    link: "#",
-  },
-  {
-    title: "Whatsapp",
-    icon: "/images/contact/whatsapp-icon.webp",
-    link: "#",
+    link: "https://www.instagram.com/cars_co.in/",
   },
 ];
 
@@ -115,7 +95,7 @@ const ContactSection = () => {
                 <li key={index} className="group">
                   <a
                     href={item.link}
-                    className="flex items-center w-[5rem] h-[5rem] p-[1.2rem] justify-center border border-[#767778] rounded-[7px] lg:w-[6rem] lg:h-[6rem] transition-all duration-500 group-hover:bg-white group-hover:border-white"
+                    className="flex items-center h-[5rem] py-[1rem] px-[2rem] justify-center border border-[#767778] rounded-[5rem] lg:h-[6rem] transition-all duration-500 group-hover:bg-white group-hover:border-white"
                     target="_blank"
                   >
                     <img
@@ -123,6 +103,9 @@ const ContactSection = () => {
                       alt={`${item.title} Icon`}
                       className="object-contain max-h-[2.5rem] group-hover:invert transition-all duration-500"
                     />
+                    <span className="inline-block ml-[2rem] text-white text-[1.4rem] xl:text-[1.6rem] font-medium transition-all duration-500 lg:group-hover:text-black">
+                      {item.title}
+                    </span>
                   </a>
                 </li>
               ))}

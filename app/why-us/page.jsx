@@ -1,9 +1,9 @@
 import React from "react";
 import HeroBanner from "@/Components/CommonComponents/HeroBanner/HeroBanner";
 import CommonVideoBox from "@/Components/CommonComponents/CommonVideoBox/CommonVideoBox";
-import WhyUs from "@/Components/BuyCars/WhyUs/WhyUs";
-import ProcessSection from "@/Components/BuyCars/ProcessSection/ProcessSection";
-import BuyYourCar from "@/Components/BuyCars/BuyYourCar/BuyYourCar";
+import WhyUs from "@/Components/WhyUs/WhyUs/WhyUs";
+import ProcessSection from "@/Components/WhyUs/ProcessSection/ProcessSection";
+import BuyYourCar from "@/Components/WhyUs/BuyYourCar/BuyYourCar";
 import ReviewsSection from "@/Components/CommonComponents/ReviewsSection/ReviewsSection";
 import ShowroomSection from "@/Components/CommonComponents/ShowroomSection/ShowroomSection";
 

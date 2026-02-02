@@ -3,7 +3,7 @@ import React from "react";
 
 const BottomBanner = () => {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden bg-[#DDF0F7]">
       <div className="bg-box h-full">
         <img
           src="/images/about-us/body-banner-bg-desktop.webp"
@@ -27,7 +27,8 @@ const BottomBanner = () => {
               start your journey
             </h6>
             <h2 className="text-black leading-[1.3] text-[2.6rem] [&>br]:hidden md:[&>br]:block xl:text-[4.5rem] xl:leading-[1.2] lg:w-[80%] xl:w-[75%]">
-             <b>Your journey starts here,</b> unlocking trust & premium car ownership.
+              <b>Your journey starts here,</b> unlocking trust & premium car
+              ownership.
             </h2>
             <p className="mt-[2rem] text-black xl:text-[2.2rem]">
               Your journey starts here with Cars.co.in, where trust meets
@@ -37,16 +38,16 @@ const BottomBanner = () => {
             </p>
             <div className="flex flex-wrap justify-center items-center gap-x-[1rem] md:justify-start mt-[3rem] xl:mt-[5rem]">
               <Link
-                href="/buy-cars"
+                href="/list-cars"
                 className="inline-block bg-[#FE0000] text-white text-[1.5rem] px-[3rem] py-[1.3rem]  rounded-[5rem] xl:text-[2.2rem] xl:py-[1.8rem] xl:px-[6rem] hover:bg-white hover:text-black transition-all duration-500"
               >
-                Buy Cars
+                List Cars
               </Link>
               <Link
-                href="/list-cars"
+                href="/collections"
                 className="inline-block bg-[transparent border border-black text-black text-[1.5rem] px-[3rem] py-[1.3rem]  rounded-[5rem] xl:text-[2.2rem] xl:py-[1.8rem] xl:px-[6rem] hover:bg-black hover:text-white transition-all duration-500"
               >
-                List Cars
+                Collections
               </Link>
             </div>
           </div>

@@ -1,0 +1,18 @@
+
+.filterBrands li.active,
+.budgetItem.active,
+.categoryItem.active{
+  border-color: #000;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  background-color: #fff;
+}
+
+@media only screen and (min-width: 1280px) {
+  .filterBrands li:hover,
+  .budgetItem:hover,
+  .categoryItem:hover {
+    border-color: #000;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    background-color: #fff;
+  }
+}

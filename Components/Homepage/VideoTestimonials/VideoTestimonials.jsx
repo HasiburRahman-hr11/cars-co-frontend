@@ -306,7 +306,7 @@ const VideoTestimonials = () => {
           </Slider>
         </div>
       ) : (
-        <div className="relative mx-auto mt-[4rem] hp-testimonial-slider pl-[2rem] lg:pl-[30px] xl:w-[90%] xl:px-[25px] xl:mt-[7rem]">
+        <div className="relative mx-auto max-w-[1530px] mt-[4rem] hp-testimonial-slider pl-[2rem] lg:pl-[30px] xl:w-[90%] xl:px-[25px] xl:mt-[7rem]">
           <Slider ref={sliderRef} {...sliderSettingsDesk}>
             {testimonials.map((testimonial, index) => (
               <div key={index} className="h-full">

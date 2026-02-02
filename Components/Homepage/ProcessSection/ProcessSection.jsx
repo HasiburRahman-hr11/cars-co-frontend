@@ -34,7 +34,7 @@ const ProcessSection = () => {
             <h6 className="w-max mx-auto bg-[#202020] px-[3rem] pb-[0.5rem] pt-[0.8rem] text-[#AEAEAE] text-[1.3rem] uppercase rounded-[4rem] leading-[1.6] mb-[2rem] xl:text-[2rem]">
               The Process
             </h6>
-            <h2 className="text-white leading-[1.3] text-[2.6rem] md:[&>br]:block xl:text-[4.5rem] xl:leading-[1.2]">
+            <h2 className="text-white leading-[1.3] text-[2.4rem] [&>br]:hidden md:[&>br]:block xl:text-[4.5rem] xl:leading-[1.2]">
               Selling your luxury car for the best price? Let's get you better. <br /> <b>List your car @ Cars.co.in</b>
             </h2>
             <p className="mt-[1rem] text-[#818181] xl:text-[2.2rem] xl:mt-[2rem]">

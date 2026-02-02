@@ -94,7 +94,7 @@ const LocationSection = () => {
                   className="w-full block object-contain"
                 />
                 <span
-                  className={`location-1 top-[26%] left-[26%] ${locationTagStyle}`}
+                  className={`location-1 top-[26%] left-[26%] ${locationTagStyle} inline-flex`}
                   onClick={() => {
                     setOpenPopup(true);
                     setLocationNumber(0);
@@ -103,7 +103,7 @@ const LocationSection = () => {
                   Gurgaon
                 </span>
                 <span
-                  className={`location-2 top-[45%] left-[0] ${locationTagStyle}`}
+                  className={`location-2 top-[45%] left-[0] ${locationTagStyle} hidden`}
                   onClick={() => {
                     setOpenPopup(true);
                     setLocationNumber(1);
@@ -112,7 +112,7 @@ const LocationSection = () => {
                   Ahmedabad
                 </span>
                 <span
-                  className={`location-3 top-[62%] left-[10%] ${locationTagStyle}`}
+                  className={`location-3 top-[62%] left-[10%] ${locationTagStyle} inline-flex`}
                   onClick={() => {
                     setOpenPopup(true);
                     setLocationNumber(2);
@@ -121,7 +121,7 @@ const LocationSection = () => {
                   Mumbai
                 </span>
                 <span
-                  className={`location-4 top-[65%] left-[33%] ${locationTagStyle}`}
+                  className={`location-4 top-[65%] left-[33%] ${locationTagStyle} inline-flex`}
                   onClick={() => {
                     setOpenPopup(true);
                     setLocationNumber(3);
@@ -130,7 +130,7 @@ const LocationSection = () => {
                   Hyderabad
                 </span>
                 <span
-                  className={`location-5 bottom-[10%] left-[14%] ${locationTagStyle}`}
+                  className={`location-5 bottom-[10%] left-[14%] ${locationTagStyle} inline-flex`}
                   onClick={() => {
                     setOpenPopup(true);
                     setLocationNumber(4);
@@ -161,7 +161,7 @@ const LocationSection = () => {
                 className="w-full block object-contain"
               />
               <span
-                className={`location-1 top-[26%] left-[26%] xl:left-[27%] xl:top-[25%] ${locationTagStyle}`}
+                className={`location-1 top-[26%] left-[26%] xl:left-[27%] xl:top-[25%] ${locationTagStyle} inline-flex`}
                 onClick={() => {
                   setOpenPopup(true);
                   setLocationNumber(0);
@@ -170,7 +170,7 @@ const LocationSection = () => {
                 Gurgaon
               </span>
               <span
-                className={`location-2 top-[45%] left-[0] xl:left-[-7rem] ${locationTagStyle}`}
+                className={`location-2 top-[45%] left-[0] xl:left-[-7rem] ${locationTagStyle} hidden`}
                 onClick={() => {
                   setOpenPopup(true);
                   setLocationNumber(1);
@@ -179,7 +179,7 @@ const LocationSection = () => {
                 Ahmedabad
               </span>
               <span
-                className={`location-3 top-[62%] left-[10%] xl:left-[5%] xl:top-[60%] ${locationTagStyle}`}
+                className={`location-3 top-[62%] left-[10%] xl:left-[5%] xl:top-[60%] ${locationTagStyle} inline-flex`}
                 onClick={() => {
                   setOpenPopup(true);
                   setLocationNumber(2);
@@ -188,7 +188,7 @@ const LocationSection = () => {
                 Mumbai
               </span>
               <span
-                className={`location-4 top-[65%] left-[33%] xl:top-[62%]  ${locationTagStyle}`}
+                className={`location-4 top-[65%] left-[33%] xl:top-[62%]  ${locationTagStyle} inline-flex`}
                 onClick={() => {
                   setOpenPopup(true);
                   setLocationNumber(3);
@@ -197,7 +197,7 @@ const LocationSection = () => {
                 Hyderabad
               </span>
               <span
-                className={`location-5 bottom-[10%] left-[14%] xl:bottom-[13%] xl:left-[15%] ${locationTagStyle}`}
+                className={`location-5 bottom-[10%] left-[14%] xl:bottom-[13%] xl:left-[15%] ${locationTagStyle} inline-flex`}
                 onClick={() => {
                   setOpenPopup(true);
                   setLocationNumber(4);
@@ -271,4 +271,4 @@ const LocationSection = () => {
 export default LocationSection;
 
 const locationTagStyle =
-  "location-tag absolute cursor-pointer bg-white inline-flex items-center justify-center rounded-[5px] text-[1.25rem] xl:text-[2rem] px-[10px] py-[5px] shadow-lg transition-all duration-500 lg:hover:bg-black lg:hover:text-white z-2";
+  "location-tag absolute cursor-pointer bg-white items-center justify-center rounded-[5px] text-[1.25rem] xl:text-[2rem] px-[10px] py-[5px] shadow-lg transition-all duration-500 lg:hover:bg-black lg:hover:text-white z-2";

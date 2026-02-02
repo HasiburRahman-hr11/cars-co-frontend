@@ -10,8 +10,8 @@ import Link from "next/link";
 
 const carsCoWorldMenu = [
   { title: "List Cars", link: "/list-cars" },
-  { title: "Buy Cars", link: "/buy-cars" },
-  { title: "Why Us", link: "#" },
+  { title: "Why Us", link: "/why-us" },
+  { title: "Collections", link: "#" },
   { title: "Compare Cars", link: "#" },
   { title: "Blogs", link: "/blogs" },
   { title: "About Us", link: "/about-us" },
@@ -54,9 +54,7 @@ const brandsMenu = [
 ];
 
 const socialLinks = [
-  { title: "YouTube", icon: "/images/youtube-icon-white.webp", link: "#" },
-  { title: "Instagram", icon: "/images/insta-icon-white.webp", link: "#" },
-  { title: "Facebook", icon: "/images/fb-icon-white.webp", link: "#" },
+  { title: "Instagram", icon: "/images/insta-icon-white.webp", link: "https://www.instagram.com/cars_co.in/" },
 ];
 
 const Footer = () => {
@@ -95,13 +93,16 @@ const Footer = () => {
                     href={item.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-[4rem] h-[4rem] rounded-[50%] border border-[#5B5B5B] flex items-center justify-center p-[1rem] xl:w-[6.1rem] xl:h-[6.1rem] group hover:bg-[#ffffff] transition-all duration-500 hover:border-[#ffffff]"
+                    className="h-[4rem] rounded-[5rem] border border-[#5B5B5B] flex items-center justify-center py-[1rem] px-[2rem] xl:h-[5rem] group hover:bg-[#ffffff] transition-all duration-500 hover:border-[#ffffff]"
                   >
                     <img
                       src={item.icon}
                       alt={item?.title || "Icon"}
                       className="max-h-[1.5rem] max-w-[1.5rem] object-contain xl:max-h-[2.2rem] xl:max-w-[2.2rem] group-hover:invert transition-all duration-500"
                     />
+                    <span className="inline-block ml-[2rem] text-white text-[1.4rem] xl:text-[1.6rem] font-medium transition-all duration-500 group-hover:text-black">
+                      {item.title}
+                    </span>
                   </a>
                 </li>
               ))}
@@ -120,7 +121,7 @@ const Footer = () => {
                     }`}
                   >
                     <h3 className="urbanist font-[600] text-white text-[2rem] py-[2rem]">
-                      Cars.Co World
+                      Cars.co.in World
                     </h3>
                     <img
                       src="/images/dropdown-arrow-grey.webp"
@@ -225,7 +226,7 @@ const Footer = () => {
           <div className="hidden w-full mt-[5rem] md:flex md:flex-wrap md:justify-between xl:w-[70%] xl:mt-0">
             <div className="w-[28%] pr-[3rem] border-r border-r-[#454545] xl:pl-[4rem] border-l border-l-[#454545] xl:w-[25%]">
               <h3 className="urbanist font-[600] text-white text-[2rem] xl:text-[2.6rem]">
-                Cars.Co World
+                Cars.co.in World
               </h3>
               <ul className="pt-[2rem]">
                 {carsCoWorldMenu.map((menu, index) => (
@@ -278,9 +279,9 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="py-[3rem] md:border-t md:border-t-[#454545] md:mt-[5rem] md:flex md:justify-between">
+        <div className="py-[3rem] text-center justify-center md:border-t md:border-t-[#454545] md:mt-[5rem] md:flex md:justify-between">
           <p className="text-[#7D7D7D] font-medium text-[1.8rem] xl:text-[2.35rem]">
-            Copyright ©2025 car.co.in
+            Copyright ©{new Date().getFullYear()} car.co.in
           </p>
           <p className="text-[#7D7D7D] font-medium text-[1.8rem] mt-[1rem] md:mt-0 xl:text-[2.35rem]">
             Credit :-{" "}
@@ -293,20 +294,23 @@ const Footer = () => {
             </a>
           </p>
 
-          <ul className="flex items-center flex-wrap gap-[1rem] mt-[2rem] md:hidden">
+          <ul className="flex items-center justify-center flex-wrap gap-[1rem] mt-[2rem] md:hidden">
             {socialLinks.map((item, index) => (
-              <li key={index} className="w-max">
+              <li key={index} className="w-max group">
                 <a
                   href={item.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-[4rem] h-[4rem] rounded-[50%] border border-[#5B5B5B] flex items-center justify-center p-[1rem]"
+                  className="h-[4rem] rounded-[5rem] border border-[#5B5B5B] flex items-center justify-center py-[1rem] px-[2rem]"
                 >
                   <img
                     src={item.icon}
                     alt={item?.title || "Icon"}
                     className="max-h-[1.5rem] max-w-[1.5rem] object-contain"
                   />
+                  <span className="inline-block ml-[2rem] text-white text-[1.4rem] xl:text-[1.6rem]">
+                    {item.title}
+                  </span>
                 </a>
               </li>
             ))}
