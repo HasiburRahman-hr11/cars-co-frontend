@@ -2,6 +2,7 @@
 import { useRef, useEffect, useState } from "react";
 import Slider from "react-slick";
 import Link from "next/link";
+import AOS from "aos";
 
 const testimonials = [
   {
@@ -177,10 +178,19 @@ const VideoTestimonials = () => {
 
   const isMobile = useMediaQuery("(max-width: 1023px)");
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <section className="bg-[#0D0D0D] py-[6rem] overflow-hidden xl:py-[13rem]">
       <div className="container">
-        <div className="text-center section-header">
+        <div
+          className="text-center section-header"
+          data-aos="fade-up"
+          data-aos-easing="linear"
+          data-aos-duration="500"
+        >
           <h6 className="w-max mx-auto bg-[#202020] px-[3rem] pb-[0.5rem] pt-[0.8rem] text-[#AEAEAE] text-[1.3rem] uppercase rounded-[4rem] leading-[1.6] mb-[2rem] xl:text-[2rem] xl:mb-[3rem]">
             Testimonials
           </h6>
@@ -241,7 +251,12 @@ const VideoTestimonials = () => {
         </div>
       </div>
       {isMobile ? (
-        <div className=" relative mx-auto mt-[4rem] hp-testimonial-slider pl-[2rem] lg:pl-[30px] xl:w-[90%] xl:px-[20px] xl:mt-[7rem]">
+        <div
+          className=" relative mx-auto mt-[4rem] hp-testimonial-slider pl-[2rem] lg:pl-[30px] xl:w-[90%] xl:px-[20px] xl:mt-[7rem]"
+          data-aos="fade-up"
+          data-aos-easing="linear"
+          data-aos-duration="500"
+        >
           <Slider ref={sliderRef} {...sliderSettings}>
             {testimonials.map((testimonial, index) => (
               <div key={index} className="h-full">
@@ -306,7 +321,12 @@ const VideoTestimonials = () => {
           </Slider>
         </div>
       ) : (
-        <div className="relative mx-auto max-w-[1530px] mt-[4rem] hp-testimonial-slider pl-[2rem] lg:pl-[30px] xl:w-[90%] xl:px-[25px] xl:mt-[7rem]">
+        <div
+          className="relative mx-auto max-w-[1530px] mt-[4rem] hp-testimonial-slider pl-[2rem] lg:pl-[30px] xl:w-[90%] xl:px-[25px] xl:mt-[7rem]"
+          data-aos="fade-up"
+          data-aos-easing="linear"
+          data-aos-duration="500"
+        >
           <Slider ref={sliderRef} {...sliderSettingsDesk}>
             {testimonials.map((testimonial, index) => (
               <div key={index} className="h-full">
@@ -372,11 +392,12 @@ const VideoTestimonials = () => {
         </div>
       )}
 
-      {/* Video SLider Mobile */}
-
-      {/* Video Slider Desktop */}
-
-      <div className="mt-[5rem] lg:hidden w-[85%] mx-auto max-w-[40rem]">
+      <div
+        className="mt-[5rem] lg:hidden w-[85%] mx-auto max-w-[40rem]"
+        data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="500"
+      >
         <Link
           href="/testimonials"
           className="bg-white flex justify-center items-center px-[5rem] py-[1.5rem] rounded-[5rem]"

@@ -1,5 +1,6 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import AOS from "aos";
 
 const locations = [
   {
@@ -44,49 +45,64 @@ const locations = [
 ];
 
 const usps = [
-    {
-        icon:"/images/contact/presence-usp-icon-1.webp",
-        title: "2009",
-        subtitle: "Established",
-    },
-    {
-        icon:"/images/contact/presence-usp-icon-2.webp",
-        title: "10000+",
-        subtitle: "Our Clientele",
-    },
-    {
-        icon:"/images/contact/presence-usp-icon-3.webp",
-        title: "120+",
-        subtitle: "Luxury Car Brands",
-    },
-    {
-        icon:"/images/contact/presence-usp-icon-4.webp",
-        title: "5000+",
-        subtitle: "Supercars Sold",
-    }
-]
+  {
+    icon: "/images/contact/presence-usp-icon-1.webp",
+    title: "2009",
+    subtitle: "Established",
+  },
+  {
+    icon: "/images/contact/presence-usp-icon-2.webp",
+    title: "10000+",
+    subtitle: "Our Clientele",
+  },
+  {
+    icon: "/images/contact/presence-usp-icon-3.webp",
+    title: "120+",
+    subtitle: "Luxury Car Brands",
+  },
+  {
+    icon: "/images/contact/presence-usp-icon-4.webp",
+    title: "5000+",
+    subtitle: "Supercars Sold",
+  },
+];
 
 const LocationSection = () => {
   const [openPopup, setOpenPopup] = useState(false);
   const [locationNumber, setLocationNumber] = useState(0);
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <section className="bg-[#F3F3F3] py-[6rem] xl:py-[13rem] contact-location-section">
       <div className="container">
         <div className="flex flex-wrap justify-between max-w-[540px] mx-auto lg:max-w-full">
-
           <div className="w-full text-center lg:w-[45%] lg:text-left">
-            <h6 className="w-max mx-auto bg-[#F3F3F3] border border-[#4D4D4D] px-[3rem] pb-[0.5rem] pt-[0.8rem] text-[#4D4D4D] text-[1.3rem] uppercase rounded-[4rem] leading-[1.6] mb-[2rem] xl:text-[2rem] xl:mb-[3rem] font-medium lg:ml-0">
-              OUR PRESENCE
-            </h6>
-            <h2 className="text-[#202020] leading-[1.3] text-[2.6rem] [&>br]:hidden md:[&>br]:block xl:text-[4.5rem] xl:leading-[1.2]">
-              Visit us in our <br /> <b>showroom in your city</b>
-            </h2>
-            <p className="mt-[1rem] text-[#636363] xl:text-[2.2rem] xl:mt-[2rem]">
-              Our list of Associates share a common vision for Automotive
-              Excellence and a deep passion for Exotic cars.
-            </p>
+            <div
+              data-aos="fade-up"
+              data-aos-easing="linear"
+              data-aos-duration="500"
+            >
+              <h6 className="w-max mx-auto bg-[#F3F3F3] border border-[#4D4D4D] px-[3rem] pb-[0.5rem] pt-[0.8rem] text-[#4D4D4D] text-[1.3rem] uppercase rounded-[4rem] leading-[1.6] mb-[2rem] xl:text-[2rem] xl:mb-[3rem] font-medium lg:ml-0">
+                OUR PRESENCE
+              </h6>
+              <h2 className="text-[#202020] leading-[1.3] text-[2.6rem] [&>br]:hidden md:[&>br]:block xl:text-[4.5rem] xl:leading-[1.2]">
+                Visit us in our <br /> <b>showroom in your city</b>
+              </h2>
+              <p className="mt-[1rem] text-[#636363] xl:text-[2.2rem] xl:mt-[2rem]">
+                Our list of Associates share a common vision for Automotive
+                Excellence and a deep passion for Exotic cars.
+              </p>
+            </div>
 
-            <div className="flex justify-center items-center mt-[3rem] lg:hidden">
+            <div
+              className="flex justify-center items-center mt-[3rem] lg:hidden"
+              data-aos="fade-up"
+              data-aos-easing="linear"
+              data-aos-duration="500"
+            >
               <div className="relative map-box">
                 <img
                   src="/images/contact/map-img.webp"
@@ -142,18 +158,36 @@ const LocationSection = () => {
             </div>
 
             <ul className="list-none grid grid-cols-2 gap-y-[4rem] mt-[5rem] xl:gap-y-[7rem]">
-               {usps.map((usp , index)=> (
-                <li key={index} className="text-center lg:text-left px-[1rem] border-l border-l-[#D5D5D5] even:border-r even:border-r-[#D5D5D5] lg:pl-[4rem]">
-                    <img src={usp.icon} alt="USP Icon" className="object-contain max-w-[5rem] max-h-[4.5rem] xl:max-w-[6rem] xl:max-h-[5.5rem] inline-block" />
-                    <h6 className="font-[600] mt-[2rem] text-[2.5rem] xl:text-[5rem]">{usp.title}</h6>
-                    <p className="text-[#606060] text-[1.8rem] xl:text-[2.8rem]">{usp.subtitle}</p>
+              {usps.map((usp, index) => (
+                <li
+                  key={index}
+                  className="text-center lg:text-left px-[1rem] border-l border-l-[#D5D5D5] even:border-r even:border-r-[#D5D5D5] lg:pl-[4rem]"
+                  data-aos="fade-up"
+                  data-aos-easing="linear"
+                  data-aos-duration="500"
+                >
+                  <img
+                    src={usp.icon}
+                    alt="USP Icon"
+                    className="object-contain max-w-[5rem] max-h-[4.5rem] xl:max-w-[6rem] xl:max-h-[5.5rem] inline-block"
+                  />
+                  <h6 className="font-[600] mt-[2rem] text-[2.5rem] xl:text-[5rem]">
+                    {usp.title}
+                  </h6>
+                  <p className="text-[#606060] text-[1.8rem] xl:text-[2.8rem]">
+                    {usp.subtitle}
+                  </p>
                 </li>
-               ))}
+              ))}
             </ul>
           </div>
 
-
-          <div className=" justify-center items-center hidden lg:flex lg:w-[47%]">
+          <div
+            className=" justify-center items-center hidden lg:flex lg:w-[47%]"
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="500"
+          >
             <div className="relative map-box">
               <img
                 src="/images/contact/map-img.webp"
@@ -207,8 +241,6 @@ const LocationSection = () => {
               </span>
             </div>
           </div>
-
-
         </div>
       </div>
       {openPopup && (

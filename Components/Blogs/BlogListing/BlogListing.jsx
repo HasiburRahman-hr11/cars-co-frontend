@@ -1,8 +1,13 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
+import AOS from "aos";
 import blogs from "@/public/dummyData/blogs";
 import Link from "next/link";
 
 const BlogListing = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <section className="bg-white py-[6rem] xl:py-[13rem]">
       <div className="container">
@@ -36,7 +41,13 @@ const BlogListing = () => {
 
         <div className="grid grid-col-1 gap-y-[4rem] mt-[4rem] border-t border-t-[#D5D5D5] pt-[3rem] sm:max-w-[500px] sm:mx-auto md:max-w-full md:grid-cols-2 md:gap-x-[2.5rem] lg:grid-cols-3 xl:gap-x-[3rem] xl:gap-y-[6rem] xl:pt-[5rem]">
           {blogs.map((blog, index) => (
-            <Link href={`/blogs/${blog._id}`} key={index}>
+            <Link
+              href={`/blogs/${blog._id}`}
+              key={index}
+              data-aos="fade-up"
+              data-aos-easing="linear"
+              data-aos-duration="500"
+            >
               <div className="overflow-hidden rounded-[1rem] group xl:rounded-[2.4rem]">
                 <img
                   src={blog.thumbnail}
@@ -62,7 +73,12 @@ const BlogListing = () => {
         </div>
 
         {/* Pagination */}
-        <ul className="flex flex-wrap items-center justify-center gap-[8px] mt-[5rem] xl:mt-[7rem]">
+        <ul
+          className="flex flex-wrap items-center justify-center gap-[8px] mt-[5rem] xl:mt-[7rem]"
+          data-aos="fade-up"
+          data-aos-easing="linear"
+          data-aos-duration="500"
+        >
           <li>
             <span className={paginationLink}>
               <img
@@ -72,25 +88,17 @@ const BlogListing = () => {
               />
             </span>
           </li>
-           <li>
-            <span className={paginationLink}>
-              1
-            </span>
+          <li>
+            <span className={paginationLink}>1</span>
           </li>
           <li>
-            <span className={paginationLink}>
-              2
-            </span>
+            <span className={paginationLink}>2</span>
           </li>
           <li>
-            <span className={paginationLink}>
-              3
-            </span>
+            <span className={paginationLink}>3</span>
           </li>
           <li>
-            <span className={paginationLink}>
-              ...
-            </span>
+            <span className={paginationLink}>...</span>
           </li>
           <li>
             <span className={paginationLink}>
@@ -109,4 +117,5 @@ const BlogListing = () => {
 
 export default BlogListing;
 
-const paginationLink = "cursor-pointer w-[3rem] h-[3rem] flex items-center justify-center p-[1rm] border border-black rounded-[0.5rem] xl:w-[7rem] xl:h-[7rem] xl:rounded-[1.3rem] text-[1.3rem] xl:text-[2.2rem] transition-all duration-300 hover:bg-black hover:text-white group"
+const paginationLink =
+  "cursor-pointer w-[3rem] h-[3rem] flex items-center justify-center p-[1rm] border border-black rounded-[0.5rem] xl:w-[7rem] xl:h-[7rem] xl:rounded-[1.3rem] text-[1.3rem] xl:text-[2.2rem] transition-all duration-300 hover:bg-black hover:text-white group";

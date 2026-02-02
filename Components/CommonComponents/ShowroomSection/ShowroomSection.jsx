@@ -1,5 +1,6 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import AOS from "aos";
 
 const showrooms = [
   {
@@ -38,19 +39,38 @@ const ShowroomSection = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <section className="bg-white py-[6rem] xl:py-[13rem]">
       <div className="container">
         <div className="flex flex-wrap max-w-[540px] mx-auto lg:max-w-full lg:justify-between">
           <div className="w-full text-center lg:w-[40%] lg:text-left">
-            <h6 className="w-max mx-auto bg-white border border-[#333333] px-[3rem] pb-[0.5rem] pt-[0.8rem] text-[#333333] text-[1.3rem] uppercase rounded-[4rem] leading-[1.6] mb-[2rem] xl:text-[2rem] xl:mb-[3rem] font-medium lg:ml-0">
+            <h6
+              className="w-max mx-auto bg-white border border-[#333333] px-[3rem] pb-[0.5rem] pt-[0.8rem] text-[#333333] text-[1.3rem] uppercase rounded-[4rem] leading-[1.6] mb-[2rem] xl:text-[2rem] xl:mb-[3rem] font-medium lg:ml-0"
+              data-aos="fade-up"
+              data-aos-easing="linear"
+              data-aos-duration="500"
+            >
               VISIT SHOWROOM
             </h6>
-            <h2 className="text-[#222222] leading-[1.3] text-[2.6rem] [&>br]:hidden md:[&>br]:block xl:text-[4.5rem] xl:leading-[1.2]">
+            <h2
+              className="text-[#222222] leading-[1.3] text-[2.6rem] [&>br]:hidden md:[&>br]:block xl:text-[4.5rem] xl:leading-[1.2]"
+              data-aos="fade-up"
+              data-aos-easing="linear"
+              data-aos-duration="500"
+            >
               You Can Also <br />
               <b>Visit Our Showroom.</b>
             </h2>
-            <div className="grid grid-cols-2 gap-[1rem] mt-[4rem] xl:mt-[5rem]">
+            <div
+              className="grid grid-cols-2 gap-[1rem] mt-[4rem] xl:mt-[5rem]"
+              data-aos="fade-up"
+              data-aos-easing="linear"
+              data-aos-duration="500"
+            >
               <div className="flex flex-col gap-[1rem] items-end">
                 <img
                   src="/images/list-cars/showroom-img-1.webp"
@@ -84,6 +104,9 @@ const ShowroomSection = () => {
                 <li
                   key={index}
                   className="border-t border-t-[#CDCDCD] w-[48%] border-b border-b-[#CDCDCD]"
+                  data-aos="fade-up"
+                  data-aos-easing="linear"
+                  data-aos-duration="500"
                 >
                   <a
                     href={showroom.googleMapLink}
@@ -117,6 +140,9 @@ const ShowroomSection = () => {
             <form
               action=""
               className="block w-full bg-[#F3F3F3] p-[2.5rem] rounded-[1rem] mt-[4rem] xl:p-[4rem]"
+              data-aos="fade-up"
+              data-aos-easing="linear"
+              data-aos-duration="500"
             >
               <h4 className="text-[2rem] xl:text-[3rem] font-medium mb-[2rem]">
                 Get A Call Back Today.

@@ -1,7 +1,8 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import Slider from "react-slick";
 import ListCarForm from "./ListCarForm";
+import AOS from "aos";
 
 const quotes = [
   {
@@ -44,12 +45,21 @@ let settings = {
   autoplay: true,
   autoplaySpeed: 3000,
 };
+
 const ListYourCar = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <section className="py-[6rem] bg-white xl:py-[13rem]">
       <div className="container">
         <div className="block md:flex md:justify-between md:items-end">
-          <div className="section-header md:w-[60%] xl:w-[75%]">
+          <div
+            className="section-header md:w-[60%] xl:w-[75%]"
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="500"
+          >
             <h2 className="leading-[1.3] text-[2.6rem] [&>br]:hidden md:[&>br]:block xl:text-[4.5rem] xl:leading-[1.2]">
               What happens when you <br /> <b>List your car with us</b>
             </h2>
@@ -59,7 +69,12 @@ const ListYourCar = () => {
               car selling simple and secure.
             </p>
           </div>
-          <div className="hidden md:block w-[10rem] xl:w-[20rem]">
+          <div
+            className="hidden md:block w-[10rem] xl:w-[20rem]"
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="500"
+          >
             <img
               src="/images/homepage/hp-sell-car-logo.webp"
               alt=""
@@ -69,22 +84,47 @@ const ListYourCar = () => {
         </div>
 
         <ul className="hp-sellcar-usps block mt-[4rem] red-tick-list [&>li]:border-t [&>li]:border-t-[#D4D4D4] [&>li:last-child]:border-b [&>li:last-child]:border-b-[#D4D4D4] lg:flex lg:flex-wrap lg:justify-between lg:[&>li]:w-[48%] xl:mt-[7rem]">
-          <li className=" text-[#333333] font-medium py-[2rem] xl:text-[2.5rem] xl:py-[3.5rem]">
+          <li
+            className=" text-[#333333] font-medium py-[2rem] xl:text-[2.5rem] xl:py-[3.5rem]"
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="500"
+          >
             Enjoy Free Doorstep Car Pickup and Inspection
           </li>
-          <li className=" text-[#333333] font-medium py-[2rem] xl:text-[2.5rem] xl:py-[3.5rem]">
+          <li
+            className=" text-[#333333] font-medium py-[2rem] xl:text-[2.5rem] xl:py-[3.5rem]"
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="500"
+          >
             List Your Car with Complete Transparency
           </li>
-          <li className=" text-[#333333] font-medium py-[2rem] xl:text-[2.5rem] xl:py-[3.5rem]">
+          <li
+            className=" text-[#333333] font-medium py-[2rem] xl:text-[2.5rem] xl:py-[3.5rem]"
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="500"
+          >
             Receive the Best Market Price for Cars
           </li>
-          <li className=" text-[#333333] font-medium py-[2rem] xl:text-[2.5rem] xl:py-[3.5rem]">
+          <li
+            className=" text-[#333333] font-medium py-[2rem] xl:text-[2.5rem] xl:py-[3.5rem]"
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="500"
+          >
             We Handle All Paperwork, Stress-Free Process
           </li>
         </ul>
 
         <div className="block md:flex md:justify-between mt-[4rem] lg:mt-[6rem] xl:mt-[8rem]">
-          <div className="md:w-[48%] lg:w-[53%] xl:w-[55%]">
+          <div
+            className="md:w-[48%] lg:w-[53%] xl:w-[55%]"
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="500"
+          >
             <img
               src="/images/homepage/hp-sell-car-thumb.webp"
               alt="Seel Car"
@@ -92,10 +132,20 @@ const ListYourCar = () => {
             />
           </div>
           {/* Mobile Form */}
-          <div className="w-full block md:hidden">
+          <div
+            className="w-full block md:hidden"
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="500"
+          >
             <ListCarForm />
           </div>
-          <div className="hp-sell-car-quotes mt-[5rem] md:mt-0 md:w-[47%] lg:w-[40%]">
+          <div
+            className="hp-sell-car-quotes mt-[5rem] md:mt-0 md:w-[47%] lg:w-[40%]"
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="500"
+          >
             <Slider {...settings}>
               {quotes.map((item, index) => (
                 <div key={index}>
@@ -131,7 +181,12 @@ const ListYourCar = () => {
         </div>
 
         {/* Desktop Form */}
-        <div className="hidden md:block">
+        <div
+          className="hidden md:block"
+          data-aos="fade-up"
+          data-aos-easing="linear"
+          data-aos-duration="500"
+        >
           <ListCarForm />
         </div>
       </div>

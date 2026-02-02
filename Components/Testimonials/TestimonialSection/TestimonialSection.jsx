@@ -1,5 +1,6 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import AOS from "aos";
 
 import { videoTestimonials, googleReviews, writtenReviews } from "./reviews";
 
@@ -82,11 +83,20 @@ const TestimonialSection = () => {
     window.history.pushState(null, "", hash);
   };
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <section className="bg-[#F3F3F3] py-[6rem] xl:py-[13rem]">
       <div className="container">
         <div className="flex flex-wrap justify-between max-w-[540px] mx-auto md:max-w-[768px] lg:max-w-full">
-          <div className="relative w-full md:w-[35%] lg:w-[25%] xl:w-[28%]">
+          <div
+            className="relative w-full md:w-[35%] lg:w-[25%] xl:w-[28%]"
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="500"
+          >
             <ul className=" bg-black py-[2rem] px-[3rem] rounded-[1.5rem] md:sticky top-[3rem] xl:px-[4rem]">
               <li className="border-b border-b-[#404040]">
                 <a
@@ -148,7 +158,12 @@ const TestimonialSection = () => {
           <div className="w-full mt-[5rem] md:w-[55%] md:mt-0 lg:w-[68%] xl:w-[65%]">
             {/* Video Testimonials */}
             <div id="videoTestimonials">
-              <h2 className="text-center leading-[1.3] text-[2.6rem] [&>br]:hidden md:[&>br]:block xl:text-[4.5rem] xl:leading-[1.2] mb-[3rem] xl:text-left xl:mb-[5rem]">
+              <h2
+                className="text-center leading-[1.3] text-[2.6rem] [&>br]:hidden md:[&>br]:block xl:text-[4.5rem] xl:leading-[1.2] mb-[3rem] xl:text-left xl:mb-[5rem]"
+                data-aos="fade-up"
+                data-aos-easing="linear"
+                data-aos-duration="500"
+              >
                 Video <b>Testimonials</b>
               </h2>
               <div className="hp-testimonial-slider flex flex-wrap gap-[2rem] lg:grid lg:grid-cols-2 xl:gap-[3.5rem]">
@@ -160,6 +175,9 @@ const TestimonialSection = () => {
                       const video = videoRefs.current[index];
                       if (video && !video.paused) handlePause(index);
                     }}
+                    data-aos="fade-up"
+                    data-aos-easing="linear"
+                    data-aos-duration="500"
                   >
                     <div className="video-box h-full w-full">
                       <video
@@ -219,7 +237,12 @@ const TestimonialSection = () => {
               id="googleTestimonials"
               className="mt-[6rem] pt-[5rem] border-t border-t-[#818181] xl:mt-[10rem] xl:pt-[9rem]"
             >
-              <h2 className="text-center leading-[1.3] text-[2.6rem] [&>br]:hidden md:[&>br]:block xl:text-[4.5rem] xl:leading-[1.2] mb-[3rem] xl:text-left xl:mb-[5rem]">
+              <h2
+                className="text-center leading-[1.3] text-[2.6rem] [&>br]:hidden md:[&>br]:block xl:text-[4.5rem] xl:leading-[1.2] mb-[3rem] xl:text-left xl:mb-[5rem]"
+                data-aos="fade-up"
+                data-aos-easing="linear"
+                data-aos-duration="500"
+              >
                 Google <b>Reviews</b>
               </h2>
               <div className="flex flex-wrap gap-[2rem] lg:grid lg:grid-cols-2 xl:gap-[3.5rem]">
@@ -227,6 +250,9 @@ const TestimonialSection = () => {
                   <div
                     key={index}
                     className="w-full bg-white px-[2rem] py-[3rem] rounded-[1rem] xl:px-[3.5rem] xl:py-[5rem] xl:rounded-[2rem]"
+                    data-aos="fade-up"
+                    data-aos-easing="linear"
+                    data-aos-duration="500"
                   >
                     <div className="flex items-center">
                       <span
@@ -267,7 +293,12 @@ const TestimonialSection = () => {
               id="writtenTestimonials"
               className="mt-[6rem] pt-[5rem] border-t border-t-[#818181] xl:mt-[10rem] xl:pt-[9rem]"
             >
-              <h2 className="text-center leading-[1.3] text-[2.6rem] [&>br]:hidden md:[&>br]:block xl:text-[4.5rem] xl:leading-[1.2] mb-[3rem] xl:text-left xl:mb-[5rem]">
+              <h2
+                className="text-center leading-[1.3] text-[2.6rem] [&>br]:hidden md:[&>br]:block xl:text-[4.5rem] xl:leading-[1.2] mb-[3rem] xl:text-left xl:mb-[5rem]"
+                data-aos="fade-up"
+                data-aos-easing="linear"
+                data-aos-duration="500"
+              >
                 Written <b>Reviews</b>
               </h2>
               <div className="flex flex-wrap gap-[2rem] xl:gap-[4rem]">
@@ -275,6 +306,9 @@ const TestimonialSection = () => {
                   <div
                     key={index}
                     className="bg-white p-[3rem] flex flex-wrap justify-between lg:items-center w-full rounded-[1rem] xl:rounded-[2rem] xl:p-[5rem]"
+                    data-aos="fade-up"
+                    data-aos-easing="linear"
+                    data-aos-duration="500"
                   >
                     <div className="w-full flex items-center lg:flex-col lg:w-[30%] lg:pr-[4rem] lg:text-center">
                       <span className="relative inline-block">

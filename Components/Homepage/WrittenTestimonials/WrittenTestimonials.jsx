@@ -1,4 +1,6 @@
 "use client";
+import AOS from "aos";
+import { useEffect } from "react";
 import Slider from "react-slick";
 
 const usps = [
@@ -80,6 +82,9 @@ function PrevArrow(props) {
 }
 
 const TestimonialItem = ({ testimonial }) => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className="bg-[#1C1C1C] flex flex-wrap justify-center px-[2rem] py-[4rem] rounded-[2rem] md:justify-between md:items-center xl:px-[2.5rem]">
       <div className="thumbnail w-full flex items-center justify-center md:w-[36%]">
@@ -154,7 +159,12 @@ const WrittenTestimonials = () => {
     <section className="bg-[#0D0D0D] py-[6rem] overflow-hidden xl:py-[13rem]">
       <div className="container">
         <div className="flex flex-wrap justify-between max-w-[380px] mx-auto xl:max-w-full">
-          <div className="w-full text-center xl:w-[62%] xl:text-left">
+          <div
+            className="w-full text-center xl:w-[62%] xl:text-left"
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="500"
+          >
             <h6 className="w-max mx-auto bg-[#202020] px-[3rem] pb-[0.5rem] pt-[0.8rem] text-[#AEAEAE] text-[1.3rem] uppercase rounded-[4rem] leading-[1.6] mb-[2rem] xl:text-[2rem] xl:mb-[3rem] xl:ml-0">
               Stories which we love
             </h6>
@@ -171,6 +181,9 @@ const WrittenTestimonials = () => {
               <li
                 key={index}
                 className="text-white px-[3rem] border-l border-l-[#5D5D5D] py-[1rem]"
+                data-aos="fade-up"
+                data-aos-easing="linear"
+                data-aos-duration="500"
               >
                 <h6 className="text-[2.3rem] xl:text-[3.8rem] font-medium">
                   {usp.title}
@@ -181,7 +194,12 @@ const WrittenTestimonials = () => {
           </ul>
         </div>
 
-        <div className="relative hidden xl:block hp-testimonial-slider hp-written-testimonials mx-[-2rem] mt-[8rem]">
+        <div
+          className="relative hidden xl:block hp-testimonial-slider hp-written-testimonials mx-[-2rem] mt-[8rem]"
+          data-aos="fade-up"
+          data-aos-easing="linear"
+          data-aos-duration="500"
+        >
           <Slider {...sliderSettingsDesk}>
             {testimonials.map((testimonial, index) => (
               <div key={index} className="h-full w-full ">
@@ -191,7 +209,12 @@ const WrittenTestimonials = () => {
           </Slider>
         </div>
 
-        <div className="text-white relative hp-testimonial-slider hp-written-testimonials mt-[5rem] pb-[7rem] xl:hidden max-w-[500px] mx-auto">
+        <div
+          className="text-white relative hp-testimonial-slider hp-written-testimonials mt-[5rem] pb-[7rem] xl:hidden max-w-[500px] mx-auto"
+          data-aos="fade-up"
+          data-aos-easing="linear"
+          data-aos-duration="500"
+        >
           <Slider {...sliderSettings}>
             {testimonials.map((testimonial, index) => (
               <div key={index} className="h-full  ">

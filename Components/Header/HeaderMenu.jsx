@@ -94,7 +94,7 @@ const HeaderMenu = ({ openMenu = false, setOpenMenu }) => {
                   >
                     <span>{menuItem.title}</span>
                     <img
-                      src="images/menu-arrow.png"
+                      src="/images//menu-arrow.png"
                       alt=""
                       className="object-contain w-[2.2rem] xl:w-[3.2rem] transition-all duration-300 xl:group-hover:scale-[1.2]"
                     />

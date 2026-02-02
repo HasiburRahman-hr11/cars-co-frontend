@@ -1,7 +1,12 @@
+"use client";
+import React, { useEffect } from "react";
+import AOS from "aos";
 import Link from "next/link";
-import React from "react";
 
 const BottomBanner = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <section className="relative overflow-hidden bg-[#DDF0F7]">
       <div className="bg-box h-full">
@@ -22,7 +27,12 @@ const BottomBanner = () => {
       </div>
       <div className="absolute top-0 left-0 w-full h-full flex flex-col pt-[8rem] md:justify-center md:py-[8rem]">
         <div className="container text-center md:text-left">
-          <div className="w-full max-w-[540px] mx-auto md:ml-0 lg:max-w-none lg:w-[57%] xl:w-[63%] 1xl:w-[55%]">
+          <div
+            className="w-full max-w-[540px] mx-auto md:ml-0 lg:max-w-none lg:w-[57%] xl:w-[63%] 1xl:w-[55%]"
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="500"
+          >
             <h6 className="w-max mx-auto bg-[#202020] px-[3rem] pb-[0.5rem] pt-[0.8rem] text-[#AEAEAE] text-[1.3rem] uppercase rounded-[4rem] leading-[1.6] mb-[2rem] xl:text-[2rem] xl:mb-[3rem] font-medium md:ml-0">
               start your journey
             </h6>

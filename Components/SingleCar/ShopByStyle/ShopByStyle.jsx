@@ -1,6 +1,7 @@
 "use client";
+import React, { useEffect } from "react";
+import AOS from "aos";
 import Link from "next/link";
-import React from "react";
 import Slider from "react-slick";
 
 const carStyles = [
@@ -61,22 +62,37 @@ let sliderSettings = {
   pauseOnHover: false,
   pauseOnFocus: false,
   centerMode: true,
-
 };
 
 const ShopByStyle = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className="mt-[6rem] pt-[5rem] border-t border-t-[#6C6C6C] lg:border-t-0 lg:mt-[7rem] lg:pt-0 max-w-[1920px] mx-auto overflow-hidden xl:mt-[13rem]">
       <div className="container">
-        <h3 className="leading-[1.3] text-[2.6rem] text-center [&>br]:hidden md:[&>br]:block xl:text-[4.5rem] xl:leading-[1.2] lg:text-left lg:pt-[6rem] lg:border-t lg:border-t-[#6C6C6C] xl:pt-[10rem]">
+        <h3
+          className="leading-[1.3] text-[2.6rem] text-center [&>br]:hidden md:[&>br]:block xl:text-[4.5rem] xl:leading-[1.2] lg:text-left lg:pt-[6rem] lg:border-t lg:border-t-[#6C6C6C] xl:pt-[10rem]"
+          data-aos="fade-up"
+          data-aos-easing="linear"
+          data-aos-duration="500"
+        >
           <b>Shop By</b> Car Style
         </h3>
       </div>
 
-      <div className="mx-auto mt-[4rem] xl:mt-[7rem] detail-style-slider">
+      <div
+        className="mx-auto mt-[4rem] xl:mt-[7rem] detail-style-slider"
+        data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="500"
+      >
         <Slider {...sliderSettings}>
           {carStyles.map((item, index) => (
-            <div key={index} className="h-full px-[0.7rem] lg:px-[1.2rem] xl:px-[2rem]">
+            <div
+              key={index}
+              className="h-full px-[0.7rem] lg:px-[1.2rem] xl:px-[2rem]"
+            >
               <Link
                 href={item.link}
                 className="flex flex-col justify-center items-center px-[2rem] py-[2.5rem] border border-[#AAAAAA] rounded-[1rem] xl:pt-[5rem] transition-all duration-300 hover:bg-black hover:border-black w-[20rem] h-[20rem] group sm:w-[17rem] sm:h-[17rem] md:w-[20rem] md:h-[20rem] xl:w-[30rem] xl:h-[30rem] "

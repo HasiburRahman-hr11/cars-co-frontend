@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import Image from "next/image";
+import AOS from "aos";
 
 const FinanceSection = () => {
   const [carPrice, setCarPrice] = useState(4900000);
@@ -54,6 +54,10 @@ const FinanceSection = () => {
     };
   };
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <section
       className="bg-black py-24 lg:py-36 xl:py-[15rem]"
@@ -61,7 +65,12 @@ const FinanceSection = () => {
     >
       <div className="container">
         <div className="lg:flex lg:flex-row-reverse lg:items-center lg:justify-between max-w-[600px] mx-auto lg:max-w-full">
-          <div className="bg-[#1D1D1D] px-[2rem] py-[4rem] rounded-[1.5rem] lg:w-[45%] xl:w-[40%] xl:rounded-[3rem] xl:py-[6rem] xl:px-[4rem]">
+          <div
+            className="bg-[#1D1D1D] px-[2rem] py-[4rem] rounded-[1.5rem] lg:w-[45%] xl:w-[40%] xl:rounded-[3rem] xl:py-[6rem] xl:px-[4rem]"
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="500"
+          >
             <div className="text-center text-white">
               <h2 className=" leading-[1.3] text-[2.6rem] [&>br]:hidden md:[&>br]:block xl:text-[4.5rem] xl:leading-[1.2]">
                 Get Your Ride <b>Financed Today!</b>
@@ -183,7 +192,12 @@ const FinanceSection = () => {
             </div>
           </div>
 
-          <div className="block w-full mt-[3rem] lg:mt-0 lg:w-[50%] xl:w-[57%] xl:rounded-[3rem]">
+          <div
+            className="block w-full mt-[3rem] lg:mt-0 lg:w-[50%] xl:w-[57%] xl:rounded-[3rem]"
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="500"
+          >
             <img
               src="/images/single-car/finance-thumb.webp"
               className="w-full object-cover block rounded-[1rem] xl:h-[65rem] xl:rounded-[3rem]"

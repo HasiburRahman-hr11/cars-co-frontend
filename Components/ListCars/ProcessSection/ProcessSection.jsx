@@ -1,5 +1,6 @@
 "use client";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import AOS from "aos";
 
 const processList = [
   {
@@ -81,6 +82,10 @@ const ProcessSection = () => {
     resetVideo(index, true);
   };
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <section className="bg-white py-[6rem] xl:py-[13rem]">
       <div className="relative max-w-[540px] mx-auto md:max-w-full">
@@ -90,7 +95,12 @@ const ProcessSection = () => {
           className="object-contain hidden md:inline-block absolute top-[5rem] right-0 w-auto max-h-[16rem] xl:max-h-[35rem]"
         />
         <div className="container">
-          <div className="text-center md:w-[60%] md:mx-auto mb-[4rem] md:mb-[5rem] xl:mb-[10rem] xl:w-[65%]">
+          <div
+            className="text-center md:w-[60%] md:mx-auto mb-[4rem] md:mb-[5rem] xl:mb-[10rem] xl:w-[65%]"
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="500"
+          >
             <h6 className="w-max mx-auto bg-white border border-[#333333] px-[3rem] pb-[0.5rem] pt-[0.8rem] text-[#333333] text-[1.3rem] uppercase rounded-[4rem] leading-[1.6] mb-[2rem] xl:text-[2rem] xl:mb-[3rem] font-medium">
               The Process
             </h6>
@@ -113,6 +123,9 @@ const ProcessSection = () => {
             <div
               key={index}
               className="w-full flex flex-wrap px-[2rem] md:justify-between md:items-center md:even:flex-row-reverse group list-car-process-item"
+              data-aos="fade-up"
+              data-aos-easing="linear"
+              data-aos-duration="500"
             >
               <div
                 className={`thumb-box w-full relative md:w-[52%] ${

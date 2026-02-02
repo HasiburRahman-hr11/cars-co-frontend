@@ -2,8 +2,8 @@
 import FilterPopup from "@/Components/FilterPopup/FilterPopup";
 import Image from "next/image";
 import Link from "next/link";
-
-import React, { useState } from "react";
+import AOS from "aos";
+import React, { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
 
 const logos = [
@@ -34,6 +34,10 @@ const BannerSection = () => {
   const togglePopup = () => {
     setFilterOpen(!filterOpen);
   };
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <section className="bg-[#111111] relative overflow-hidden ">
       <div className="h-full w-full">
@@ -51,7 +55,12 @@ const BannerSection = () => {
         />
       </div>
       <div className="absolute top-[0] left-[0] text-center w-full h-full flex flex-col justify-between pt-[12rem] xl:pt-[15rem] 3xl:pt-[20rem]">
-        <div className="container w-full">
+        <div
+          className="container w-full"
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="500"
+        >
           <h1 className="text-[#ffffff] text-center text-[3rem] font-[500] leading-[1.3] xl:text-[6rem] lx:leading-[1.1]">
             You Deserve the Luxury You Work Hard For
           </h1>

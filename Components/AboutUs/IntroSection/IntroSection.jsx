@@ -1,29 +1,39 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
+import AOS from "aos";
 
 const introUsps = [
-    {
-        icon : "/images/about-us/intro-usp-icon-1.webp",
-        title: "Handpicked luxury cars, verified & certified"
-    },
-     {
-        icon : "/images/about-us/intro-usp-icon-2.webp",
-        title: "Seamless experience from test drive to ownership"
-    },
-     {
-        icon : "/images/about-us/intro-usp-icon-3.webp",
-        title: "Strong ecosystem of reliable dealers & partners"
-    },
-     {
-        icon : "/images/about-us/intro-usp-icon-4.webp",
-        title: "Personalized service and support at every step"
-    }
-]
+  {
+    icon: "/images/about-us/intro-usp-icon-1.webp",
+    title: "Handpicked luxury cars, verified & certified",
+  },
+  {
+    icon: "/images/about-us/intro-usp-icon-2.webp",
+    title: "Seamless experience from test drive to ownership",
+  },
+  {
+    icon: "/images/about-us/intro-usp-icon-3.webp",
+    title: "Strong ecosystem of reliable dealers & partners",
+  },
+  {
+    icon: "/images/about-us/intro-usp-icon-4.webp",
+    title: "Personalized service and support at every step",
+  },
+];
 
 const IntroSection = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <section className="bg-black py-[6rem] xl:py-[13rem]">
       <div className="container">
-        <div className="text-center section-header lg:w-[75%] lg:text-left xl:w-[85%]">
+        <div
+          className="text-center section-header lg:w-[75%] lg:text-left xl:w-[85%]"
+          data-aos="fade-up"
+          data-aos-easing="linear"
+          data-aos-duration="500"
+        >
           <h6 className="w-max mx-auto bg-[#202020] px-[3rem] pb-[0.5rem] pt-[0.8rem] text-[#AEAEAE] text-[1.3rem] uppercase rounded-[4rem] leading-[1.6] mb-[2rem] xl:text-[2rem] xl:mb-[3rem] lg:ml-0">
             Who we are
           </h6>
@@ -38,7 +48,12 @@ const IntroSection = () => {
         </div>
 
         <div className="mt-[5rem] max-w-[540px] mx-auto lg:max-w-none lg:flex lg:flex-wrap lg:justify-between xl:mt-[7rem]">
-          <div className="lg:w-[46%]">
+          <div
+            className="lg:w-[46%]"
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="500"
+          >
             <img
               src="/images/about-us/intro-thumb.webp"
               alt="THumbnail"
@@ -48,7 +63,12 @@ const IntroSection = () => {
             />
           </div>
           <div className="mt-[5rem] lg:w-[47%] lg:mt-0">
-            <p className="mt-[1rem] text-[#A7A7A7] xl:text-[2.2rem] lg:mt-0">
+            <p
+              className="mt-[1rem] text-[#A7A7A7] xl:text-[2.2rem] lg:mt-0"
+              data-aos="fade-up"
+              data-aos-easing="linear"
+              data-aos-duration="500"
+            >
               Cars.co.in goes beyond buying and selling—it’s about experiences
               blending luxury, trust, and accessibility. As India’s trusted
               destination, we bring premium cars closer with expert guidance,
@@ -58,12 +78,24 @@ const IntroSection = () => {
             </p>
 
             <ul className="mt-[4rem] flex flex-wrap justify-between gap-y-[3rem] lg:gap-y-[5rem]">
-                {introUsps.map((usp , index) => (
-                    <li key={index} className="w-[48%]">
-                        <img src={usp.icon} alt="Icon" className="object-contain w-[2.5rem] h-[3rem] xl:w-[3rem] 1xl:w-[4rem] 1xl:h-[4rem]" />
-                        <h6 className="text-white font-[500] mt-[1.5rem] text-[1.6rem] xl:text-[2.2rem] 1xl:text-[2.6rem]">{usp.title}</h6>
-                    </li>
-                ))}
+              {introUsps.map((usp, index) => (
+                <li
+                  key={index}
+                  className="w-[48%]"
+                  data-aos="fade-up"
+                  data-aos-easing="linear"
+                  data-aos-duration="500"
+                >
+                  <img
+                    src={usp.icon}
+                    alt="Icon"
+                    className="object-contain w-[2.5rem] h-[3rem] xl:w-[3rem] 1xl:w-[4rem] 1xl:h-[4rem]"
+                  />
+                  <h6 className="text-white font-[500] mt-[1.5rem] text-[1.6rem] xl:text-[2.2rem] 1xl:text-[2.6rem]">
+                    {usp.title}
+                  </h6>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

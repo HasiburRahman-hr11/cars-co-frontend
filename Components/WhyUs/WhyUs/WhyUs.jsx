@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
+import AOS from "aos";
 
 const usps = [
   {
@@ -20,10 +22,18 @@ const usps = [
 ];
 
 const WhyUs = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <section className="bg-black py-[6rem] overflow-hidden xl:py-[13rem]">
       <div className="container">
-        <div className="w-full text-center lg:w-[65%] mx-auto">
+        <div
+          className="w-full text-center lg:w-[65%] mx-auto"
+          data-aos="fade-up"
+          data-aos-easing="linear"
+          data-aos-duration="500"
+        >
           <h6 className="w-max mx-auto bg-[#202020] px-[3rem] py-[1.4rem] text-[#AEAEAE] text-[1.3rem] uppercase rounded-[4rem] leading-1 mb-[2rem] xl:text-[2rem] xl:leading-[1] xl:mb-[3rem]">
             Why Buy From Us
           </h6>
@@ -43,6 +53,9 @@ const WhyUs = () => {
             <li
               key={index}
               className="text-center px-[1.5rem] relative bg-[#111111] rounded-[1rem] py-[3rem] lg:bg-transparent lg:mt-[5rem] lg:odd:mt-[15rem] xl:odd:mt-[20rem]"
+              data-aos="fade-up"
+              data-aos-easing="linear"
+              data-aos-duration="500"
             >
               <img
                 src={usp.icon}

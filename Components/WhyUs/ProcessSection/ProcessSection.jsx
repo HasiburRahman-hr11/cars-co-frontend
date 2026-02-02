@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
+import AOS from "aos";
 
 const processList = [
   {
@@ -28,10 +30,18 @@ const processList = [
 ];
 
 const ProcessSection = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <section className="bg-white py-[6rem] xl:py-[13rem]">
       <div className="container">
-        <div className="text-center md:w-[60%] md:mx-auto mb-[4rem] md:mb-[5rem] lg:w-[48%] lg:text-left lg:ml-0 xl:pr-[5rem]">
+        <div
+          className="text-center md:w-[60%] md:mx-auto mb-[4rem] md:mb-[5rem] lg:w-[48%] lg:text-left lg:ml-0 xl:pr-[5rem]"
+          data-aos="fade-up"
+          data-aos-easing="linear"
+          data-aos-duration="500"
+        >
           <h6 className="w-max mx-auto bg-white border border-[#333333] px-[3rem] pb-[0.5rem] pt-[0.8rem] text-[#333333] text-[1.3rem] uppercase rounded-[4rem] leading-[1.6] mb-[2rem] xl:text-[2rem] xl:mb-[3rem] font-medium lg:ml-0">
             How It Works
           </h6>
@@ -46,7 +56,13 @@ const ProcessSection = () => {
 
         <div className="flex flex-wrap justify-between max-w-[600px] mx-auto md:max-w-full md:gap-y-[5rem] xl:gap-y-[7rem] lg:flex-row-reverse">
           {processList.map((process, index) => (
-            <div key={index} className="mt-[4rem] pt-[4rem] border-t border-t-[#dddddd] first:mt-0 first:pt-0 first:border-t-0 w-full md:w-[48%] md:mt-0 md:pt-0 md:border-t-o lg:odd:-translate-y-[20rem] xl:odd:-translate-y-[33rem]">
+            <div
+              key={index}
+              className="mt-[4rem] pt-[4rem] border-t border-t-[#dddddd] first:mt-0 first:pt-0 first:border-t-0 w-full md:w-[48%] md:mt-0 md:pt-0 md:border-t-o lg:odd:-translate-y-[20rem] xl:odd:-translate-y-[33rem]"
+              data-aos="fade-up"
+              data-aos-easing="linear"
+              data-aos-duration="500"
+            >
               <img
                 src={process.thumbnail}
                 alt="Process Image"
@@ -60,7 +76,9 @@ const ProcessSection = () => {
                   <h6 className="font-medium text-[1.8rem] xl:text-[3rem]">
                     {process.title}
                   </h6>
-                  <p className="text-[1.6rem] xl:text-[2.2rem] mt-[1rem] font-light">{process.description}</p>
+                  <p className="text-[1.6rem] xl:text-[2.2rem] mt-[1rem] font-light">
+                    {process.description}
+                  </p>
                 </div>
               </div>
             </div>

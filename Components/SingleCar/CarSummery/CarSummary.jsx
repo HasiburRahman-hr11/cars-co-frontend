@@ -1,8 +1,9 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import AOS from "aos";
 
 import styles from "../SingleCar.module.css";
 
@@ -81,12 +82,18 @@ const CarSummaryCard = ({ data }) => {
 };
 
 const CarSummary = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
-    <div className="">
+    <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
       <div className="container">
         <h6 className="flex items-center justify-center md:justify-between text-[2rem] xl:text-[4.8rem] mb-[2rem] pt-[3rem] border-t border-t-[#dddddd] lg:border-t-0 xl:pt-[10rem]">
-         <span className="w-max"> <b>Car</b> Summary</span>
-         <span className="hidden md:block md:h-[1px] md:bg-[#0A0909] md:ml-[1rem] md:flex-[1]"></span>
+          <span className="w-max">
+            {" "}
+            <b>Car</b> Summary
+          </span>
+          <span className="hidden md:block md:h-[1px] md:bg-[#0A0909] md:ml-[1rem] md:flex-[1]"></span>
         </h6>
       </div>
 
@@ -100,10 +107,7 @@ const CarSummary = () => {
       <div className="container hidden sm:block lg:mt-20 ">
         <ul className="sm:grid grid-cols-3 lg:grid-cols-4 gap-y-[3rem] xl:mt-[10rem] xl:gap-y-[4rem]">
           {dummyData.map((data, index) => (
-            <li
-              key={index}
-              className={` ${styles.carSummeryItem}`}
-            >
+            <li key={index} className={` ${styles.carSummeryItem}`}>
               <CarSummaryCard data={data} />
             </li>
           ))}

@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
+import AOS from "aos";
 
 const showrooms = [
   {
@@ -39,11 +41,19 @@ const showrooms = [
 ];
 
 const OurShowrooms = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <section className="bg-[#F3F3F3] py-[6rem] xl:py-[15rem]">
       <div className="container">
         <div className="flex flex-wrap justify-between gap-y-[3rem] lg:grid lg:grid-cols-3 lg:gap-[3rem]">
-          <div className="w-full text-center section-header lg:text-left lg:w-full">
+          <div
+            className="w-full text-center section-header lg:text-left lg:w-full"
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="500"
+          >
             <h6 className="w-max mx-auto bg-[#F3F3F3] border border-[#4D4D4D] px-[3rem] pb-[0.5rem] pt-[0.8rem] text-[1.3rem] uppercase rounded-[4rem] leading-[1.6] mb-[2rem] xl:text-[2rem] xl:mb-[3rem] font-medium lg:ml-0">
               Our Showrooms
             </h6>
@@ -64,6 +74,9 @@ const OurShowrooms = () => {
             <div
               key={index}
               className="w-full relative overflow-hidden rounded-[1.5rem] sm:w-[48%] lg:w-full group xl:rounded-[3rem]"
+              data-aos="fade-up"
+              data-aos-easing="linear"
+              data-aos-duration="500"
             >
               <div className="img-box h-full">
                 <img

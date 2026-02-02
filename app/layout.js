@@ -3,6 +3,7 @@ import Header from "@/Components/Header/Header";
 import Footer from "@/Components/Footer/Footer";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "aos/dist/aos.css";
 
 export const metadata = {
   title: "Over 180+ premium brands & used exotic cars in inventory",

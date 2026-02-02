@@ -1,24 +1,27 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Accordion,
   AccordionHeader,
   AccordionBody,
 } from "@material-tailwind/react";
-
-
+import AOS from "aos";
 
 const SpecificationsAccordion = ({ specifications }) => {
   const [open, setOpen] = React.useState(0);
 
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
 
-
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className="hidden lg:block bg-white pb-[6rem] xl:pb-[13rem]">
       <div
         className="container"
-
+        data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="500"
       >
         <h6 className="text-[2rem] xl:text-[4.8rem] pt-[6rem] mb-[3rem] mt-[6rem] border-t border-t-[#383838] xl:mt-[13rem] xl:pt-[10rem] xl:mb-[6rem]">
           <b>Full</b> Specification
@@ -44,7 +47,6 @@ const SpecificationsAccordion = ({ specifications }) => {
                   <img
                     src={item.icon}
                     alt=""
-           
                     className="object-contain w-[1.8rem] h-[1.8rem] inline-block xl:w-[3rem] xl:h-[3rem] mr-[1.5rem] xl:mr-[2rem]"
                   />
                   <p className="font-medium text-[1.8rem] xl:text-[2.8rem]">
@@ -55,8 +57,7 @@ const SpecificationsAccordion = ({ specifications }) => {
                   <img
                     src="/images/accordion-arrow-black.png"
                     alt="Arrow Icon"
-                
-                    className={`w-[16px] object-contain transition-all duration-500 ease-in-out accordion-arrow ${ open === index + 1 && "rotate-[180deg]" }`}
+                    className={`w-[16px] object-contain transition-all duration-500 ease-in-out accordion-arrow ${open === index + 1 && "rotate-[180deg]"}`}
                   />
                 </div>
               </div>

@@ -1,5 +1,7 @@
+"use client";
+import React, { useEffect } from "react";
+import AOS from "aos";
 import Link from "next/link";
-import React from "react";
 const brands = [
   { logo: "/images/single-car/brand-icon-audi.webp", title: "Audi", link: "#" },
   {
@@ -76,9 +78,17 @@ const brands = [
 ];
 
 const ShopByBrand = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className="container">
-      <div className="lg:flex items-center justify-between lg:gap-x-[2rem] text-center">
+      <div
+        className="lg:flex items-center justify-between lg:gap-x-[2rem] text-center"
+        data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="500"
+      >
         <h3 className="leading-[1.3] text-[2.6rem] [&>br]:hidden md:[&>br]:block xl:text-[4.5rem] xl:leading-[1.2]">
           <b>Our</b> Portfolio
         </h3>
@@ -96,6 +106,9 @@ const ShopByBrand = () => {
           <li
             key={index}
             className="border-l border-l-[#eeeeee] border-r border-r-[#eeeeee] group hover:bg-[#F3F3F3] hover:border-0 hover:rounded-[1rem] transition-all duration-300 xl:hover:rounded-[2rem]"
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="500"
           >
             <Link
               href={brand.link}
@@ -111,7 +124,12 @@ const ShopByBrand = () => {
         ))}
       </ul>
 
-      <div className="flex justify-center mt-[4rem] lg:hidden ">
+      <div
+        className="flex justify-center mt-[4rem] lg:hidden "
+        data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="500"
+      >
         <Link
           href="#"
           className="text-white border border-black bg-black w-max flex items-center justify-center px-[2.5rem] leading-[1] h-[4rem] rounded-[5rem] transition-all duration-300 "

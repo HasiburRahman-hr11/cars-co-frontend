@@ -1,5 +1,6 @@
 "use client";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
+import AOS from "aos";
 
 const CommonVideoBox = ({ data }) => {
   const videoRef = useRef(null);
@@ -18,6 +19,9 @@ const CommonVideoBox = ({ data }) => {
       setIsPlaying(false);
     }
   };
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <section className="bg-black">
       <div className="max-w-[1920px] mx-auto relative">
@@ -33,7 +37,12 @@ const CommonVideoBox = ({ data }) => {
         />
         <div className="container">
           <div className="py-[6rem] xl:py-[13rem] border-t border-t-[#7C7C7C] text-center">
-            <div className="w-full lg:w-[60%] lg:mx-auto xl:w-[75%]">
+            <div
+              className="w-full lg:w-[60%] lg:mx-auto xl:w-[75%]"
+              data-aos="fade-up"
+              data-aos-easing="linear"
+              data-aos-duration="500"
+            >
               {data?.subHeading && (
                 <h6 className="w-max mx-auto bg-[#202020] px-[3rem] py-[1.4rem] text-[#AEAEAE] text-[1.3rem] uppercase rounded-[4rem] leading-1 mb-[2rem] xl:text-[2rem] xl:leading-[1] xl:mb-[3rem]">
                   {data.subHeading}
@@ -60,6 +69,9 @@ const CommonVideoBox = ({ data }) => {
                   handlePause();
                 }
               }}
+              data-aos="fade-up"
+              data-aos-easing="linear"
+              data-aos-duration="500"
             >
               <video
                 src={data?.video}

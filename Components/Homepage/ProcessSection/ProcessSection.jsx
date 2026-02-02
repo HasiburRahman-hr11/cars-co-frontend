@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import AOS from "aos";
 
 const usps = [
   { title: "Outright Sale to End User" },
@@ -26,16 +27,26 @@ const ProcessSection = () => {
       setIsPlaying(false);
     }
   };
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <section className="bg-[#0D0D0D] overflow-hidden">
       <div className="container">
         <div className="py-[6rem] border-t border-t-[#7C7C7C] xl:py-[13rem]">
-          <div className="text-center section-header md:hidden">
+          <div
+            className="text-center section-header md:hidden"
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="500"
+          >
             <h6 className="w-max mx-auto bg-[#202020] px-[3rem] pb-[0.5rem] pt-[0.8rem] text-[#AEAEAE] text-[1.3rem] uppercase rounded-[4rem] leading-[1.6] mb-[2rem] xl:text-[2rem]">
               The Process
             </h6>
             <h2 className="text-white leading-[1.3] text-[2.4rem] [&>br]:hidden md:[&>br]:block xl:text-[4.5rem] xl:leading-[1.2]">
-              Selling your luxury car for the best price? Let's get you better. <br /> <b>List your car @ Cars.co.in</b>
+              Selling your luxury car for the best price? Let's get you better.{" "}
+              <br /> <b>List your car @ Cars.co.in</b>
             </h2>
             <p className="mt-[1rem] text-[#818181] xl:text-[2.2rem] xl:mt-[2rem]">
               Sell your luxury car quickly and hassle-free in just four easy
@@ -52,6 +63,9 @@ const ProcessSection = () => {
                   handlePause();
                 }
               }}
+              data-aos="fade-up"
+              data-aos-easing="linear"
+              data-aos-duration="500"
             >
               <video
                 src="/videos/hp-process-video.mp4"
@@ -81,12 +95,18 @@ const ProcessSection = () => {
             </div>
 
             <div className="w-full md:w-[50%] xl:w-[52%]">
-              <div className="text-center section-header hidden md:block md:text-left">
+              <div
+                className="text-center section-header hidden md:block md:text-left"
+                data-aos="fade-up"
+                data-aos-easing="linear"
+                data-aos-duration="500"
+              >
                 <h6 className="w-max mx-auto bg-[#202020] px-[3rem] py-[1.4rem] text-[#AEAEAE] text-[1.3rem] uppercase rounded-[4rem] leading-1 mb-[2rem] xl:text-[2rem] xl:leading-[1] xl:mb-[3rem] xl:ml-0">
                   The Process
                 </h6>
                 <h2 className="text-white leading-[1.3] text-[2.6rem] [&>br]:hidden md:[&>br]:block xl:text-[4.5rem] xl:leading-[1.2]">
-                  Selling your luxury car for the best price? Let's get you better. <br /> <b>List your car @ Cars.co.in</b>
+                  Selling your luxury car for the best price? Let's get you
+                  better. <br /> <b>List your car @ Cars.co.in</b>
                 </h2>
                 <p className="mt-[1rem] text-[#818181] xl:text-[2.2rem] xl:mt-[2rem]">
                   Sell your luxury car quickly and hassle-free in just four easy
@@ -99,6 +119,9 @@ const ProcessSection = () => {
                   <li
                     key={index}
                     className="flex text-white text-[2rem] font-medium xl:text-[3rem]"
+                    data-aos="fade-up"
+                    data-aos-easing="linear"
+                    data-aos-duration="500"
                   >
                     <span className="inline-block text-[#5B5B5B] mr-[1rem] xl:mr-[2rem]">
                       0{index + 1} /
@@ -110,7 +133,12 @@ const ProcessSection = () => {
             </div>
           </div>
 
-          <div className="flex flex-wrap flex-col items-center justify-center bg-[#FE0000] px-[3rem] py-[4rem] rounded-[1.5rem] mt-[5rem] md:flex-row md:justify-between md:py-[2.5rem] xl:mt-[7rem]">
+          <div
+            className="flex flex-wrap flex-col items-center justify-center bg-[#FE0000] px-[3rem] py-[4rem] rounded-[1.5rem] mt-[5rem] md:flex-row md:justify-between md:py-[2.5rem] xl:mt-[7rem]"
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="500"
+          >
             <div className="w-full md:flex md:items-center md:flex-[1] md:pr-[3rem]">
               <img
                 src="/images/homepage/hp-process-cars.webp"

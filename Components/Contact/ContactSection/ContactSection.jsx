@@ -1,5 +1,6 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import AOS from "aos";
 
 const socialLinks = [
   {
@@ -29,18 +30,38 @@ const ContactSection = () => {
     setLocation("");
     setMessage("");
   };
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <section className="bg-black py-[6rem] xl:py-[13rem]">
       <div className="container">
         <div className="flex flex-wrap justify-between max-w-[540px] mx-auto md:max-w-full">
           <div className="w-full md:w-[45%] xl:w-[47%]">
-            <h6 className="w-max mx-auto md:ml-0  bg-white px-[3rem] pb-[0.5rem] pt-[0.8rem] text-black text-[1.3rem] uppercase rounded-[4rem] leading-[1.6] mb-[2rem] xl:text-[2rem] font-[500]">
+            <h6
+              className="w-max mx-auto md:ml-0  bg-white px-[3rem] pb-[0.5rem] pt-[0.8rem] text-black text-[1.3rem] uppercase rounded-[4rem] leading-[1.6] mb-[2rem] xl:text-[2rem] font-[500]"
+              data-aos="fade-up"
+              data-aos-easing="linear"
+              data-aos-duration="500"
+            >
               Connect With Us
             </h6>
-            <h2 className="text-white leading-[1.3] text-[2.6rem] [&>br]:hidden md:[&>br]:block xl:text-[4.5rem] xl:leading-[1.2] text-center md:text-left">
+            <h2
+              className="text-white leading-[1.3] text-[2.6rem] [&>br]:hidden md:[&>br]:block xl:text-[4.5rem] xl:leading-[1.2] text-center md:text-left"
+              data-aos="fade-up"
+              data-aos-easing="linear"
+              data-aos-duration="500"
+            >
               <b>Drop us A message</b> or call us on our direct Number.
             </h2>
-            <p className="mt-[2rem] text-white xl:text-[2.2rem] text-center md:text-left">
+            <p
+              className="mt-[2rem] text-white xl:text-[2.2rem] text-center md:text-left"
+              data-aos="fade-up"
+              data-aos-easing="linear"
+              data-aos-duration="500"
+            >
               Have questions or need assistance? Drop us a message anytime or
               call us directly on our number — we’re here to help you quickly
               and professionally.
@@ -51,6 +72,9 @@ const ContactSection = () => {
                 <a
                   href="mailto:sales@cars.co.in.com"
                   className="flex items-center"
+                  data-aos="fade-up"
+                  data-aos-easing="linear"
+                  data-aos-duration="500"
                 >
                   <span className="icon w-[6rem] h-[6rem] p-[1.2rem] flex items-center justify-center border border-[#555555] rounded-[7px]">
                     <img
@@ -69,7 +93,12 @@ const ContactSection = () => {
                   </div>
                 </a>
               </li>
-              <li className="mt-[2.5rem]">
+              <li
+                className="mt-[2.5rem]"
+                data-aos="fade-up"
+                data-aos-easing="linear"
+                data-aos-duration="500"
+              >
                 <a href="tel:+919999999908" className="flex items-center">
                   <span className="icon w-[6rem] h-[6rem] p-[1.2rem] flex items-center justify-center border border-[#555555] rounded-[7px]">
                     <img
@@ -92,7 +121,13 @@ const ContactSection = () => {
 
             <ul className="social-list list-none flex flex-wrap items-center justify-center md:justify-start mt-[5rem] gap-5 xl:mt-[13rem]">
               {socialLinks.map((item, index) => (
-                <li key={index} className="group">
+                <li
+                  key={index}
+                  className="group"
+                  data-aos="fade-up"
+                  data-aos-easing="linear"
+                  data-aos-duration="500"
+                >
                   <a
                     href={item.link}
                     className="flex items-center h-[5rem] py-[1rem] px-[2rem] justify-center border border-[#767778] rounded-[5rem] lg:h-[6rem] transition-all duration-500 group-hover:bg-white group-hover:border-white"
@@ -112,7 +147,12 @@ const ContactSection = () => {
             </ul>
           </div>
 
-          <div className="w-full md:w-[50%] mt-[7rem] md:mt-0 xl:w-[45%]">
+          <div
+            className="w-full md:w-[50%] mt-[7rem] md:mt-0 xl:w-[45%]"
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="500"
+          >
             <div className="form-wrapper bg-white rounded-[2.5rem] py-[4rem] px-[3rem] lg:py-[6rem] lg:px-[5rem]">
               <h3 className="text-[2.3rem] xl:text-[4.5rem] mb-[3rem] font-medium">
                 Send us an email

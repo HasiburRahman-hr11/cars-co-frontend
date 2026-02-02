@@ -1,21 +1,32 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import cars from "@/public/dummyData/cars";
 import CarItem from "@/Components/CommonComponents/CarItem/CarItem";
 import RequestCallPopup from "@/Components/RequestCallPopup/RequestCallPopup";
+import AOS from "aos";
 
 const RelatedCars = () => {
   const [popupOpen, setPopupOpen] = useState(false);
   const togglePopup = () => {
     setPopupOpen(!popupOpen);
   };
-
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   return (
     <section className="bg-[#F3F3F3] py-[6rem] overflow-hidden] xl:py-[13rem]">
       <div className="container">
-        <h2 className="relative text-center leading-[1.3] text-[2.6rem] md:text-left md:flex md:items-center md:justify-between [&>br]:hidden md:[&>br]:block xl:text-[4.5rem] xl:leading-[1.2]">
-          <span> Related  <b>  Cars</b></span>
+        <h2
+          className="relative text-center leading-[1.3] text-[2.6rem] md:text-left md:flex md:items-center md:justify-between [&>br]:hidden md:[&>br]:block xl:text-[4.5rem] xl:leading-[1.2]"
+          data-aos="fade-up"
+          data-aos-easing="linear"
+          data-aos-duration="500"
+        >
+          <span>
+            {" "}
+            Related <b> Cars</b>
+          </span>
           <span className="hidden md:block md:h-[1px] md:bg-[#0A0909] md:ml-[1rem] md:flex-[1]"></span>
         </h2>
 
@@ -25,8 +36,14 @@ const RelatedCars = () => {
 
         <div className="mt-[4rem] flex flex-wrap gap-y-[3rem] sm:max-w-[40rem] sm:mx-auto md:max-w-none md:grid md:grid-cols-2 md:gap-x-[2.5rem] md:gap-y-[4rem] lg:grid-cols-3 lg:gap-y-[5rem] xl:mt-[6rem]">
           {cars.slice(0, 3).map((car, index) => (
-            <div key={index}  className="w-full [&_.item-divider]:hidden">
-              <CarItem data={car}  togglePopup={togglePopup} />
+            <div
+              key={index}
+              className="w-full [&_.item-divider]:hidden"
+              data-aos="fade-up"
+              data-aos-easing="linear"
+              data-aos-duration="500"
+            >
+              <CarItem data={car} togglePopup={togglePopup} />
             </div>
           ))}
         </div>

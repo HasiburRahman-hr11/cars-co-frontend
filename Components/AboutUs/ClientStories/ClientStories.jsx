@@ -1,5 +1,6 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
 import Slider from "react-slick";
 
 const galleryImages = [
@@ -53,10 +54,18 @@ let sliderSettings = {
 };
 
 const ClientStories = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <section className="bg-black py-[6rem] overflow-hidden xl:py-[13rem]">
       <div className="container">
-        <div className="text-center section-header">
+        <div
+          className="text-center section-header"
+          data-aos="fade-up"
+          data-aos-easing="linear"
+          data-aos-duration="500"
+        >
           <h6 className="w-max mx-auto bg-[#202020] px-[3rem] pb-[0.5rem] pt-[0.8rem] text-[#AEAEAE] text-[1.3rem] uppercase rounded-[4rem] leading-[1.6] mb-[2rem] xl:text-[2rem] xl:mb-[3rem] font-medium">
             Client Stories
           </h6>
@@ -65,7 +74,12 @@ const ClientStories = () => {
           </h2>
         </div>
       </div>
-      <div className="full-width-gallery-slider mx-auto mt-[4rem] xl:mt-[6rem]">
+      <div
+        className="full-width-gallery-slider mx-auto mt-[4rem] xl:mt-[6rem]"
+        data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="500"
+      >
         <Slider {...sliderSettings}>
           {galleryImages.map((item, index) => (
             <div key={index} className="h-full px-[0.7rem] xl:px-[1rem]">
@@ -78,7 +92,12 @@ const ClientStories = () => {
           ))}
         </Slider>
       </div>
-      <div className="container">
+      <div
+        className="container"
+        data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="500"
+      >
         <div className="text-center text-[1.6rem] xl:text-[2.6rem] text-white font-medium mt-[4rem] max-w-[540px] mx-auto xl:max-w-[937px] xl:mt-[6rem]">
           "Buying my dream car at PreOwn Luxury Cars was effortless. The team
           was professional, honest, and made sure every detail was perfect. I

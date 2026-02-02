@@ -1,5 +1,6 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import AOS from "aos";
 
 const ListYourCar = () => {
   const [totalStep, setTotalStep] = useState(6);
@@ -78,6 +79,9 @@ const ListYourCar = () => {
     return formData[stepKeys[currentStep - 1]].trim() !== "";
   };
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <section className="bg-black py-[6rem] xl:py-[13rem]">
       <div className="container">
@@ -86,8 +90,16 @@ const ListYourCar = () => {
             src="/images/list-cars/list-car-heading.png"
             alt="List Your Car"
             className="w-full block object-contain"
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="500"
           />
-          <div className="w-full text-white md:w-[80%] mx-auto lg:w-[70%] xl:max-w-[90rem] mt-[1rem]">
+          <div
+            className="w-full text-white md:w-[80%] mx-auto lg:w-[70%] xl:max-w-[90rem] mt-[1rem]"
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="500"
+          >
             <h2 className=" leading-[1.3] text-[2.6rem] [&>br]:hidden md:[&>br]:block xl:text-[4.5rem] xl:leading-[1.2]">
               Upload <b>Your Car Details</b>
             </h2>
@@ -99,7 +111,12 @@ const ListYourCar = () => {
           </div>
         </div>
 
-        <div className="bg-[#191919] rounded-[2rem] xl:rounded-[4rem] py-[3rem] px-[2rem] mt-[4rem] block w-full relative lg:px-[5rem] lg:py-[5rem] xl:px-[12rem] xl:py-[8rem] xl:mt-[6rem]">
+        <div
+          className="bg-[#191919] rounded-[2rem] xl:rounded-[4rem] py-[3rem] px-[2rem] mt-[4rem] block w-full relative lg:px-[5rem] lg:py-[5rem] xl:px-[12rem] xl:py-[8rem] xl:mt-[6rem]"
+          data-aos="fade-up"
+          data-aos-easing="linear"
+          data-aos-duration="500"
+        >
           <span className="count absolute top-[2rem] right-[2rem] inline-flex items-end leading-[1] lg:top-[3rem] lg:right-[4rem] xl:top-[5rem] xl:right-[6rem]">
             <span className="text-[#AEAEAE] text-[1.7rem] xl:text-[3.5rem]">
               0{currentStep}
