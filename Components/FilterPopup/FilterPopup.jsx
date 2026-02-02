@@ -461,7 +461,7 @@ const FilterPopup = ({ active, togglePopup }) => {
           {/* Submit  */}
           <div>
             <button
-              className={`border mt-[30px] text-white w-full flex items-center justify-center py-6 px-10 transition-all duration-500 font-medium text-1.6x ${
+              className={`border mt-[30px] text-white w-full flex items-center justify-center py-6 px-10 transition-all duration-500 font-medium xl:text-[1.8rem] xl:py-8 ${
                 disableSubmit
                   ? " bg-gray-300 border-gray-300 pointer-events-none"
                   : "bg-black border-black cursor-pointer"

@@ -367,15 +367,15 @@ const SingleCarPage = () => {
           <SpecificationTabs specifications={specifications} />
 
           <SpecificationsAccordion specifications={specifications} />
-          <RelatedCars />
-          <FinanceSection />
-          <section className="bg-white py-[6rem] xl:py-[13rem]">
-            <ShopByBrand />
-            <ShopByStyle />
-          </section>
-          <OurShowrooms />
         </div>
       </section>
+      <RelatedCars />
+      <FinanceSection />
+      <section className="bg-white py-[6rem] xl:py-[13rem]">
+        <ShopByBrand />
+        <ShopByStyle />
+      </section>
+      <OurShowrooms />
     </>
   );
 };

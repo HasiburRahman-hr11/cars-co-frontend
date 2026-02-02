@@ -1,8 +1,9 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import HeaderMenu from "./HeaderMenu";
 
 const phoneNumbers = [
   { label: "BUY - 9999 9999 83", link: "tel:+919999999983" },
@@ -15,9 +16,17 @@ const phoneNumbers = [
 
 const Header = ({ forceBlack = false }) => {
   const pathName = usePathname();
+  const [openMenu, setOpenMenu] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
 
   // Define static routes and dynamic route prefixes
-  const staticRoutes = ["/emi-calculator", "/privacy-policy", "/thank-you", "/terms-and-conditions" , "/refund-policy"];
+  const staticRoutes = [
+    "/emi-calculator",
+    "/privacy-policy",
+    "/thank-you",
+    "/terms-and-conditions",
+    "/refund-policy",
+  ];
   const dynamicPrefixes = ["/cars"];
 
   // single blog page: /blogs/{id}
@@ -29,13 +38,27 @@ const Header = ({ forceBlack = false }) => {
     dynamicPrefixes.some((prefix) => pathName.startsWith(prefix)) ||
     isSingleBlog;
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsSticky(window.scrollY >= 1000);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <header
-      className={`header left-[0] top-[0] z-[20] w-full ${
+      className={`header left-[0] top-[0] z-[22] w-full ${
         isBlackHeader ? "black-header " : "bg-transparent absolute"
-      }`}
+      } ${isSticky ? "page-header sticky-header w-full" : ""}`}
       id="header"
     >
+      <HeaderMenu openMenu={openMenu} setOpenMenu={setOpenMenu} />
       <div className="header-wrapper mx-auto px-[20px] py-[15px] flex justify-between items-center lg:px-[30px] xl:py-[20px] xl:w-[97%] xl:max-w-[1790px] xl:px-[30px]">
         <Link
           href="/"
@@ -63,7 +86,10 @@ const Header = ({ forceBlack = false }) => {
               </a>
             ))}
           </div>
-          <span className="menu-icon group flex flex-col justify-between w-[3.5rem] h-[1.5rem] xl:w-[3.4rem] xl:h-[1.7rem] cursor-pointer [&>span]:transition-all [&>span]:duration-500">
+          <span
+            className="menu-icon group flex flex-col justify-between w-[3.5rem] h-[1.5rem] xl:w-[3.4rem] xl:h-[1.7rem] cursor-pointer [&>span]:transition-all [&>span]:duration-500"
+            onClick={() => setOpenMenu(true)}
+          >
             <span className="bg-white w-[1.6rem] h-[1px] group-hover:w-[2.5rem]"></span>
             <span className="bg-white w-full h-[1px]"></span>
             <span className="bg-white w-[1.6rem] h-[1px] ml-auto group-hover:w-[2.5rem]"></span>
