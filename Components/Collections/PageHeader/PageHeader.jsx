@@ -112,8 +112,8 @@ const PageHeader = () => {
                     leaveFrom="transform opacity-100 scale-100"
                     leaveTo="transform opacity-0 scale-95"
                   >
-                    <Menu.Items className="absolute right-0 z-10 mt-2 w-[11rem] origin-top-right rounded-md bg-white shadow-lg ring-1 ring-[#555] ring-opacity-5 focus:outline-none md:w-[12rem] xl:min-w-[19rem]">
-                      <div className="py-1">
+                    <Menu.Items className="absolute right-0 z-10 mt-2 w-[11rem] origin-top-right rounded-md bg-white shadow-lg ring-1 ring-[#555] ring-opacity-5 focus:outline-none md:w-[12rem] xl:min-w-[19rem] xl:ring-0">
+                      <div>
                         <Menu.Item>
                           {({ active }) => (
                             <span
