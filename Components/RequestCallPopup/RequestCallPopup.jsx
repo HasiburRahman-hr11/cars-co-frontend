@@ -54,7 +54,7 @@ const RequestCallPopup = ({ active, togglePopup }) => {
                   type="text"
                   required
                   placeholder="Your Name*"
-                  className="w-full outline-none border border-[#666666] rounded-[5px] text-[1.6rem] py-[1rem] pl-[1.5rem] font-light"
+                  className={inputStyle}
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                 />
@@ -64,7 +64,7 @@ const RequestCallPopup = ({ active, togglePopup }) => {
                   type="email"
                   required
                   placeholder="Your Email Address*"
-                  className="w-full outline-none border border-[#666666] rounded-[5px] text-[1.6rem] py-[1rem] pl-[1.5rem] font-light"
+                  className={inputStyle}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
@@ -74,7 +74,7 @@ const RequestCallPopup = ({ active, togglePopup }) => {
                   type="tel"
                   required
                   placeholder="Your Phone Number*"
-                  className="w-full outline-none border border-[#666666] rounded-[5px] text-[1.6rem] py-[1rem] pl-[1.5rem] font-light"
+                  className={inputStyle}
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                 />
@@ -82,7 +82,7 @@ const RequestCallPopup = ({ active, togglePopup }) => {
               <div className="mb-7">
                 <textarea
                   placeholder="Message"
-                  className="w-full outline-none border border-[#666666] rounded-[5px] text-[1.6rem] py-[1rem] pl-[1.5rem] font-light min-h-[10rem] xl:min-h-[14rem]"
+                  className={`${inputStyle} min-h-[10rem] xl:min-h-[14rem]`}
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                 ></textarea>
@@ -90,7 +90,7 @@ const RequestCallPopup = ({ active, togglePopup }) => {
               <div>
                 <button
                   type="submit"
-                  className="bg-[black] text-white text-center py-5 px-10 border border-[black] outline-none rounded-[5px] w-full transition-all duration-500 ease-in-out hover:bg-transparent hover:text-black"
+                  className="bg-[black] text-white text-center py-5 px-10 border border-[black] cursor-pointer outline-none rounded-[5px] w-full transition-all duration-500 ease-in-out hover:bg-transparent hover:text-black xl:text-[1.8rem] xl:py-[1.5rem]"
                 >
                   Submit
                 </button>
@@ -102,5 +102,7 @@ const RequestCallPopup = ({ active, togglePopup }) => {
     </div>
   );
 };
+
+const inputStyle = "w-full outline-none border border-[#666666] rounded-[5px] text-[1.6rem] py-[1rem] pl-[1.5rem] font-light xl:text-[1.8rem] xl:py-[1.2rem]"
 
 export default RequestCallPopup;

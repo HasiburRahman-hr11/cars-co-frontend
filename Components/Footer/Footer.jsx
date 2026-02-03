@@ -11,7 +11,7 @@ import Link from "next/link";
 const carsCoWorldMenu = [
   { title: "List Cars", link: "/list-cars" },
   { title: "Why Us", link: "/why-us" },
-  { title: "Collections", link: "#" },
+  { title: "Collections", link: "/collections" },
   { title: "Compare Cars", link: "#" },
   { title: "Blogs", link: "/blogs" },
   { title: "About Us", link: "/about-us" },

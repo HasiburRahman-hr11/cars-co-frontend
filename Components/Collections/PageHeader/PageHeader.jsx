@@ -29,7 +29,7 @@ const PageHeader = () => {
   return (
     <section className="bg-white md:bg-[#f3f3f3]">
       <div className="container">
-        <div className="pt-16 xl:pt-[11rem]">
+        <div className="pt-16 xl:pt-[11rem] sm:max-w-[50rem] sm:mx-auto md:max-w-none">
           <p className="hidden lg:flex flex-wrap items-center font-normal">
             <Link href="/" className="text-lg md:text-xl xl:text-[1.8rem]">
               Home
@@ -53,7 +53,7 @@ const PageHeader = () => {
               We make driving your dream car seamless, swift, and unforgettable.
             </p>
           </div>
-          <div className="flex flex-wrap items-center justify-between mt-[5rem] border-t border-[#D9D9D9] py-[3rem] xl:mt-[9.5rem] xl:pt-[4rem] xl:mb-[2rem]">
+          <div className="flex flex-wrap items-center justify-between mt-[5rem] border-t border-[#D9D9D9] py-[3rem] xl:mt-[9.5rem] xl:pt-[4rem] md:border-b md:border-b-[#D9D9D9]">
             <div className="flex flex-wrap items-center lg:flex-row-reverse">
               <div className="flex flex-wrap items-center ">
                 <div className="md:flex cursor-pointer md:items-center lg:mx-[2rem] lg:px-[2rem] lg:border-l lg:border-[#D9D9D9] xl:px-[3.5rem] xl:mx-[3.5rem]">
@@ -88,13 +88,13 @@ const PageHeader = () => {
             </div>
 
             <div className="flex flex-wrap items-center">
-              <div className="ml-5 md:flex cursor-pointer md:items-center md:ml-8">
+              <div className="ml-5 md:flex md:items-center md:ml-8">
                 <p className="hidden md:inline-block md:mr-4 xl:text-[2rem]">
                   Sort by:
                 </p>
                 <Menu as="div" className="relative inline-block text-left">
                   <div>
-                    <Menu.Button className=" w-[11rem] whitespace-nowrap  inline-flex justify-between items-center gap-x-1.5 outline-none border border-neutral-400 pl-[1rem] py-[0.4rem] text-[1.1rem] rounded-[0.4rem] md:border md:border-[#E0E0E0] md:h-[4rem] md:min-w-[12rem] md:rounded-[5px] md:bg-transparent md:text-xl xl:min-w-[19rem]  xl:h-[5.7rem] xl:text-[2rem]">
+                    <Menu.Button className=" w-[11rem] whitespace-nowrap  inline-flex justify-between items-center gap-x-1.5 outline-none border border-neutral-400 pl-[1rem] py-[0.4rem] text-[1.1rem] rounded-[0.4rem] md:border md:border-[#E0E0E0] md:h-[4rem] md:min-w-[12rem] md:rounded-[5px] md:bg-transparent md:text-xl xl:min-w-[19rem]  xl:h-[5.7rem] xl:text-[2rem] cursor-pointer">
                       {sortTitle}
                       <ChevronDownIcon
                         className="h-8 w-8 object-contain  1xl:w-[2.8rem] 1xl:h-[2.8rem] 3xl:w-[3.5rem] 3xl:h-[3.5rem] text-[#333] font-light"
@@ -121,7 +121,7 @@ const PageHeader = () => {
                                 active
                                   ? "bg-gray-100 text-gray-900"
                                   : "text-gray-700",
-                                "block px-4 py-2 text-[1.1rem] md:px-5 md:py-4  md:text-xl xl:text-[1.8rem]",
+                                "block px-4 py-2 text-[1.1rem] md:px-5 md:py-4  md:text-xl xl:text-[1.8rem] cursor-pointer",
                               )}
                               onClick={() =>
                                 sortChangeHandle("High To Low", "high")
@@ -138,7 +138,7 @@ const PageHeader = () => {
                                 active
                                   ? "bg-gray-100 text-gray-900"
                                   : "text-gray-700",
-                                "block px-4 py-2 text-[1.1rem] md:px-5 md:py-4  md:text-xl xl:text-[1.8rem]",
+                                "block px-4 py-2 text-[1.1rem] md:px-5 md:py-4  md:text-xl xl:text-[1.8rem] cursor-pointer",
                               )}
                               onClick={() =>
                                 sortChangeHandle("Low To High", "low")

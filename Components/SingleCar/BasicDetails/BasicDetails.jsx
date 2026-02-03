@@ -108,10 +108,10 @@ const BasicDetails = () => {
 
               {/* Call Button For Desktop */}
               <div className="overflow-hidden hidden lg:block lg:max-w-[17rem] xl:max-w-[27rem]">
-                <a href="#" className="outline-none font-medium w-full flex items-center justify-center border border-black transition-all duration-300 px-[2rem] text-[1.2rem] xl:text-[2.2rem] h-[5rem] xl:h-[7.5rem] rounded-[5rem] hover:bg-black hover:text-white group">
+                <Link href="/emi-calculator" className="outline-none font-medium w-full flex items-center justify-center border border-black transition-all duration-300 px-[2rem] text-[1.2rem] xl:text-[2.2rem] h-[5rem] xl:h-[7.5rem] rounded-[5rem] hover:bg-black hover:text-white group">
                   <img src="/images/single-car/emi-icon.png" alt="EMI Calculator" className="object-contain w-[1.8rem] xl:w-[2.6rem] inline-block mr-[2rem] transition-all duration-300 group-hover:invert" />
                   <span>Emi Calculator</span>
-                </a>
+                </Link>
 
                 <button href="#" className="outline-none font-medium w-full flex items-center justify-center border bg-black border-black transition-all duration-300 px-[2rem] text-[1.2rem] xl:text-[2.2rem] h-[5rem] xl:h-[7.5rem] rounded-[5rem] hover:bg-[#222222] text-white group mt-[1rem] group cursor-pointer">
                   <img src="/images/single-car/reserve-car-icon.png" alt="EMI Calculator" className="object-contain w-[1.8rem] xl:w-[2.6rem] inline-block mr-[2rem] transition-all duration-300 " />

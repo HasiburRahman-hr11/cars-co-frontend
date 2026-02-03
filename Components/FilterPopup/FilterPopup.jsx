@@ -69,26 +69,50 @@ const brands = [
 const categories = [
   {
     _id: "001",
-    icon: "/images/single-car/car-style-1.png",
-    title: "Convertible",
+    icon: "/images/filter-type-bike.webp",
+    title: "Bike",
     url: "#",
   },
   {
     _id: "002",
-    icon: "/images/single-car/car-style-2.png",
-    title: "Coupe",
+    icon: "/images/filter-type-convertible.webp",
+    title: "Convertible",
     url: "#",
   },
   {
     _id: "003",
-    icon: "/images/single-car/car-style-3.png",
-    title: "Sports",
+    icon: "/images/filter-type-coupe.webp",
+    title: "Coupe",
     url: "#",
   },
   {
     _id: "004",
-    icon: "/images/single-car/car-style-4.png",
+    icon: "/images/filter-type-hatchback.webp",
     title: "Hatchback",
+    url: "#",
+  },
+  {
+    _id: "005",
+    icon: "/images/filter-type-muv.webp",
+    title: "MUV-MPV",
+    url: "#",
+  },
+  {
+    _id: "006",
+    icon: "/images/filter-type-sedan.webp",
+    title: "Sedan",
+    url: "#",
+  },
+  {
+    _id: "007",
+    icon: "/images/filter-type-sports.webp",
+    title: "Sports",
+    url: "#",
+  },
+  {
+    _id: "008",
+    icon: "/images/filter-type-suv.webp",
+    title: "SUV",
     url: "#",
   },
 ];
@@ -155,7 +179,7 @@ const FilterPopup = ({ active, togglePopup }) => {
   const handleSelectBudget = (budget) => {
     setSelectedBudget(budget);
   };
-    //   Select Fuel Type function
+  //   Select Fuel Type function
   const handleSelectFuelType = (fuel) => {
     setFuelType(fuel);
   };
@@ -195,10 +219,14 @@ const FilterPopup = ({ active, togglePopup }) => {
   };
 
   useEffect(() => {
-    console.log(selectedBrand)
-    console.log(selectedBudget)
-    console.log(selectedTypes)
-    if (selectedBrand !== "" || selectedTypes.length > 0 || selectedBudget !== "") {
+    console.log(selectedBrand);
+    console.log(selectedBudget);
+    console.log(selectedTypes);
+    if (
+      selectedBrand !== "" ||
+      selectedTypes.length > 0 ||
+      selectedBudget !== ""
+    ) {
       setDisableSubmit(false);
     } else {
       setDisableSubmit(true);
@@ -342,7 +370,7 @@ const FilterPopup = ({ active, togglePopup }) => {
             </ul>
           </div>
 
-           {/* Fuel Type */}
+          {/* Fuel Type */}
           <div className="border-t border-b border-neutral-200 pt-10 pb-4">
             <p className={filterTypeTitle}>Fuel Type</p>
             <ul className="flex py-7 flex-wrap gap-y-5">
@@ -352,25 +380,24 @@ const FilterPopup = ({ active, togglePopup }) => {
               >
                 Petrol
               </li>
-                <li
+              <li
                 className={`${capsuleStyles}  ${fuelType === "Diesel" ? "active" : ""}`}
                 onClick={() => handleSelectFuelType("Diesel")}
               >
                 Diesel
               </li>
-                <li
+              <li
                 className={`${capsuleStyles}  ${fuelType === "Hybrid" ? "active" : ""}`}
                 onClick={() => handleSelectFuelType("Hybrid")}
               >
                 Hybrid
               </li>
-                <li
+              <li
                 className={`${capsuleStyles}  ${fuelType === "Electric" ? "active" : ""}`}
                 onClick={() => handleSelectFuelType("Electric")}
               >
                 Electric
               </li>
-             
             </ul>
           </div>
 
@@ -414,7 +441,7 @@ const FilterPopup = ({ active, togglePopup }) => {
           {/* Vehicle Type */}
           <div className="py-12">
             <p className={filterTypeTitle}>Vehicle type</p>
-            <ul className="grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-[1.5rem] xl:ga-[2rem] mt-[2rem]">
+            <ul className="grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-[1.5rem] xl:gap-[2.5rem] mt-[2rem]">
               {categories.map((category) => (
                 <li
                   key={category._id}
@@ -480,6 +507,7 @@ const FilterPopup = ({ active, togglePopup }) => {
 const filterTypeTitle = "font-medium text-[1.5rem] xl:text-[2.2rem]";
 const capsuleStyles =
   "text-[1.3rem] tracking-tight px-[1.5rem] border border-neutral-200 rounded-3xl mr-3 whitespace-nowrap cursor-pointer transition-all duration-300 xl:text-[1.6rem] xl:rounded-[4rem] xl:px-[2.5rem] xl:min-w-[12rem] py-[0.5rem] flex justify-center items-center filter-popup-capsule";
-  const selectStyles = "bg-transparent border border-neutral-200 mt-8 px-[2rem] py-[1.5rem] text-[1.3rem] w-full rounded-md outline-none xl:text-[1.7rem] filter-custom-dropdown"
+const selectStyles =
+  "bg-transparent border border-neutral-200 mt-8 px-[2rem] py-[1.5rem] text-[1.3rem] w-full rounded-md outline-none xl:text-[1.7rem] filter-custom-dropdown";
 
 export default FilterPopup;
