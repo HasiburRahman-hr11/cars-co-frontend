@@ -88,7 +88,7 @@ const ContactSection = () => {
                       Email Us
                     </span>
                     <span className="block text-white text-[2.2rem] xl:text-[2.8rem]">
-                      sales@cars.co.in.com
+                      sales@cars.co.in
                     </span>
                   </div>
                 </a>
