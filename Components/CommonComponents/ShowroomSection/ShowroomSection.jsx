@@ -1,5 +1,6 @@
 "use client";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import Slider from "react-slick";
 import AOS from "aos";
 
 const showrooms = [
@@ -32,6 +33,19 @@ const showrooms = [
     googleMapLink: "https://maps.app.goo.gl/PLdXNLZFW4SgDqaG9",
   },
 ];
+
+let settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  centerMode: false,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  arrows: false,
+};
 
 const ShowroomSection = () => {
   const [firstName, setFirstName] = useState("");
@@ -66,7 +80,7 @@ const ShowroomSection = () => {
               <b>Visit Our Showroom.</b>
             </h2>
             <div
-              className="grid grid-cols-2 gap-[1rem] mt-[4rem] xl:mt-[5rem]"
+              className="hidden sm:grid grid-cols-2 gap-[1rem] mt-[4rem] xl:mt-[5rem]"
               data-aos="fade-up"
               data-aos-easing="linear"
               data-aos-duration="500"
@@ -95,6 +109,45 @@ const ShowroomSection = () => {
                   className="block w-full"
                 />
               </div>
+            </div>
+
+            {/* For Mobile */}
+            <div
+              className="block showroom-img-slider sm:hidden mt-[3rem]"
+              data-aos="fade-up"
+              data-aos-easing="linear"
+              data-aos-duration="500"
+            >
+              <Slider {...settings}>
+                <div className="p-4">
+                  <img
+                    src="/images/list-cars/mob-showroom-img-1.webp"
+                    alt="Showroom"
+                    className="block w-full rounded-[1.5rem] object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <img
+                    src="/images/list-cars/mob-showroom-img-2.webp"
+                    alt="Showroom"
+                    className="block w-full rounded-[1.5rem] object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <img
+                    src="/images/list-cars/mob-showroom-img-3.webp"
+                    alt="Showroom"
+                    className="block w-full rounded-[1.5rem] object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <img
+                    src="/images/list-cars/mob-showroom-img-4.webp"
+                    alt="Showroom"
+                    className="block w-full rounded-[1.5rem] object-cover"
+                  />
+                </div>
+              </Slider>
             </div>
           </div>
 

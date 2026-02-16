@@ -27,6 +27,8 @@ const Header = ({ forceBlack = false }) => {
     "/terms-and-conditions",
     "/refund-policy",
     "/collections",
+    "/search-results",
+    "/booking",
   ];
   const dynamicPrefixes = ["/cars"];
 
@@ -87,13 +89,20 @@ const Header = ({ forceBlack = false }) => {
               </a>
             ))}
           </div>
+          <span className="flex md:hidden w-[4.4rem] h-[4.4rem] rounded-[50%] items-center justify-center mr-[7px] border border-[#4B4B4B] p-[1rem] bg-[#1D1A1B] transition-all duration-500 hover:bg-white focus:bg-white active:bg-white group">
+            <img
+              src="/images/mob-search-icon.png"
+              alt="Search icon"
+              className="object-contain transition-all duration-500 group-hover:invert group-focus:invert group-active:invert"
+            />
+          </span>
           <span
-            className="menu-icon group flex flex-col justify-between w-[3.5rem] h-[1.5rem] xl:w-[3.4rem] xl:h-[1.7rem] cursor-pointer [&>span]:transition-all [&>span]:duration-500"
+            className="menu-icon group w-[4.4rem] h-[4.4rem] rounded-[50%] border border-[#4B4B4B] py-[1.5rem] px-[1.2rem] bg-[#1D1A1B] md:p-0 md:bg-transparent flex flex-col justify-between md:border-0 md:w-[3.5rem] md:h-[1.5rem] xl:w-[3.4rem] xl:h-[1.7rem] cursor-pointer transition-all duration-500 [&>span]:transition-all [&>span]:duration-500 hover:bg-white focus:bg-white active:bg-white md:hover:bg-transparent md:focus:bg-transparent md:active:bg-transparent hover:[&>span]:bg-black focus:[&>span]:bg-black active:[&>span]:bg-black md:hover:[&>span]:bg-white md:focus:[&>span]:bg-white md:active:[&>span]:bg-white"
             onClick={() => setOpenMenu(true)}
           >
-            <span className="bg-white w-[1.6rem] h-[1px] group-hover:w-[2.5rem]"></span>
+            <span className="bg-white w-[1rem] md:w-[1.6rem] h-[1px] md:group-hover:w-[2.5rem]"></span>
             <span className="bg-white w-full h-[1px]"></span>
-            <span className="bg-white w-[1.6rem] h-[1px] ml-auto group-hover:w-[2.5rem]"></span>
+            <span className="bg-white w-[1rem] h-[1px] md:w-[1.6rem] ml-auto md:group-hover:w-[2.5rem]"></span>
           </span>
         </div>
       </div>

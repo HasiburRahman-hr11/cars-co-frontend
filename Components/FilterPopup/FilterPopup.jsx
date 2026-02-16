@@ -266,7 +266,7 @@ const FilterPopup = ({ active, togglePopup }) => {
                 </span>
               </div>
               <div
-                className="w-max p-3 flex justify-center items-center cursor-pointer rounded-[50%] border border-black ml-3 group hover:bg-black transition-all duration-300 xl:w-[3.5rem] xl:h-[3.5rem] xl:p-[0.9rem]"
+                className="w-[2.7rem] h-[2.7rem] p-3 flex justify-center items-center cursor-pointer rounded-[50%] border border-black ml-3 group hover:bg-black transition-all duration-300 xl:w-[3.5rem] xl:h-[3.5rem] xl:p-[0.9rem]"
                 onClick={togglePopup}
               >
                 <img

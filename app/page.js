@@ -9,6 +9,7 @@ import VideoTestimonials from "@/Components/Homepage/VideoTestimonials/VideoTest
 // import WhyUs from "@/Components/Homepage/WhyUs/WhyUs";
 import WrittenTestimonials from "@/Components/Homepage/WrittenTestimonials/WrittenTestimonials";
 import React from "react";
+import ListCarStickyBarMobile from "@/Components/CommonComponents/ListCarStickyBarMobile/ListCarStickyBarMobile";
 
 const page = () => {
   return (
@@ -24,6 +25,7 @@ const page = () => {
         <WrittenTestimonials />
       </div>
       <ListCarStickyBar />
+      <ListCarStickyBarMobile />
     </>
   );
 };

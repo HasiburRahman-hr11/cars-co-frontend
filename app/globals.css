@@ -68,7 +68,6 @@ html {
 }
 body {
   background-color: #f5f5f5;
-  overflow-x: hidden;
   font-family: "ITC Avant Garde Gothic Std";
   font-size: 1.4rem;
   color: #000;
@@ -156,6 +155,50 @@ header.sticky-header {
   100% {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+.mobile-collection-btn {
+  background: linear-gradient(
+    93.46deg,
+    rgba(255, 255, 255, 0.225) 21.64%,
+    rgba(255, 255, 255, 0.075) 95.24%
+  );
+  border: 1px solid #ffffff1a;
+  backdrop-filter: blur(10px);
+  background-size: 200% 200%;
+  animation: mobCollectionBtn 3s ease infinite;
+}
+
+.mob-filter-icon {
+  background: linear-gradient(
+    171.57deg,
+    rgba(124, 124, 124, 0.5) 4.54%,
+    rgba(255, 255, 255, 0.1) 93.55%
+  );
+  backdrop-filter: blur(10px);
+  background-size: 200% 200%;
+  animation: mobCollectionBtn 2s ease-in-out infinite;
+  border: 0.8px solid #ffffff33;
+}
+.mobile-collection-btn:hover,
+.mob-filter-icon:hover {
+  background: #ffffff;
+  backdrop-filter: none;
+  background-size: cover;
+  color: #000;
+}
+.mob-filter-icon:hover img{
+  filter: invert(0);
+}
+@keyframes mobCollectionBtn {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
@@ -533,11 +576,18 @@ footer .active-menu img {
 .blog-detail-content a:hover {
   color: #ef3024;
 }
+.filter-popup-brand li:hover,
+.filter-popup-capsule:hover,
 .filter-popup-brand li.active,
 .filter-popup-capsule.active {
   border-color: #000;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   background-color: #fff;
+}
+.filter-popup-brand li.active,
+.filter-popup-capsule.active {
+  background-color: #000;
+  color: #fff;
 }
 .filter-custom-dropdown {
   -webkit-appearance: none;
@@ -558,6 +608,63 @@ footer .active-menu img {
 .popupScrollbar::-webkit-scrollbar-thumb {
   background-color: darkgrey;
   border-radius: 1rem;
+}
+.single-car-empty-bar {
+  height: 57vh;
+}
+.single-car-empty-bar.banner-scrolled {
+  height: 67.5vh;
+}
+.scroll-animation {
+  animation: scrollDown 1s ease-in-out infinite;
+}
+.play-btn-pulse {
+  animation: pulse-animation 1.8s infinite;
+}
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(245, 4, 4, 0.16);
+  }
+}
+
+@keyframes scrollDown {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translateY(0.5rem);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+.showroom-img-slider .slick-dots {
+  bottom: 4rem;
+  z-index: 2;
+}
+.showroom-img-slider .slick-dots li {
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: transparent;
+  border-radius: 50%;
+  margin: 0 4px;
+}
+.showroom-img-slider .slick-dots li button {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  cursor: pointer;
+  color: transparent;
+  background-color: transparent;
+  border: 0.4rem solid #ffffff;
+  border-radius: 50%;
+}
+.showroom-img-slider .slick-dots .slick-active button {
+  background-color: #ffffff;
 }
 
 @media only screen and (max-width: 639px) {
@@ -755,12 +862,6 @@ footer .active-menu img {
   .blog-detail-content ul,
   .blog-detail-content ol {
     margin-bottom: 4rem;
-  }
-  .filter-popup-brand li:hover,
-  .filter-popup-capsule:hover {
-    border-color: #000;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    background-color: #fff;
   }
 }
 @media only screen and (min-width: 1360px) {
