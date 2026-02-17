@@ -18,6 +18,13 @@ const Header = ({ forceBlack = false }) => {
   const pathName = usePathname();
   const [openMenu, setOpenMenu] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
+  const [mobSearchOpen, setMobSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const closeMobSearch = () => {
+    setMobSearchOpen(false);
+    setSearchQuery("");
+  };
 
   // Define static routes and dynamic route prefixes
   const staticRoutes = [
@@ -89,7 +96,10 @@ const Header = ({ forceBlack = false }) => {
               </a>
             ))}
           </div>
-          <span className="flex md:hidden w-[4.4rem] h-[4.4rem] rounded-[50%] items-center justify-center mr-[7px] border border-[#4B4B4B] p-[1rem] bg-[#1D1A1B] transition-all duration-500 hover:bg-white focus:bg-white active:bg-white group">
+          <span
+            className="flex md:hidden w-[4.4rem] h-[4.4rem] rounded-[50%] items-center justify-center mr-[7px] border border-[#4B4B4B] p-[1rem] bg-[#1D1A1B] transition-all duration-500 hover:bg-white focus:bg-white active:bg-white group"
+            onClick={() => setMobSearchOpen(true)}
+          >
             <img
               src="/images/mob-search-icon.png"
               alt="Search icon"
@@ -105,6 +115,48 @@ const Header = ({ forceBlack = false }) => {
             <span className="bg-white w-[1rem] h-[1px] md:w-[1.6rem] ml-auto md:group-hover:w-[2.5rem]"></span>
           </span>
         </div>
+      </div>
+
+      {/* Mobile Search */}
+      <div
+        className={`lg:hidden mobile-search fixed ${
+          mobSearchOpen ? "top-0 show-search" : "top-[-120vh]"
+        } left-0 w-full h-full z-[100] min-h-[100vh] min-w-[100vw] pt-[60px] transition-all duration-500`}
+      >
+        <div
+          className={` overlay bg-black absolute w-full h-full left-0 top-0 min-h-[100vh] min-w-[100vw] transition-all duration-500`}
+        ></div>
+        <div className=" px-[3rem] relative z-[2] flex flex-col items-center">
+          <div className="relative flex items-center w-full bg-black rounded-[4rem] mobile-search-box overflow-hidden border border-[#525252]">
+            <input
+              type="search"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Search Your Dream Car..."
+              className="w-full border-0 outline-none bg-transparent text-white text-[15px] py-4 pr-20 pl-8 placeholder:text-white"
+            />
+            <span className="absolute right-5 top-[50%] translate-y-[-50%]">
+              <img
+                src="/images/mob-search-icon.png"
+                alt="Search Icon"
+                className="w-[16px] object-contain"
+              />
+            </span>
+          </div>
+          <button className=" bg-[#333333] text-white px-[20px] py-[8px] w-max rounded-full text-[14px] font-medium mx-auto mt-[15px] inline-block hover:bg-[#232121] focus:bg-[#232121] active:bg-[#232121]">
+            Search
+          </button>
+        </div>
+        <span
+          className="w-[30px] h-[30px] absolute top-[15px] right-[15px] border border-[#525252] rounded-[50%] flex justify-center align-center p-[5px]"
+          onClick={closeMobSearch}
+        >
+          <img
+            src="/images/close-menu-icon.png"
+            alt="Close"
+            className="object-contain w-[11px]"
+          />
+        </span>
       </div>
     </header>
   );
